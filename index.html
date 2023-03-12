@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <script async src="js/analytics.js"></script>
+  <script async src="GAMMA/js/analytics.js"></script>
   <script type="text/javascript">
     var gform; gform || (document.addEventListener("gform_main_scripts_loaded", function () { gform.scriptsLoaded = !0 }), window.addEventListener("DOMContentLoaded", function () { gform.domLoaded = !0 }), gform = { domLoaded: !1, scriptsLoaded: !1, initializeOnLoaded: function (o) { gform.domLoaded && gform.scriptsLoaded ? o() : !gform.domLoaded && gform.scriptsLoaded ? window.addEventListener("DOMContentLoaded", o) : document.addEventListener("gform_main_scripts_loaded", o) }, hooks: { action: {}, filter: {} }, addAction: function (o, n, r, t) { gform.addHook("action", o, n, r, t) }, addFilter: function (o, n, r, t) { gform.addHook("filter", o, n, r, t) }, doAction: function (o) { gform.doHook("action", o, arguments) }, applyFilters: function (o) { return gform.doHook("filter", o, arguments) }, removeAction: function (o, n) { gform.removeHook("action", o, n) }, removeFilter: function (o, n, r) { gform.removeHook("filter", o, n, r) }, addHook: function (o, n, r, t, i) { null == gform.hooks[o][n] && (gform.hooks[o][n] = []); var e = gform.hooks[o][n]; null == i && (i = n + "_" + e.length), gform.hooks[o][n].push({ tag: i, callable: r, priority: t = null == t ? 10 : t }) }, doHook: function (n, o, r) { var t; if (r = Array.prototype.slice.call(r, 1), null != gform.hooks[n][o] && ((o = gform.hooks[n][o]).sort(function (o, n) { return o.priority - n.priority }), o.forEach(function (o) { "function" != typeof (t = o.callable) && (t = window[t]), "action" == n ? t.apply(null, r) : r[0] = t.apply(null, r) })), "filter" == n) return r[0] }, removeHook: function (o, n, t, i) { var r; null != gform.hooks[o][n] && (r = (r = gform.hooks[o][n]).filter(function (o, n, r) { return !!(null != i && i != o.tag || null != t && t != o.priority) }), gform.hooks[o][n] = r) } });
   </script>
@@ -24,7 +24,7 @@
   <meta property="og:site_name" content="GAMMA Relief through Design">
   <meta property="article:publisher" content="https://www.facebook.com/gammarelief/">
   <meta property="article:modified_time" content="2023-03-08T15:32:42+00:00">
-  <meta property="og:image" content="images/GSD_Logo_black_300ppi_social.png">
+  <meta property="og:image" content="GAMMA/images/GSD_Logo_black_300ppi_social.png">
   <meta property="og:image:width" content="2308">
   <meta property="og:image:height" content="1154">
   <meta property="og:image:type" content="image/png">
@@ -255,7 +255,7 @@
     /*! This file is auto-generated */
     !function (e, a, t) { var n, r, o, i = a.createElement("canvas"), p = i.getContext && i.getContext("2d"); function s(e, t) { var a = String.fromCharCode, e = (p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, e), 0, 0), i.toDataURL()); return p.clearRect(0, 0, i.width, i.height), p.fillText(a.apply(this, t), 0, 0), e === i.toDataURL() } function c(e) { var t = a.createElement("script"); t.src = e, t.defer = t.type = "text/javascript", a.getElementsByTagName("head")[0].appendChild(t) } for (o = Array("flag", "emoji"), t.supports = { everything: !0, everythingExceptFlag: !0 }, r = 0; r < o.length; r++)t.supports[o[r]] = function (e) { if (p && p.fillText) switch (p.textBaseline = "top", p.font = "600 32px Arial", e) { case "flag": return s([127987, 65039, 8205, 9895, 65039], [127987, 65039, 8203, 9895, 65039]) ? !1 : !s([55356, 56826, 55356, 56819], [55356, 56826, 8203, 55356, 56819]) && !s([55356, 57332, 56128, 56423, 56128, 56418, 56128, 56421, 56128, 56430, 56128, 56423, 56128, 56447], [55356, 57332, 8203, 56128, 56423, 8203, 56128, 56418, 8203, 56128, 56421, 8203, 56128, 56430, 8203, 56128, 56423, 8203, 56128, 56447]); case "emoji": return !s([129777, 127995, 8205, 129778, 127999], [129777, 127995, 8203, 129778, 127999]) }return !1 }(o[r]), t.supports.everything = t.supports.everything && t.supports[o[r]], "flag" !== o[r] && (t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && t.supports[o[r]]); t.supports.everythingExceptFlag = t.supports.everythingExceptFlag && !t.supports.flag, t.DOMReady = !1, t.readyCallback = function () { t.DOMReady = !0 }, t.supports.everything || (n = function () { t.readyCallback() }, a.addEventListener ? (a.addEventListener("DOMContentLoaded", n, !1), e.addEventListener("load", n, !1)) : (e.attachEvent("onload", n), a.attachEvent("onreadystatechange", function () { "complete" === a.readyState && t.readyCallback() })), (e = t.source || {}).concatemoji ? c(e.concatemoji) : e.wpemoji && e.twemoji && (c(e.twemoji), c(e.wpemoji))) }(window, document, window._wpemojiSettings);
   </script>
-  <script src="js/wp-emoji-release.min.js" type="text/javascript" defer></script>
+  <script src="GAMMA/js/wp-emoji-release.min.js" type="text/javascript" defer></script>
   <style type="text/css">
     img.wp-smiley,
     img.emoji {
@@ -270,10 +270,10 @@
       padding: 0 !important;
     }
   </style>
-  <link rel="stylesheet" id="wp-block-library-css" href="css/style.min.css" type="text/css" media="all">
-  <link rel="stylesheet" id="bu-navigation-block-frontend-style-css" href="css/block-frontend.css" type="text/css"
+  <link rel="stylesheet" id="wp-block-library-css" href="GAMMA/css/style.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="bu-navigation-block-frontend-style-css" href="GAMMA/css/block-frontend.css" type="text/css"
     media="all">
-  <link rel="stylesheet" id="classic-theme-styles-css" href="css/classic-themes.min.css" type="text/css" media="all">
+  <link rel="stylesheet" id="classic-theme-styles-css" href="GAMMA/css/classic-themes.min.css" type="text/css" media="all">
   <style id="global-styles-inline-css" type="text/css">
     body {
       --wp--preset--color--black: #000000;
@@ -607,17 +607,17 @@
       line-height: 1.6;
     }
   </style>
-  <link rel="stylesheet" id="gsd-theme-css" href="css/style.css" type="text/css" media="screen">
-  <link rel="stylesheet" id="gsd-theme-print-css" href="css/print.css" type="text/css" media="print">
-  <script type="text/javascript" src="js/frontend-gtag.min.js" id="monsterinsights-frontend-script-js"></script>
+  <link rel="stylesheet" id="gsd-theme-css" href="GAMMA/css/style.css" type="text/css" media="screen">
+  <link rel="stylesheet" id="gsd-theme-print-css" href="GAMMA/css/print.css" type="text/css" media="print">
+  <script type="text/javascript" src="GAMMA/js/frontend-gtag.min.js" id="monsterinsights-frontend-script-js"></script>
   <script data-cfasync="false" data-wpfc-render="false" type="text/javascript"
     id="monsterinsights-frontend-script-js-extra">/* <![CDATA[ */
       var monsterinsights_frontend = { "js_events_tracking": "true", "download_extensions": "doc,pdf,ppt,zip,xls,docx,xlsx,pptx", "inbound_paths": "[]", "home_url": "https:\/\/www.gsd.harvard.edu", "hash_tracking": "false", "ua": "UA-80325496-2", "v4_id": "G-XBP2115NM8" };/* ]]> */
     </script>
-  <script type="text/javascript" src="js/modernizr.js" id="modernizr-js"></script>
-  <script type="text/javascript" src="js/jquery.min.js" id="jquery-core-js"></script>
-  <script type="text/javascript" src="js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
-  <script type="text/javascript" defer="defer" src="js/jquery.json.min.js" id="gform_json-js"></script>
+  <script type="text/javascript" src="GAMMA/js/modernizr.js" id="modernizr-js"></script>
+  <script type="text/javascript" src="GAMMA/js/jquery.min.js" id="jquery-core-js"></script>
+  <script type="text/javascript" src="GAMMA/js/jquery-migrate.min.js" id="jquery-migrate-js"></script>
+  <script type="text/javascript" defer="defer" src="GAMMA/js/jquery.json.min.js" id="gform_json-js"></script>
   <script type="text/javascript" id="gform_gravityforms-js-extra">
     /* <![CDATA[ */
     var gf_global = { "gf_currency_config": { "name": "U.S. Dollar", "symbol_left": "$", "symbol_right": "", "symbol_padding": "", "thousand_separator": ",", "decimal_separator": ".", "decimals": 2, "code": "USD" }, "base_url": "https:\/\/www.gsd.harvard.edu\/wp-content\/plugins\/gravityforms", "number_formats": [], "spinnerUrl": "https:\/\/www.gsd.harvard.edu\/wp-content\/plugins\/gravityforms\/images\/spinner.svg", "strings": { "newRowAdded": "New row added.", "rowRemoved": "Row removed", "formSaved": "The form has been saved.  The content contains the link to return and complete the form." } };
@@ -629,8 +629,8 @@
   <script type="text/javascript" id="gform_gravityforms-js-before">
 
   </script>
-  <script type="text/javascript" defer="defer" src="js/gravityforms.min.js" id="gform_gravityforms-js"></script>
-  <script type="text/javascript" src="js/underscore.min.js" id="underscore-js"></script>
+  <script type="text/javascript" defer="defer" src="GAMMA/js/gravityforms.min.js" id="gform_gravityforms-js"></script>
+  <script type="text/javascript" src="GAMMA/js/underscore.min.js" id="underscore-js"></script>
   <script type="text/javascript" id="wp-util-js-extra">
     /* <![CDATA[ */
     var _wpUtilSettings = { "ajax": { "url": "\/wp-admin\/admin-ajax.php" } };
@@ -910,9 +910,9 @@ function powerpress_pinw(pinw_url){window.open(pinw_url, 'PowerPressPlayer','too
   </script>
   <!-- /copied from algolia's library -->
 
-  <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="GAMMA/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="GAMMA/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="GAMMA/images/favicon-16x16.png">
   <link rel="manifest" href="/wp-content/themes/gsd-wp-theme/favicons/site.webmanifest?v=jw722yl4y4">
   <link rel="mask-icon" href="fonts/safari-pinned-tab.svg" color="#5bbad5">
   <link rel="shortcut icon" href="favicon.ico">
@@ -1123,28 +1123,28 @@ function powerpress_pinw(pinw_url){window.open(pinw_url, 'PowerPressPlayer','too
 
 
                   <figure id="topic-feature__figure-1" class="topic-feature__figure">
-                    <img src="images/Fig.-5-Summit-Flats-Composite-copy-1.jpg" alt="Infrastructure" class="topic-feature__image">
+                    <img src="GAMMA/images/Fig.-5-Summit-Flats-Composite-copy-1.jpg" alt="Infrastructure" class="topic-feature__image">
                   </figure>
 
 
                   <figure id="topic-feature__figure-2" class="topic-feature__figure">
-                    <img src="images/fabricateimage.jpeg" alt class="topic-feature__image">
+                    <img src="GAMMA/images/fabricateimage.jpeg" alt class="topic-feature__image">
                   </figure>
 
 
                   <figure id="topic-feature__figure-3" class="topic-feature__figure">
-                    <img src="images/1505226001.jpeg"
+                    <img src="GAMMA/images/1505226001.jpeg"
                       alt="Abstract image of apartment building" class="topic-feature__image">
                   </figure>
 
 
                   <figure id="topic-feature__figure-4" class="topic-feature__figure">
-                    <img src="images/assemble.png" alt="Climate Change Topic" class="topic-feature__image">
+                    <img src="GAMMA/images/assemble.png" alt="Climate Change Topic" class="topic-feature__image">
                   </figure>
 
 
                   <figure id="topic-feature__figure-5" class="topic-feature__figure">
-                    <img src="images/empowerimg.jpeg" alt="Woman holding drawing of a face in front of her head"
+                    <img src="GAMMA/images/empowerimg.jpeg" alt="Woman holding drawing of a face in front of her head"
                       class="topic-feature__image">
                   </figure>
 
@@ -1155,31 +1155,31 @@ function powerpress_pinw(pinw_url){window.open(pinw_url, 'PowerPressPlayer','too
 
                   <figure id="topic-feature__figure-1--mobile" class="topic-feature__figure--mobile">
                     <div class="topic-feature__image--mobile"
-                      style="background-image: url(&#x27;images/TOPIC-INFRASTRUCTURE.jpg&#x27;);"></div>
+                      style="background-image: url(&#x27;GAMMA/images/Fig.-5-Summit-Flats-Composite-copy-1.jpg&#x27;);"></div>
                   </figure>
 
 
                   <figure id="topic-feature__figure-2--mobile" class="topic-feature__figure--mobile">
                     <div class="topic-feature__image--mobile"
-                      style="background-image: url(&#x27;images/2-HEALTH.jpg&#x27;);"></div>
+                      style="background-image: url(&#x27;GAMMA/images/fabricateimage.jpeg&#x27;);"></div>
                   </figure>
 
 
                   <figure id="topic-feature__figure-3--mobile" class="topic-feature__figure--mobile">
                     <div class="topic-feature__image--mobile"
-                      style="background-image: url(&#x27;images/Fig.-5-Summit-Flats-Composite-copy-1.jpg&#x27;);"></div>
+                      style="background-image: url(&#x27;GAMMA/images/1505226001.jpeg&#x27;);"></div>
                   </figure>
 
 
                   <figure id="topic-feature__figure-4--mobile" class="topic-feature__figure--mobile">
                     <div class="topic-feature__image--mobile"
-                      style="background-image: url(&#x27;images/CLIMATE-CHANGE-1.jpg&#x27;);"></div>
+                      style="background-image: url(&#x27;GAMMA/images/assemble.png&#x27;);"></div>
                   </figure>
 
 
                   <figure id="topic-feature__figure-5--mobile" class="topic-feature__figure--mobile">
                     <div class="topic-feature__image--mobile"
-                      style="background-image: url(&#x27;images/Road2-copy-1.jpeg&#x27;);"></div>
+                      style="background-image: url(&#x27;GAMMA/images/empowerimg.jpeg&#x27;);"></div>
                   </figure>
 
                 </div>
@@ -1319,6 +1319,7 @@ function powerpress_pinw(pinw_url){window.open(pinw_url, 'PowerPressPlayer','too
                     <h1 class="base-tease__heading"><a
                         href="https://www.gsd.harvard.edu/2021/04/students-in-dialogue-a-conversation-with-march-ii-candidate-selwyn-bachus/"
                         class="base-tease__heading--link">
+                        <br>
                         <p>We design sustainable prefabricated timber units (flatpacks) which are assembled into
                           shelters in a matter of days and constitute a foundation for expansion and customisation in
                           the mid-long term. Therefore, we provide shelter for the period of upheaval whilst serving as
@@ -1328,6 +1329,7 @@ function powerpress_pinw(pinw_url){window.open(pinw_url, 'PowerPressPlayer','too
                           growth and community inclusion.</p>
                       </a></h1>
                     <p class="base-tease__subheading base-tease__quote-attriubtion">Mayar Ariss</p>
+                    <br>
                   </div> <!-- /.base-tease__headings -->
 
 
@@ -1365,17 +1367,17 @@ function powerpress_pinw(pinw_url){window.open(pinw_url, 'PowerPressPlayer','too
                       <div class="slideshow-container">
 
                         <div class="mySlides">
-                          <img src="./cut1fp.jpeg" style="width:100%">
+                          <img src="GAMMA/cut1fp.jpeg" style="width:100%">
                           <div class="text"></div>
                         </div>
 
                         <div class="mySlides">
-                          <img src="./cut2fp.jpeg" style="width:100%">
+                          <img src="GAMMA/cut2fp.jpeg" style="width:100%">
                           <div class="text"></div>
                         </div>
 
                         <div class="mySlides">
-                          <img src="./cut3fp.jpeg" style="width:100%">
+                          <img src="GAMMA/cut3fp.jpeg" style="width:100%">
                           <div class="text"></div>
                         </div>
 
@@ -1899,16 +1901,16 @@ m-45 -470 l229 -7 -98 -50 c-201 -102 -358 -221 -411 -310 -32 -55 -55 -120
 		/* End MonsterInsights Scroll Tracking */
 
       </script>
-      <script type="text/javascript" src="js/regenerator-runtime.min.js" id="regenerator-runtime-js"></script>
-      <script type="text/javascript" src="js/wp-polyfill.min.js" id="wp-polyfill-js"></script>
-      <script type="text/javascript" src="js/dom-ready.min.js" id="wp-dom-ready-js"></script>
-      <script type="text/javascript" src="js/hooks.min.js" id="wp-hooks-js"></script>
-      <script type="text/javascript" src="js/i18n.min.js" id="wp-i18n-js"></script>
+      <script type="text/javascript" src="GAMMA/js/regenerator-runtime.min.js" id="regenerator-runtime-js"></script>
+      <script type="text/javascript" src="GAMMA/js/wp-polyfill.min.js" id="wp-polyfill-js"></script>
+      <script type="text/javascript" src="GAMMA/js/dom-ready.min.js" id="wp-dom-ready-js"></script>
+      <script type="text/javascript" src="GAMMA/js/hooks.min.js" id="wp-hooks-js"></script>
+      <script type="text/javascript" src="GAMMA/js/i18n.min.js" id="wp-i18n-js"></script>
       <script type="text/javascript" id="wp-i18n-js-after">
         wp.i18n.setLocaleData({ 'text direction\u0004ltr': ['ltr'] });
       </script>
-      <script type="text/javascript" src="js/a11y.min.js" id="wp-a11y-js"></script>
-      <script type="text/javascript" defer="defer" src="js/placeholders.jquery.min.js"
+      <script type="text/javascript" src="GAMMA/js/a11y.min.js" id="wp-a11y-js"></script>
+      <script type="text/javascript" defer="defer" src="GAMMA/js/placeholders.jquery.min.js"
         id="gform_placeholder-js"></script>
 
 
@@ -1916,7 +1918,7 @@ m-45 -470 l229 -7 -98 -50 c-201 -102 -358 -221 -411 -310 -32 -55 -55 -120
 
   </div> <!-- /#pjax-container -->
 
-  <script src="js/script.js"></script>
+  <script src="GAMMA/js/script.js"></script>
 
 
 </body>
