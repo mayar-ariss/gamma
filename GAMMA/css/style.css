@@ -17644,7 +17644,7 @@ img.wide+figcaption {
     width: 100%
 }
  
-@media (min-width: 500px) { /* INITIAL 600 */
+@media (min-width: 370px) { /* INITIAL 600 */
     .program-container {
         padding-bottom: 30px
     }
@@ -17665,7 +17665,7 @@ img.wide+figcaption {
 }
 
 
-@media (min-width: 500px) { /* INITIAL 600 */
+@media (min-width: 370px) { /* INITIAL 600 */
     .program-list__item {
         margin-bottom: 30px;
         padding-left: 20px; /* INITIAL 30 */
@@ -29650,7 +29650,7 @@ form .truncatable--show {
     width: 100%
 }
 
-@media (min-width: 500px) { /* INITIAL 600 */
+@media (min-width: 370px) { /* INITIAL 600 */
     .visual-content-panel__item {
         flex-basis: 50%;
         margin-bottom: 30px;
