@@ -30474,6 +30474,7 @@ img {
   }
   
   .my-slideshow-container::-webkit-scrollbar {
+    -webkit-appearance: none;
     height: 3px;
     width: 2px;
   }
@@ -30492,6 +30493,7 @@ img {
   }
   
   html::-webkit-scrollbar {
+    -webkit-appearance: none;
     width: 8px;
   }
   
