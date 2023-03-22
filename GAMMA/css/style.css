@@ -30491,6 +30491,23 @@ img {
     background-color: #555;
   }
   
+  html::-webkit-scrollbar {
+    width: 8px;
+  }
+  
+  html::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background-color: #000000;
+    border-radius: 1px;
+  }
+  
+  html::-webkit-scrollbar-thumb:hover {
+    background: #555;
+  }
+  
   
   /* .my-slideshow:before {
     content: "";
