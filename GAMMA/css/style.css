@@ -30491,38 +30491,34 @@ img {
     background-color: #555;
   }
   
-  html::-webkit-scrollbar {
-    width: 8px;
+  
+/* Set the width and height of the scrollbar */
+::-webkit-scrollbar {
+    width: 7px;
+    height: 7px;
   }
   
-  html::-webkit-scrollbar-track {
-    background: #f1f1f1;
-  }
-  
-  html::-webkit-scrollbar-thumb {
-    background-color: #000000;
-    border-radius: 1px;
-  }
-  
-  html::-webkit-scrollbar-thumb:hover {
-    background: #555;
-  }
-  
-  ::-webkit-scrollbar {
-    -webkit-appearance: none;
-    width: 8px;
-    height: 8px;
-  }
-  
+  /* Style the thumb (the moving part of the scrollbar) */
   ::-webkit-scrollbar-thumb {
     background-color: #000000;
     border-radius: 1px;
   }
   
+  /* Style the track (the non-moving part of the scrollbar) */
   ::-webkit-scrollbar-track {
     background-color: #f1f1f1;
   }
   
+  /* Force scrollbar to appear on mobile screens */
+  @media only screen and (max-width: 1440px) {
+    html, body {
+      height: 100%;
+      overflow-y: auto;
+    }
+  }
+  
+  
+
   /* .my-slideshow:before {
     content: "";
     display: inline-block;
