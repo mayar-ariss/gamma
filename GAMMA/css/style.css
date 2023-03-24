@@ -17554,11 +17554,11 @@ img.wide+figcaption {
 
 /* BEGIN ADDED  */
 .view-all .view-all-link:first-child {
-    margin-right: 20px;
+    margin-bottom: 12px;
   }
   
   .view-all .view-all-link:last-child {
-    margin-left: 20px;
+    margin-top: 12px;
   }
 /* END ADDED */
 
@@ -18082,11 +18082,11 @@ img.wide+figcaption {
 }
 
 @media (min-width: 0) and (max-width: 767px) {
-    .topic-feature__subheading-link {
+    .topic-feature__subheading {
         color: #fff !important
     }
 
-    .topic-feature__subheading-link:hover {
+    .topic-feature__subheading:hover {
         box-shadow: 0 1px 0 0 #fff !important
     }
 }
@@ -18243,7 +18243,7 @@ img.wide+figcaption {
 }
 
 @media (min-width: 0) and (max-width: 767px) {
-    .topic-feature__item--link {
+    .topic-feature__item {
         color: #fff !important
     }
 }
