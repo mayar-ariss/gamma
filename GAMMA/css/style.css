@@ -30432,12 +30432,17 @@ img {
 }
 
 
-/* Default styles */
+
+
+
 
   .my-slideshow-container {
     width: 100%;
     overflow-x: scroll;
+    overflow-y: hidden;
     white-space: nowrap;
+    display: flex;
+    align-items: stretch;
   }
   
   .my-slide {
@@ -30448,6 +30453,18 @@ img {
     position: relative;
   }
   
+  
+.my-slide:not(:last-child)::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -10px; /* Adjust the position of the line as needed */
+  width: 1px;
+  height: 700px;
+  background-color: #000000;
+}
+
+
   .my-slide img {
     max-width: 100%;
     height: auto;
@@ -30465,16 +30482,18 @@ img {
     position: relative;
   }
   
-  /* Styles for screens with a maximum width of 768px (phones) */
   @media only screen and (max-width: 768px) {
     .my-slide {
       max-width: 220px;
     }
-    
+  
     .my-slide img {
       max-width: 100%;
     }
   }
+  
+
+
   
   /* Styles for screens with a minimum width of 769px (not phones) */
   /* @media only screen and (min-width: 769px) {
@@ -30542,7 +30561,7 @@ img {
   /* Style the thumb (the moving part of the scrollbar) */
   ::-webkit-scrollbar-thumb {
     background-color: #000000;
-    border-radius: 1px;
+    border-radius: 3px;
   }
   
   /* Style the track (the non-moving part of the scrollbar) */
