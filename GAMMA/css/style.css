@@ -30477,7 +30477,7 @@ img {
   }
   
   /* Styles for screens with a minimum width of 769px (not phones) */
-  @media only screen and (min-width: 769px) {
+  /* @media only screen and (min-width: 769px) {
     .my-slide img {
       max-width: 320px;
     }
@@ -30499,10 +30499,35 @@ img {
   
   .my-slideshow-container::-webkit-scrollbar-thumb:hover {
     background-color: #555;
+  } */
+
+
+
+  /* For Safari on iPhone */
+@media only screen and (max-width: 768px) {
+    .my-slideshow-container {
+      -webkit-overflow-scrolling: touch;
+    }
+  
+    .my-slideshow-container::-webkit-scrollbar {
+      height: 3px;
+      width: 2px;
+    }
+    
+    .my-slideshow-container::-webkit-scrollbar-track {
+      background-color: #f1f1f1;
+    }
+    
+    .my-slideshow-container::-webkit-scrollbar-thumb {
+      background-color: #000000;
+      border-radius: 2px;
+    }
+    
+    .my-slideshow-container::-webkit-scrollbar-thumb:hover {
+      background-color: #555;
+    }
   }
-
-
-
+  
 
 
   
@@ -30534,25 +30559,6 @@ img {
     }
   }
 
-  /* For Safari */
-@media screen and (min-width: 320px) and (max-width: 767px) {
-    ::-webkit-scrollbar {
-      -webkit-appearance: none;
-      width: 7px;
-    }
-    
-    /* ::-webkit-scrollbar-thumb {
-      border-radius: 4px;
-      background-color: rgba(0, 0, 0, 0.5);
-      -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
-    }
-    
-    ::-webkit-scrollbar-track {
-      -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
-      border-radius: 4px;
-      background-color: rgba(0, 0, 0, 0.1);
-    }
-  } */
   
   
   
