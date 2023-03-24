@@ -17552,6 +17552,16 @@ img.wide+figcaption {
     }
 }
 
+/* BEGIN ADDED  */
+.view-all .view-all-link:first-child {
+    margin-right: 20px;
+  }
+  
+  .view-all .view-all-link:last-child {
+    margin-left: 20px;
+  }
+/* END ADDED */
+
 .view-all-link {
     font-family: "office-code", monospace;
     font-size: 14px;
@@ -30490,6 +30500,12 @@ img {
   .my-slideshow-container::-webkit-scrollbar-thumb:hover {
     background-color: #555;
   }
+
+
+
+
+
+  
   
   
 /* Set the width and height of the scrollbar */
@@ -30509,6 +30525,7 @@ img {
     background-color: #f1f1f1;
   }
   
+
   /* Force scrollbar to appear on mobile screens */
   @media only screen and (max-width: 1440px) {
     html, body {
