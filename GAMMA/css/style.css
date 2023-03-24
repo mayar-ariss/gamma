@@ -30533,27 +30533,29 @@ img {
       overflow-y: auto;
     }
   }
-  
-  
 
-  /* .my-slideshow:before {
-    content: "";
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
-  }
-  
-  .my-slide:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: -12px;
-    bottom: 0;
-    width: 1px;
-    margin: auto;
-    background-color: black;
-    height: 100%;
+  /* For Safari */
+@media screen and (min-width: 320px) and (max-width: 767px) {
+    ::-webkit-scrollbar {
+      -webkit-appearance: none;
+      width: 7px;
+    }
+    
+    /* ::-webkit-scrollbar-thumb {
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.5);
+      -webkit-box-shadow: 0 0 1px rgba(255, 255, 255, 0.5);
+    }
+    
+    ::-webkit-scrollbar-track {
+      -webkit-box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.3);
+      border-radius: 4px;
+      background-color: rgba(0, 0, 0, 0.1);
+    }
   } */
+  
+  
+  
 
   
   
