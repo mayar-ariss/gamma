@@ -30458,7 +30458,7 @@ img {
   content: "";
   position: absolute;
   top: 0;
-  right: -10px; /* Adjust the position of the line as needed */
+  right: -12px; /* Adjust the position of the line as needed */
   width: 1px;
   height: 700px;
   background-color: #000000;
