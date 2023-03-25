@@ -30582,6 +30582,15 @@ img {
   
   
 
-  
-  
- 
+  /* @media (min-width: 768px) {
+    .my-header .my-header__heading, .my-article-header .my-article-header__heading {
+        margin-left: 25%;
+        margin-right: 25%;
+        text-align: center;
+        width: 50%;
+        margin: 0 auto;
+    }
+} */
+
+
+
