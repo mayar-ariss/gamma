@@ -17534,6 +17534,7 @@ img.wide+figcaption {
     .view-all {
         padding-left: 30px
     }
+
 }
 
 @media (min-width: 768px) {
@@ -17555,13 +17556,19 @@ img.wide+figcaption {
 /* BEGIN ADDED  */
 .view-all .view-all-link:first-child {
     margin-bottom: 12px;
+    margin-right:12px;
+
   }
   
   .view-all .view-all-link:last-child {
     margin-top: 12px;
-  }
-/* END ADDED */
+    margin-left:12px;
 
+  }
+
+  /* END ADDED */
+
+  
 .view-all-link {
     font-family: "office-code", monospace;
     font-size: 14px;
@@ -17595,6 +17602,83 @@ img.wide+figcaption {
     opacity: 1;
     padding-left: 5px
 }
+
+/* BEGIN ADDED */
+
+@media (max-width: 425px) {
+    .view-all .view-all-link {
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 50%;
+        height: 170px;
+        line-height: 170px;
+        text-align: center;
+        width: 170px;
+    }
+
+    .view-all .view-all-link:first-child {
+        margin-bottom: 12px;
+        margin-right:12px;
+      }
+      
+      .view-all .view-all-link:last-child {
+        margin-top: 12px;
+        margin-left: 12px;
+
+      }
+
+}
+
+
+@media (max-width: 375px) {
+    .view-all .view-all-link {
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 50%;
+        height: 150px;
+        line-height: 150px;
+        text-align: center;
+        width: 150px;
+    }
+
+    .view-all .view-all-link:first-child {
+        margin-bottom: 12px;
+        margin-right:12px;
+      }
+      
+      .view-all .view-all-link:last-child {
+        margin-top: 12px;
+        margin-left: 12px;
+
+      }
+
+}
+
+@media (max-width: 320px) {
+    .view-all .view-all-link {
+        border-style: solid;
+        border-width: 1px;
+        border-radius: 50%;
+        height: 125px;
+        line-height: 125px;
+        text-align: center;
+        width: 125px;
+    }
+
+    .view-all .view-all-link:first-child {
+        margin-bottom: 12px;
+        margin-right:12px;
+      }
+      
+      .view-all .view-all-link:last-child {
+        margin-top: 12px;
+        margin-left: 12px;
+
+      }
+
+}
+
+/* END ADDED */
 
 .js .js--hidden {
     display: none
@@ -30580,17 +30664,6 @@ img {
 
   
   
-  
-
-  /* @media (min-width: 768px) {
-    .my-header .my-header__heading, .my-article-header .my-article-header__heading {
-        margin-left: 25%;
-        margin-right: 25%;
-        text-align: center;
-        width: 50%;
-        margin: 0 auto;
-    }
-} */
 
 
 
