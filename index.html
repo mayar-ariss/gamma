@@ -984,7 +984,7 @@
 
 
   <script>
-   const canvas = document.getElementById('seismograph-canvas');
+const canvas = document.getElementById('seismograph-canvas');
 const ctx = canvas.getContext('2d');
 
 // Draw initial seismograph function as straight line
@@ -1040,6 +1040,43 @@ window.addEventListener('wheel', (event) => {
     }
   }
 });
+
+// Add touch event listener for scrolling down on mobile devices
+let startY;
+let endY;
+canvas.addEventListener('touchstart', (event) => {
+  startY = event.touches[0].clientY;
+});
+
+canvas.addEventListener('touchmove', (event) => {
+  endY = event.touches[0].clientY;
+  if (endY > startY) {
+    magnitude += 0.5;
+    counter = Math.min(magnitude / 5, 9.5);
+    counter = Number(counter.toFixed(1));
+    document.getElementById('counter').textContent = counter;
+
+    if (magnitude >= 60) {
+      document.getElementById('seismograph-container').style.display = 'none';
+      document.getElementById('seismograph-max').style.display = 'block';
+    }
+  }
+});
+
+// Add touch event listener for scrolling up on mobile devices
+canvas.addEventListener('touchmove', (event) => {
+  endY = event.touches[0].clientY;
+  if (endY < startY) {
+    magnitude -= 0.5;
+    counter = Math.max(magnitude / 5, 0);
+    counter = Number(counter.toFixed(1));
+    document.getElementById('counter').textContent = counter;
+    if (magnitude < 0) {
+      magnitude = 0;
+    }
+  }
+});
+
 
 // Animate seismograph function with noise
 function animate() {
