@@ -1002,11 +1002,12 @@ window.addEventListener('touchmove', handleScroll);
 
 function handleScroll(event) {
   let delta = event.deltaY;
-
-  if (event.type === 'touchmove') {
+  
+   if (event.type === 'touchmove') {
     // If touch event, get the first touch position and use it to determine scrolling direction
-    delta = event.changedTouches[0].clientY - startY;
-    startY = event.changedTouches[0].clientY;
+    const touchY = event.changedTouches[0].clientY;
+    delta = touchY > startY ? -1 : 1;
+    startY = touchY;
   }
 
   if (delta < 0) {
