@@ -930,7 +930,7 @@
 			align-items: center;
 			justify-content: center;
 
-		}
+  		}
 
 
 		.seismograph-max {
@@ -1055,11 +1055,15 @@ function animate() {
     const y = i;
     ctx.lineTo(x, y);
   }
+  
+  ctx.strokeStyle = 'red'; // Set stroke style to red
+  
   ctx.stroke();
 
   // Request next frame
   requestAnimationFrame(animate);
 }
+
 
 // Start animation loop
 animate();
