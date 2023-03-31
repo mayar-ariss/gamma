@@ -979,12 +979,12 @@
     <p class="hero-caption positionhero">Scroll <br> <span style='font-size:40px;'>&#8595;</span></p>
     <canvas id="seismograph-canvas" width="500" height="1000"></canvas>
     <span class= "hero-caption" style="font-size: 24px; position: fixed; bottom: 70px; right: 20px;">Magnitude</span>
-    <span id="counter" class= "hero-caption" style="font-size: 40px; position: fixed; bottom: 20px; right: 20px;">0</span>
+    <span id="counter" class= "hero-caption" style="font-size: 24px; position: fixed; bottom: 20px; right: 20px;">0</span>
   </div>
 
 
   <script>
-const canvas = document.getElementById('seismograph-canvas');
+   const canvas = document.getElementById('seismograph-canvas');
 const ctx = canvas.getContext('2d');
 
 // Draw initial seismograph function as straight line
@@ -1019,32 +1019,9 @@ window.addEventListener('scroll', () => {
   }
 });
 
-// Add wheel event listener for scrolling up on non-touch devices
+// Add scroll event listener for scrolling up
 window.addEventListener('wheel', (event) => {
   if (event.deltaY < 0) {
-    // Decrement magnitude as user scrolls up
-    magnitude -= 0.5;
-
-    // Decrement counter as user scrolls up, down to a minimum of 0
-    counter = Math.max(magnitude / 5, 0);
-
-    // Round counter to the nearest decimal
-    counter = Number(counter.toFixed(1));
-
-    // Update counter display
-    document.getElementById('counter').textContent = counter;
-
-    // Clamp magnitude to 0
-    if (magnitude < 0) {
-      magnitude = 0;
-    }
-  }
-});
-
-// Add touchmove event listener for scrolling up on touch devices
-canvas.addEventListener('touchmove', (event) => {
-  event.preventDefault(); // Disable default touchmove behavior
-  if (event.touches[0].clientY < event.changedTouches[0].clientY) {
     // Decrement magnitude as user scrolls up
     magnitude -= 0.5;
 
@@ -1068,6 +1045,7 @@ canvas.addEventListener('touchmove', (event) => {
 function animate() {
   // Clear canvas before drawing updated seismograph function
   ctx.clearRect(0, 0, canvas.width, canvas.height);
+
   // Draw updated seismograph function with noise
   ctx.beginPath();
   ctx.moveTo(canvas.width / 2, 0);
