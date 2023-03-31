@@ -1050,8 +1050,8 @@ function animate() {
   ctx.beginPath();
   ctx.moveTo(canvas.width / 2, 0);
   for (let i = 0; i < canvas.height; i++) {
-    const noise = Math.random() * magnitude * 3;
-    const x = canvas.width / 2 + (Math.sin(i * 0.1) * Math.cos(i * 0.01)) * magnitude * 3 + noise;
+    const noise = Math.random() * magnitude * 1.1;
+    const x = canvas.width / 2 + (Math.sin(i * 0.1) * Math.cos(i * 0.01)) * magnitude * 1.1 + noise;
     const y = i;
     ctx.lineTo(x, y);
   }
