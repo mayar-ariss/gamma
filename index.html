@@ -976,15 +976,15 @@
 <body id="pagetop" class="home page-template-default page page-id-629">
  
   <div id="seismograph-container">
-    <p class="hero-caption positionhero" >Scroll <br> <span style='font-size:40px;'>&#8595;</span>
-    </p>
+    <p class="hero-caption positionhero">Scroll <br> <span style='font-size:40px;'>&#8595;</span></p>
     <canvas id="seismograph-canvas" width="500" height="1000"></canvas>
-
+    <span class= "hero-caption" style="font-size: 24px; position: fixed; bottom: 70px; right: 20px;">Magnitude</span>
+    <span id="counter" class= "hero-caption" style="font-size: 40px; position: fixed; bottom: 20px; right: 20px;">0</span>
   </div>
 
 
   <script>
-const canvas = document.getElementById('seismograph-canvas');
+   const canvas = document.getElementById('seismograph-canvas');
 const ctx = canvas.getContext('2d');
 
 // Draw initial seismograph function as straight line
@@ -993,13 +993,23 @@ ctx.moveTo(canvas.width / 2, 0);
 ctx.lineTo(canvas.width / 2, canvas.height);
 ctx.stroke();
 
-// Set initial magnitude to 0
+// Set initial magnitude to 0 and counter to 0
 let magnitude = 0;
+let counter = 0;
 
 // Add scroll event listener for scrolling down
 window.addEventListener('scroll', () => {
   // Increase magnitude as user scrolls down
-  magnitude += 1;
+  magnitude += 0.5;
+
+  // Increase counter as user scrolls down, up to a maximum of 12
+  counter = Math.min(magnitude / 5, 9.5);
+  
+  // Round counter to the nearest decimal
+  counter = Number(counter.toFixed(1));
+
+  // Update counter display
+  document.getElementById('counter').textContent = counter;
 
   // Check if magnitude has reached maximum
   if (magnitude >= 60) {
@@ -1013,7 +1023,16 @@ window.addEventListener('scroll', () => {
 window.addEventListener('wheel', (event) => {
   if (event.deltaY < 0) {
     // Decrement magnitude as user scrolls up
-    magnitude -= 1;
+    magnitude -= 0.5;
+
+    // Decrement counter as user scrolls up, down to a minimum of 0
+    counter = Math.max(magnitude / 5, 0);
+
+    // Round counter to the nearest decimal
+    counter = Number(counter.toFixed(1));
+
+    // Update counter display
+    document.getElementById('counter').textContent = counter;
 
     // Clamp magnitude to 0
     if (magnitude < 0) {
@@ -1045,7 +1064,8 @@ function animate() {
 // Start animation loop
 animate();
 
-  </script>
+    
+    </script>
 
 
 
