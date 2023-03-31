@@ -914,9 +914,146 @@
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="msapplication-config" content="/wp-content/themes/gsd-wp-theme/favicons/browserconfig.xml?v=jw722yl4y4">
   <meta name="theme-color" content="#ffffff">
+
+
+  <style>
+		#seismograph-container {
+			height: 100vh;
+			background-color: white;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 9999;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+		}
+
+
+		.seismograph-max {
+			display: none;
+		}
+
+		.seismograph-intense {
+			background-color: red;
+		}
+
+		.section {
+			height: 100vh;
+			display: none;
+		}
+
+		.section.active {
+			display: block;
+		}
+
+    #seismograph-container p {
+		font-size: 24px;
+		line-height: 1.5;
+    padding-left: 70px;
+	}
+
+  .positionhero {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  margin-top: -10px; /* adjust this value to move the text closer or farther from the line */
+}
+
+
+	</style>
+
 </head>
 
+
+
+
+
 <body id="pagetop" class="home page-template-default page page-id-629">
+ 
+  <div id="seismograph-container">
+    <p class="hero-caption positionhero" >Scroll <br> <span style='font-size:40px;'>&#8595;</span>
+    </p>
+    <canvas id="seismograph-canvas" width="500" height="1000"></canvas>
+
+  </div>
+
+
+  <script>
+const canvas = document.getElementById('seismograph-canvas');
+const ctx = canvas.getContext('2d');
+
+// Draw initial seismograph function as straight line
+ctx.beginPath();
+ctx.moveTo(canvas.width / 2, 0);
+ctx.lineTo(canvas.width / 2, canvas.height);
+ctx.stroke();
+
+// Set initial magnitude to 0
+let magnitude = 0;
+
+// Add scroll event listener for scrolling down
+window.addEventListener('scroll', () => {
+  // Increase magnitude as user scrolls down
+  magnitude += 1;
+
+  // Check if magnitude has reached maximum
+  if (magnitude >= 60) {
+    // Hide seismograph and show message
+    document.getElementById('seismograph-container').style.display = 'none';
+    document.getElementById('seismograph-max').style.display = 'block';
+  }
+});
+
+// Add scroll event listener for scrolling up
+window.addEventListener('wheel', (event) => {
+  if (event.deltaY < 0) {
+    // Decrement magnitude as user scrolls up
+    magnitude -= 1;
+
+    // Clamp magnitude to 0
+    if (magnitude < 0) {
+      magnitude = 0;
+    }
+  }
+});
+
+// Animate seismograph function with noise
+function animate() {
+  // Clear canvas before drawing updated seismograph function
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Draw updated seismograph function with noise
+  ctx.beginPath();
+  ctx.moveTo(canvas.width / 2, 0);
+  for (let i = 0; i < canvas.height; i++) {
+    const noise = Math.random() * magnitude * 1.2;
+    const x = canvas.width / 2 + (Math.sin(i * 0.1) * Math.cos(i * 0.01)) * magnitude * 3 + noise;
+    const y = i;
+    ctx.lineTo(x, y);
+  }
+  ctx.stroke();
+
+  // Request next frame
+  requestAnimationFrame(animate);
+}
+
+// Start animation loop
+animate();
+
+  </script>
+
+
+
+
+  
+
+
+
 
   <div id="pjax-announce" aria-live="assertive" class="visually-hidden"></div>
 
@@ -985,7 +1122,14 @@
       </header> <!-- /.l--header -->
 
 
+
+      
+
+
+
+      
       <section class="l--content" id="main" role="main">
+        
 
         <div class="home-header-container ">
           <header class="base-header feature-header topic-feature feature-theme--light-gray">
@@ -1120,12 +1264,6 @@
 
           </header>
         </div> <!-- /.home-header-container -->
-
-
-
-
-
-
 
 
           <div class="base-header-inner article-header-inner center-full-header">
