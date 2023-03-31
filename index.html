@@ -1012,7 +1012,7 @@ window.addEventListener('scroll', () => {
   document.getElementById('counter').textContent = counter;
 
   // Check if magnitude has reached maximum
-  if (magnitude >= 50) {
+  if (magnitude >= 70) {
     // Hide seismograph and show message
     document.getElementById('seismograph-container').style.display = 'none';
     document.getElementById('seismograph-max').style.display = 'block';
@@ -1051,7 +1051,7 @@ function animate() {
   ctx.moveTo(canvas.width / 2, 0);
   for (let i = 0; i < canvas.height; i++) {
     const noise = Math.random() * magnitude * 1.1;
-    const x = canvas.width / 2 + (Math.sin(i * 0.1) * Math.cos(i * 0.01)) * magnitude * 1.1 + noise;
+    const x = canvas.width / 2 + (Math.sin(i * 0.1) * Math.cos(i * 0.01)) * magnitude * 3 + noise;
     const y = i;
     ctx.lineTo(x, y);
   }
