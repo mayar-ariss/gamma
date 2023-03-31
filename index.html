@@ -981,89 +981,86 @@
     <span class= "hero-caption" style="font-size: 24px; position: fixed; bottom: 70px; right: 20px;">Magnitude</span>
     <span id="counter" class= "hero-caption" style="font-size: 24px; position: fixed; bottom: 20px; right: 20px;">0</span>
   </div>
-
-
+  
   <script>
-   const canvas = document.getElementById('seismograph-canvas');
-const ctx = canvas.getContext('2d');
-
-// Draw initial seismograph function as straight line
-ctx.beginPath();
-ctx.moveTo(canvas.width / 2, 0);
-ctx.lineTo(canvas.width / 2, canvas.height);
-ctx.stroke();
-
-// Set initial magnitude to 0 and counter to 0
-let magnitude = 0;
-let counter = 0;
-
-// Add scroll event listener for scrolling down
-window.addEventListener('scroll', () => {
-  // Increase magnitude as user scrolls down
-  magnitude += 0.7;
-
-  // Increase counter as user scrolls down, up to a maximum of 12
-  counter = Math.min(magnitude / 5, 9.5);
+    const canvas = document.getElementById('seismograph-canvas');
+    const ctx = canvas.getContext('2d');
   
-  // Round counter to the nearest decimal
-  counter = Number(counter.toFixed(1));
-
-  // Update counter display
-  document.getElementById('counter').textContent = counter;
-
-  // Check if magnitude has reached maximum
-  if (magnitude >= 70) {
-    // Hide seismograph and show message
-    document.getElementById('seismograph-container').style.display = 'none';
-    document.getElementById('seismograph-max').style.display = 'block';
-  }
-});
-
-// Add scroll event listener for scrolling up
-window.addEventListener('wheel', (event) => {
-  if (event.deltaY < 0) {
-    // Decrement magnitude as user scrolls up
-    magnitude -= 0.7;
-
-    // Decrement counter as user scrolls up, down to a minimum of 0
-    counter = Math.max(magnitude / 5, 0);
-
-    // Round counter to the nearest decimal
-    counter = Number(counter.toFixed(1));
-
-    // Update counter display
-    document.getElementById('counter').textContent = counter;
-
-    // Clamp magnitude to 0
-    if (magnitude < 0) {
-      magnitude = 0;
+    // Draw initial seismograph function as straight line
+    ctx.beginPath();
+    ctx.moveTo(canvas.width / 2, 0);
+    ctx.lineTo(canvas.width / 2, canvas.height);
+    ctx.stroke();
+  
+    // Set initial magnitude to 0 and counter to 0
+    let magnitude = 0;
+    let counter = 0;
+  
+    // Add wheel event listener for scrolling up and down
+    window.addEventListener('wheel', (event) => {
+      if (event.deltaY < 0) {
+        // Decrement magnitude as user scrolls up
+        magnitude -= 0.7;
+  
+        // Decrement counter as user scrolls up, down to a minimum of 0
+        counter = Math.max(magnitude / 5, 0);
+  
+        // Round counter to the nearest decimal
+        counter = Number(counter.toFixed(1));
+  
+        // Update counter display
+        document.getElementById('counter').textContent = counter;
+  
+        // Clamp magnitude to 0
+        if (magnitude < 0) {
+          magnitude = 0;
+        }
+      } else {
+        // Increase magnitude as user scrolls down
+        magnitude += 0.7;
+  
+        // Increase counter as user scrolls down, up to a maximum of 12
+        counter = Math.min(magnitude / 5, 9.5);
+  
+        // Round counter to the nearest decimal
+        counter = Number(counter.toFixed(1));
+  
+        // Update counter display
+        document.getElementById('counter').textContent = counter;
+  
+        // Check if magnitude has reached maximum
+        if (magnitude >= 70) {
+          // Hide seismograph and show message
+          document.getElementById('seismograph-container').style.display = 'none';
+          document.getElementById('seismograph-max').style.display = 'block';
+        }
+      }
+  
+      event.preventDefault(); // Prevent default scrolling behavior
+    });
+  
+    // Animate seismograph function with noise
+    function animate() {
+      // Clear canvas before drawing updated seismograph function
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
+  
+      // Draw updated seismograph function with noise
+      ctx.beginPath();
+      ctx.moveTo(canvas.width / 2, 0);
+      for (let i = 0; i < canvas.height; i++) {
+        const noise = Math.random() * magnitude * 1.1;
+        const x = canvas.width / 2 + (Math.sin(i * 0.1) * Math.cos(i * 0.01)) * magnitude * 3 + noise;
+        const y = i;
+        ctx.lineTo(x, y);
+      }
+  
+      ctx.strokeStyle = 'red'; // Set stroke style to red
+  
+      ctx.stroke();
+  
+      // Request next frame
+      requestAnimationFrame(animate);
     }
-  }
-});
-
-// Animate seismograph function with noise
-function animate() {
-  // Clear canvas before drawing updated seismograph function
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  // Draw updated seismograph function with noise
-  ctx.beginPath();
-  ctx.moveTo(canvas.width / 2, 0);
-  for (let i = 0; i < canvas.height; i++) {
-    const noise = Math.random() * magnitude * 1.1;
-    const x = canvas.width / 2 + (Math.sin(i * 0.1) * Math.cos(i * 0.01)) * magnitude * 3 + noise;
-    const y = i;
-    ctx.lineTo(x, y);
-  }
-  
-  ctx.strokeStyle = 'red'; // Set stroke style to red
-  
-  ctx.stroke();
-
-  // Request next frame
-  requestAnimationFrame(animate);
-}
-
 
 // Start animation loop
 animate();
