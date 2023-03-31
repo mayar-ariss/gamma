@@ -30544,7 +30544,7 @@ img {
   top: 0;
   right: -12px; /* Adjust the position of the line as needed */
   width: 1px;
-  height: 700px;
+  height: 690px;
   background-color: #000000;
 }
 
@@ -30629,6 +30629,7 @@ img {
     .my-slideshow-container::-webkit-scrollbar-thumb:hover {
       background-color: #555;
     }
+    
   }
   
 
