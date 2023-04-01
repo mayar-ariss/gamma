@@ -929,6 +929,7 @@
 			display: flex;
 			align-items: center;
 			justify-content: center;
+      overflow-y: scroll;
 
   		}
 
@@ -1012,7 +1013,7 @@ function handleScroll(event) {
 
   if (delta < 0) {
     // Decrement magnitude as user scrolls up
-    magnitude -= 0.7;
+    magnitude -= 0.5;
 
     // Decrement counter as user scrolls up, down to a minimum of 0
     counter = Math.max(magnitude / 5, 0);
@@ -1029,7 +1030,7 @@ function handleScroll(event) {
     }
   } else {
     // Increase magnitude as user scrolls down
-    magnitude += 0.7;
+    magnitude += 0.5;
 
     // Increase counter as user scrolls down, up to a maximum of 12
     counter = Math.min(magnitude / 5, 9.5);
@@ -1067,7 +1068,7 @@ function animate() {
   ctx.beginPath();
   ctx.moveTo(canvas.width / 2, 0);
   for (let i = 0; i < canvas.height; i++) {
-    const noise = Math.random() * magnitude * 1.1;
+    const noise = Math.random() * magnitude ;
     const x = canvas.width / 2 + (Math.sin(i * 0.1) * Math.cos(i * 0.01)) * magnitude * 3 + noise;
     const y = i;
     ctx.lineTo(x, y);
