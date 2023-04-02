@@ -1031,8 +1031,8 @@ function handleScroll(event) {
     // Increase magnitude as user scrolls down
     magnitude += 0.5;
 
-    // Increase counter as user scrolls down, up to a maximum of 12
-    counter = Math.min(magnitude / 5, 9.5);
+    // Increase counter as user scrolls down, up to a maximum of 9.5
+    counter = Math.min(magnitude / 7, 9.5);
 
     // Round counter to the nearest decimal
     counter = Number(counter.toFixed(1));
@@ -1041,7 +1041,7 @@ function handleScroll(event) {
     document.getElementById('counter').textContent = counter;
 
     // Check if magnitude has reached maximum
-    if (magnitude >= 70) {
+    if (magnitude >= 66.5) {
       // Hide seismograph and show message
       document.getElementById('seismograph-container').style.display = 'none';
       document.getElementById('seismograph-max').style.display = 'block';
