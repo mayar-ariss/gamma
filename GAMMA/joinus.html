@@ -40,6 +40,9 @@
     <meta name="google-site-verification" content="a-disable-UA-80325496-2">
     <!-- / Yoast SEO Premium plugin. -->
 
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Pragma" content="no-cache">
+<meta http-equiv="Expires" content="0">
 
     <!-- This site uses the Google Analytics by MonsterInsights plugin v8.10.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
     <script src="//www.googletagmanager.com/gtag/js?id=UA-80325496-2" data-cfasync="false" data-wpfc-render="false"
@@ -615,8 +618,8 @@
             line-height: 1.6;
         }
     </style>
-    <link rel="stylesheet" id="gsd-theme-css" href="./css/style.css" type="text/css" media="screen">
-    <link rel="stylesheet" id="gsd-theme-print-css" href="./css/print.css" type="text/css" media="print">
+    <link rel="stylesheet" id="gsd-theme-css" href="./css/style.css?v=1" type="text/css" media="screen">
+    <link rel="stylesheet" id="gsd-theme-print-css" href="./css/print.css?v=1" type="text/css" media="print">
     <script type="text/javascript"
         src="https://www.gsd.harvard.edu/wp-content/plugins/google-analytics-premium/assets/js/frontend-gtag.min.js?ver=8.10.0"
         id="monsterinsights-frontend-script-js"></script>
@@ -1073,54 +1076,6 @@
     </style>
 
 
-
-<script>
-    // Define a function to fetch the list of countries
-    async function fetchCountries() {
-        const response = await fetch('https://restcountries.com/v3.1/all');
-        const data = await response.json();
-        return data.map(country => country.name.common);
-    }
-
-    // Populate the country datalist element with the list of countries
-    const countryDatalist = document.getElementById('country_list');
-    fetchCountries().then(countries => {
-        countries.sort(); // Sort the countries alphabetically
-        countries.forEach(country => {
-            const option = document.createElement('option');
-            option.value = country;
-            countryDatalist.querySelector('select').appendChild(option);
-        });
-    });
-
-    function handleSubmit(event) {
-        event.preventDefault();
-        const form = document.querySelector('.contact-form');
-        const message = document.querySelector('.message');
-        form.classList.add('ty_hidden');
-        message.classList.remove('ty_hidden');
-    }
-
-    const form = document.querySelector('.contact-form');
-    const thankYouMessage = document.querySelector('.thank-you-message');
-
-    form.addEventListener('submit', (event) => {
-        event.preventDefault();
-
-        // Validate form here
-        if (form.checkValidity()) {
-            // Collapse form and show thank you message
-            form.style.display = 'none';
-            thankYouMessage.style.display = 'block';
-        } else {
-            // If form is invalid, show error message
-            alert('Please fill out all required fields and enter a valid email address.');
-        }
-    });
-</script>
-
-<link rel="preload" href="https://use.typekit.net/zqu8cde.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://use.typekit.net/zqu8cde.css"></noscript>
 
 
 </head>
@@ -1721,6 +1676,52 @@
                             </div>
 
                             
+<script>
+    // Define a function to fetch the list of countries
+    async function fetchCountries() {
+        const response = await fetch('https://restcountries.com/v3.1/all');
+        const data = await response.json();
+        return data.map(country => country.name.common);
+    }
+
+    // Populate the country datalist element with the list of countries
+    const countryDatalist = document.getElementById('country_list');
+    fetchCountries().then(countries => {
+        countries.sort(); // Sort the countries alphabetically
+        countries.forEach(country => {
+            const option = document.createElement('option');
+            option.value = country;
+            countryDatalist.querySelector('select').appendChild(option);
+        });
+    });
+
+    function handleSubmit(event) {
+        event.preventDefault();
+        const form = document.querySelector('.contact-form');
+        const message = document.querySelector('.message');
+        form.classList.add('ty_hidden');
+        message.classList.remove('ty_hidden');
+    }
+
+    const form = document.querySelector('.contact-form');
+    const thankYouMessage = document.querySelector('.thank-you-message');
+
+    form.addEventListener('submit', (event) => {
+        event.preventDefault();
+
+        // Validate form here
+        if (form.checkValidity()) {
+            // Collapse form and show thank you message
+            form.style.display = 'none';
+            thankYouMessage.style.display = 'block';
+        } else {
+            // If form is invalid, show error message
+            alert('Please fill out all required fields and enter a valid email address.');
+        }
+    });
+</script>
+
+
 
                         </div> <!-- /.page-body -->
 
