@@ -1469,17 +1469,17 @@ table,
 .color--program-box-shadow:focus,
 .program-list__item--link:focus,
 .flexbox-detailed-links-list__item--link:focus {
-    box-shadow: inset 10px 0 0 0 #fdf2ee
+    box-shadow: inset 10px 0 0 0 #CC3333
 }
 
 .color--background-gradient,
 .feature-header {
-    background: linear-gradient(to right, #fdf2ee, #fdf2ee 70%, #fcebe5 70%, #fcebe5)
+    background: linear-gradient(to right, #CC3333, #CC3333 70%, rgb(252, 235, 229) 70%, rgb(252, 235, 229)90% 1%))
 }
 
 .color--background-gradient-alt,
 .topic-feature {
-    background: linear-gradient(to right, #fdf2ee, #fdf2ee 50%, #fcebe5 50%, #fcebe5)
+    background: linear-gradient(to right, #CC3333, #CC3333 50%, #CC3333 50%, #CC3333)
 }
 
 .color--event-landing-gradient,
@@ -9430,7 +9430,7 @@ html .theme--miami input:focus[type="button"],
 
 .theme--miami .color--footer-background,
 .theme--miami .l--footer {
-    background-color: #ffc3d5
+    background-color: #CC3333
 }
 
 .theme--miami .color--footer-text,
@@ -9621,7 +9621,7 @@ h6 .theme--miami small,
 .flexbox-component-spacer-to-top.flexbox-theme--spot .theme--miami .flexbox-component__button-link:hover,
 .theme--miami .flexbox-component-spacer-to-top.flexbox-theme--spot .flexbox-component__button-link:focus,
 .flexbox-component-spacer-to-top.flexbox-theme--spot .theme--miami .flexbox-component__button-link:focus {
-    color: #ffc3d5
+    color: #CC3333
 }
 
 .theme--miami .color--spot-border,
@@ -9640,7 +9640,7 @@ h6 .theme--miami small,
 .flexbox-component-spacer-to-top.flexbox-theme--spot .theme--miami .flexbox-component__button-link:hover,
 .theme--miami .flexbox-component-spacer-to-top.flexbox-theme--spot .flexbox-component__button-link:focus,
 .flexbox-component-spacer-to-top.flexbox-theme--spot .theme--miami .flexbox-component__button-link:focus {
-    border-color: #ffc3d5
+    border-color: #CC3333
 }
 
 .theme--miami .color--spot-background,
@@ -9667,17 +9667,17 @@ h6 .theme--miami small,
 .flexbox-component-spacer-to-top.flexbox-theme--spot .theme--miami .section-heading,
 .theme--miami .flexbox-component-spacer-to-top.flexbox-theme--spot .flexbox-component__button-link,
 .flexbox-component-spacer-to-top.flexbox-theme--spot .theme--miami .flexbox-component__button-link {
-    background-color: #ffc3d5
+    background-color: #CC3333
 }
 
 .theme--miami .color--spot-fill,
 .theme--miami .footer__back-to-top--arrow {
-    fill: #ffc3d5
+    fill: #CC3333
 }
 
 .theme--miami .color--spot-stroke,
 .theme--miami .loading__rectangle {
-    stroke: #ffc3d5
+    stroke: #CC3333
 }
 
 .theme--miami .color--tint-background,
@@ -9732,7 +9732,7 @@ table .theme--miami thead,
 .flexbox-component-table-layout.flexbox-theme--tint .theme--miami .section-heading,
 .theme--miami .flexbox-component-table-layout article.flexbox-theme--tint .section-heading,
 .flexbox-component-table-layout article.flexbox-theme--tint .theme--miami .section-heading {
-    background-color: #ffc3d5
+    background-color: #CC3333
 }
 
 .theme--miami .color--tint-text,
@@ -9748,7 +9748,7 @@ table .theme--miami thead,
 .flexbox-component-spacer-to-top.flexbox-theme--tint .theme--miami .flexbox-component__button-link:hover,
 .theme--miami .flexbox-component-spacer-to-top.flexbox-theme--tint .flexbox-component__button-link:focus,
 .flexbox-component-spacer-to-top.flexbox-theme--tint .theme--miami .flexbox-component__button-link:focus {
-    color: #ffc3d5
+    color: #CC3333
 }
 
 .theme--miami .color--tint-border,
@@ -9764,7 +9764,7 @@ table .theme--miami thead,
 .flexbox-component-spacer-to-top.flexbox-theme--tint .theme--miami .flexbox-component__button-link:hover,
 .theme--miami .flexbox-component-spacer-to-top.flexbox-theme--tint .flexbox-component__button-link:focus,
 .flexbox-component-spacer-to-top.flexbox-theme--tint .theme--miami .flexbox-component__button-link:focus {
-    border-color: #ffc3d5
+    border-color: #CC3333
 }
 
 .theme--miami .color--lt-gray-text,
@@ -9874,7 +9874,7 @@ table .theme--miami thead,
 .theme--miami input:focus,
 .theme--miami select:focus,
 .theme--miami textarea:focus {
-    box-shadow: 0 0 4px 0 #ffc3d5
+    box-shadow: 0 0 4px 0 #CC3333
 }
 
 .theme--miami .color--table-shadow,
@@ -10000,7 +10000,7 @@ table .theme--miami thead,
 .flexbox-component-table-layout.flexbox-theme--lt-gray .theme--miami a:focus,
 .theme--miami .flexbox-component-table-layout article.flexbox-theme--lt-gray a:focus,
 .flexbox-component-table-layout article.flexbox-theme--lt-gray .theme--miami a:focus {
-    box-shadow: 0 1px 0 0 #ffc3d5
+    box-shadow: 0 1px 0 0 #CC3333
 }
 
 .theme--miami .color--box-shadow-hover-alt,
@@ -10079,7 +10079,7 @@ table .theme--miami thead,
 .theme--miami .base-tease__heading--link:focus,
 .theme--miami .base-tease__meta-item--category-link:focus,
 .theme--miami .base-tease__meta-item--link:focus {
-    box-shadow: 0 1px 0 0 #ffc3d5
+    box-shadow: 0 1px 0 0 #CC3333
 }
 
 .theme--miami .color--box-shadow-hover-alt-selected,
@@ -10107,7 +10107,7 @@ table .theme--miami thead,
 .theme--miami .feed-filter__radio:checked+.feed-filter__label--radio:focus,
 .theme--miami .feed-filter__checkbox:checked+.feed-filter__label--checkbox:focus,
 .theme--miami .feed-filter__label--checkbox-active:focus {
-    box-shadow: 0 2px 0 0 #ffc3d5
+    box-shadow: 0 2px 0 0 #CC3333
 }
 
 .theme--miami .color--footer-box-shadow-hover,
@@ -10129,7 +10129,7 @@ table .theme--miami thead,
 .footer-news-feed .theme--miami .base-tease__heading--link:focus,
 .theme--miami .footer-events-feed .base-tease__heading--link:focus,
 .footer-events-feed .theme--miami .base-tease__heading--link:focus {
-    box-shadow: 0 1px 0 0 #ffc3d5
+    box-shadow: 0 1px 0 0 #CC3333
 }
 
 .theme--miami .color--program-box-shadow:hover,
@@ -10138,17 +10138,17 @@ table .theme--miami thead,
 .theme--miami .color--program-box-shadow:focus,
 .theme--miami .program-list__item--link:focus,
 .theme--miami .flexbox-detailed-links-list__item--link:focus {
-    box-shadow: inset 10px 0 0 0 #ffc3d5
+    box-shadow: inset 10px 0 0 0 #CC3333
 }
 
 .theme--miami .color--background-gradient,
 .theme--miami .feature-header {
-    background: linear-gradient(to right, #ffc3d5, #ffc3d5 70%, #ffbed1 70%, #ffbed1)
+    background: linear-gradient(to right, #CC3333, #CC3333 70%, #ffbed1 70%, #ffbed1)
 }
 
 .theme--miami .color--background-gradient-alt,
 .theme--miami .topic-feature {
-    background: linear-gradient(to right, #ffc3d5, #ffc3d5 50%, #ffbed1 50%, #ffbed1)
+    background: linear-gradient(to right, #CC3333, #CC3333 50%, #ffbed1 50%, #ffbed1)
 }
 
 .theme--miami .color--event-landing-gradient,
@@ -12798,7 +12798,7 @@ table .theme--white thead,
 }
 
 .feature-theme--light-gray .footer__back-to-top--arrow {
-    fill: #f5f5f5 !important
+    fill: #CC3333 !important
 }
 
 .wrapper .feature-theme--red {
@@ -25813,7 +25813,7 @@ form .truncatable--show {
     .no-touchevents .gsd-map__marker-link:focus:focus,
     .gsd-map__marker--active .gsd-map__marker-link:hover,
     .gsd-map__marker--active .gsd-map__marker-link:focus {
-        box-shadow: 0 0 0 15px rgba(248, 189, 185, 0.15)
+        box-shadow: 0 0 0 15px #CC3333
     }
 }
 
