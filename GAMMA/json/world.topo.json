@@ -3579,7 +3579,8 @@
                         "iso-a3": "ITA",
                         "iso-a2": "IT",
                         "woe-id": "23424853",
-                        "continent": "Europe"
+                        "continent": "Europe",
+                        "value":0
                     }
                 },
                 {
@@ -3707,7 +3708,8 @@
                         "iso-a3": "CYP",
                         "iso-a2": "CY",
                         "woe-id": "-90",
-                        "continent": "Asia"
+                        "continent": "Asia",
+                        "value":1
                     }
                 },
                 {
