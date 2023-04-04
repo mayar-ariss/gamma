@@ -33,7 +33,7 @@
   <!-- / Yoast SEO Premium plugin. -->
 
 
-  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
 <meta http-equiv="Pragma" content="no-cache">
 <meta http-equiv="Expires" content="0">
 
@@ -1017,7 +1017,7 @@ function handleScroll(event) {
 
   if (delta < 0) {
     // Decrement magnitude as user scrolls up
-    magnitude -= 0.5;
+    magnitude -= 1;
 
     // Decrement counter as user scrolls up, down to a minimum of 0
     counter = Math.max(magnitude / 5.27, 0);
@@ -1034,7 +1034,7 @@ function handleScroll(event) {
     }
   } else {
     // Increase magnitude as user scrolls down
-    magnitude += 0.5;
+    magnitude += 1;
 
     // Increase counter as user scrolls down, up to a maximum of 9.5
     counter = Math.min(magnitude / 5.27, 9.5);
