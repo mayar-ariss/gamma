@@ -951,9 +951,6 @@
         src="/wp-content/themes/gsd-wp-theme/static/js/dist/3.d81c77e6eff7879e5ea8.js"></script>
 
 
-        <link rel="stylesheet" href="https://use.typekit.net/zqu8cde.css">
-
-
     <style>
         .globe_main {
             max-width: 1200px;
@@ -1007,10 +1004,6 @@
             box-sizing: border-box;
         }
 
-        body {
-            margin: 0;
-            background-color: #F0F0F0;
-        }
 
         .contact-form {
             max-width: 400px;
@@ -1066,11 +1059,11 @@
             background-color: #CC3333;
         }
 
-        .hidden {
+        .ty_hidden {
             display: none;
         }
 
-        .message {
+        .ty_message {
             background-color: #FFFFFF;
             border: 1px solid #f1f1f1;
             padding: 20px;
@@ -1104,8 +1097,8 @@
         event.preventDefault();
         const form = document.querySelector('.contact-form');
         const message = document.querySelector('.message');
-        form.classList.add('hidden');
-        message.classList.remove('hidden');
+        form.classList.add('ty_hidden');
+        message.classList.remove('ty_hidden');
     }
 
     const form = document.querySelector('.contact-form');
@@ -1126,6 +1119,8 @@
     });
 </script>
 
+<link rel="preload" href="https://use.typekit.net/zqu8cde.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://use.typekit.net/zqu8cde.css"></noscript>
 
 
 </head>
@@ -1720,7 +1715,7 @@
                                 <button type="submit">Submit</button>
                             </form>
 
-                            <div class="message hidden">
+                            <div class="message ty_hidden">
                                 <h2>Thank you!</h2>
                                 <p>We will contact you soon.</p>
                             </div>
