@@ -1640,46 +1640,6 @@
 
 
                             
-
-
-
-                            <p class="base-intro guide-intro">To support our action, we encourage you to join our
-                                community by completing the form below. Contact us <a href="mailto:mayar313@mit.com"
-                                    rel="noopener">directly</a> if you are interested in joining the team.
-
-                            </p>
-
-                            <br>
-
-                            <form action="https://formsubmit.co/YOUR_FORMSUBMIT_EMAIL_HERE" method="POST"
-                                onsubmit="handleSubmit(event)" class="contact-form">
-                                <label for="form_name">Name:</label>
-                                <input type="form_text" id="form_name" name="form_name" required>
-
-                                <label for="form_surname">Surname:</label>
-                                <input type="form_text" id="form_surname" name="form_surname" required>
-
-                                <label for="form_country">Country:</label>
-                                <input type="form_text" id="form_country" name="form_country" list="country_list"
-                                    required>
-                                <datalist id="country_list">
-                                    <select>
-                                        <option value="" disabled>Select your country</option>
-                                    </select>
-                                </datalist>
-
-                                <label for="form_email">Email:</label>
-                                <input type="form_email" id="form_email" name="form_email" required
-                                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
-
-                                <button type="form_submit">Submit</button>
-                            </form>
-
-                            <div class="message hidden">
-                                <h2>Thank you!</h2>
-                                <p>We will contact you soon.</p>
-                            </div>
-
                             <script>
                                 // Define a function to fetch the list of countries
                                 async function fetchCountries() {
@@ -1725,6 +1685,46 @@
                                 });
                             </script>
 
+
+
+                            <p class="base-intro guide-intro">To support our action, we encourage you to join our
+                                community by completing the form below. Contact us <a href="mailto:mayar313@mit.com"
+                                    rel="noopener">directly</a> if you are interested in joining the team.
+
+                            </p>
+
+                            <br>
+
+                            <form action="https://formsubmit.co/YOUR_FORMSUBMIT_EMAIL_HERE" method="POST"
+                                onsubmit="handleSubmit(event)" class="contact-form">
+                                <label for="form_name">Name:</label>
+                                <input type="form_text" id="form_name" name="form_name" required>
+
+                                <label for="form_surname">Surname:</label>
+                                <input type="form_text" id="form_surname" name="form_surname" required>
+
+                                <label for="form_country">Country:</label>
+                                <input type="form_text" id="form_country" name="form_country" list="country_list"
+                                    required>
+                                <datalist id="country_list">
+                                    <select>
+                                        <option value="" disabled>Select your country</option>
+                                    </select>
+                                </datalist>
+
+                                <label for="form_email">Email:</label>
+                                <input type="form_email" id="form_email" name="form_email" required
+                                    pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
+
+                                <button type="form_submit">Submit</button>
+                            </form>
+
+                            <div class="message hidden">
+                                <h2>Thank you!</h2>
+                                <p>We will contact you soon.</p>
+                            </div>
+
+                            
 
 
 
