@@ -1016,14 +1016,15 @@
       background-color: #F0F0F0;
     }
 
-    form {
-      max-width: 400px;
-      margin: 50px auto;
-      padding: 20px;
-      background-color: #FFFFFF;
-      border-radius: 0;
-      border: 1px solid #f1f1f1;
-    }
+    .contact-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background-color: #FFFFFF;
+  border-radius: 0;
+  border: 1px solid #f1f1f1;
+}
+
 
     label {
       display: inline-block;
@@ -1187,7 +1188,7 @@
                                 <script>
                                     function handleSubmit(event) {
                                       event.preventDefault();
-                                      const form = document.querySelector('form');
+                                      const form = document.querySelector('.contact-form');
                                       const message = document.querySelector('.message');
                                       form.classList.add('hidden');
                                       message.classList.remove('hidden');
@@ -1195,10 +1196,10 @@
                                   </script>
 
 <script>
-    const form = document.querySelector('form');
+    const form = document.querySelector('.contact-form');
     const thankYouMessage = document.querySelector('.thank-you-message');
   
-    form.addEventListener('submit', (event) => {
+    form.addEventListener('form_submit', (event) => {
       event.preventDefault();
   
       // Validate form here
@@ -1222,7 +1223,7 @@
 
                                 <br>
 
-                                <form action="https://formsubmit.co/YOUR_FORMSUBMIT_EMAIL_HERE" method="POST" onsubmit="handleSubmit(event)">
+                                <form action="https://formsubmit.co/YOUR_FORMSUBMIT_EMAIL_HERE" method="POST" onsubmit="handleSubmit(event)" class="contact-form">
                                     <label for="form_name">Name:</label>
                                     <input type="form_text" id="form_name" name="form_name" required>
                                   
@@ -1240,7 +1241,7 @@
                                     <label for="form_email">Email:</label>
                                     <input type="form_email" id="form_email" name="form_email" required pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$">
                                   
-                                    <button type="submit">Submit</button>
+                                    <button type="form_submit">Submit</button>
                                   </form>
 
                                   <div class="message hidden">
