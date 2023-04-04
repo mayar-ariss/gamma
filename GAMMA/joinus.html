@@ -1680,53 +1680,7 @@
                                 <p>We will contact you soon.</p>
                             </div>
 
-                            <script>
-                                // Define a function to fetch the list of countries
-                                async function fetchCountries() {
-                                    const response = await fetch('https://restcountries.com/v3.1/all');
-                                    const data = await response.json();
-                                    return data.map(country => country.name.common);
-                                }
-
-                                // Populate the country datalist element with the list of countries
-                                const countryDatalist = document.getElementById('country_list');
-                                fetchCountries().then(countries => {
-                                    countries.sort(); // Sort the countries alphabetically
-                                    countries.forEach(country => {
-                                        const option = document.createElement('option');
-                                        option.value = country;
-                                        countryDatalist.querySelector('select').appendChild(option);
-                                    });
-                                });
-
-                                function handleSubmit(event) {
-                                    event.preventDefault();
-                                    const form = document.querySelector('.contact-form');
-                                    const message = document.querySelector('.message');
-                                    form.classList.add('hidden');
-                                    message.classList.remove('hidden');
-                                }
-
-                                const form = document.querySelector('.contact-form');
-                                const thankYouMessage = document.querySelector('.thank-you-message');
-
-                                form.addEventListener('submit', (event) => {
-                                    event.preventDefault();
-
-                                    // Validate form here
-                                    if (form.checkValidity()) {
-                                        // Collapse form and show thank you message
-                                        form.style.display = 'none';
-                                        thankYouMessage.style.display = 'block';
-                                    } else {
-                                        // If form is invalid, show error message
-                                        alert('Please fill out all required fields and enter a valid email address.');
-                                    }
-                                });
-                            </script>
-
-
-
+                            
 
                         </div> <!-- /.page-body -->
 
@@ -2193,6 +2147,52 @@
                 <!-- Algolia branding has been removed -->
             </div>
         </span></span>
+
+        <script>
+            // Define a function to fetch the list of countries
+            async function fetchCountries() {
+                const response = await fetch('https://restcountries.com/v3.1/all');
+                const data = await response.json();
+                return data.map(country => country.name.common);
+            }
+
+            // Populate the country datalist element with the list of countries
+            const countryDatalist = document.getElementById('country_list');
+            fetchCountries().then(countries => {
+                countries.sort(); // Sort the countries alphabetically
+                countries.forEach(country => {
+                    const option = document.createElement('option');
+                    option.value = country;
+                    countryDatalist.querySelector('select').appendChild(option);
+                });
+            });
+
+            function handleSubmit(event) {
+                event.preventDefault();
+                const form = document.querySelector('.contact-form');
+                const message = document.querySelector('.message');
+                form.classList.add('hidden');
+                message.classList.remove('hidden');
+            }
+
+            const form = document.querySelector('.contact-form');
+            const thankYouMessage = document.querySelector('.thank-you-message');
+
+            form.addEventListener('submit', (event) => {
+                event.preventDefault();
+
+                // Validate form here
+                if (form.checkValidity()) {
+                    // Collapse form and show thank you message
+                    form.style.display = 'none';
+                    thankYouMessage.style.display = 'block';
+                } else {
+                    // If form is invalid, show error message
+                    alert('Please fill out all required fields and enter a valid email address.');
+                }
+            });
+        </script>
+
 </body>
 
 </html>
