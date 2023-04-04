@@ -1639,34 +1639,7 @@
                         <div class="base-body page-body">
 
 
-                            <script>
-                                function handleSubmit(event) {
-                                    event.preventDefault();
-                                    const form = document.querySelector('.contact-form');
-                                    const message = document.querySelector('.message');
-                                    form.classList.add('hidden');
-                                    message.classList.remove('hidden');
-                                }
-                            </script>
-
-                            <script>
-                                const form = document.querySelector('.contact-form');
-                                const thankYouMessage = document.querySelector('.thank-you-message');
-
-                                form.addEventListener('form_submit', (event) => {
-                                    event.preventDefault();
-
-                                    // Validate form here
-                                    if (form.checkValidity()) {
-                                        // Collapse form and show thank you message
-                                        form.style.display = 'none';
-                                        thankYouMessage.style.display = 'block';
-                                    } else {
-                                        // If form is invalid, show error message
-                                        alert('Please fill out all required fields and enter a valid email address.');
-                                    }
-                                });
-                            </script>
+                            
 
 
 
@@ -1724,6 +1697,31 @@
                                         option.value = country;
                                         countryDatalist.querySelector('select').appendChild(option);
                                     });
+                                });
+
+                                function handleSubmit(event) {
+                                    event.preventDefault();
+                                    const form = document.querySelector('.contact-form');
+                                    const message = document.querySelector('.message');
+                                    form.classList.add('hidden');
+                                    message.classList.remove('hidden');
+                                }
+
+                                const form = document.querySelector('.contact-form');
+                                const thankYouMessage = document.querySelector('.thank-you-message');
+
+                                form.addEventListener('form_submit', (event) => {
+                                    event.preventDefault();
+
+                                    // Validate form here
+                                    if (form.checkValidity()) {
+                                        // Collapse form and show thank you message
+                                        form.style.display = 'none';
+                                        thankYouMessage.style.display = 'block';
+                                    } else {
+                                        // If form is invalid, show error message
+                                        alert('Please fill out all required fields and enter a valid email address.');
+                                    }
                                 });
                             </script>
 
