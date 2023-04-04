@@ -1095,7 +1095,7 @@ textarea[disabled],
 .flexbox-component-accordion.flexbox-theme--spot .flexbox-component__button-link:focus,
 .flexbox-component-spacer-to-top.flexbox-theme--spot .flexbox-component__button-link:hover,
 .flexbox-component-spacer-to-top.flexbox-theme--spot .flexbox-component__button-link:focus {
-    color: #f8bdb9
+    color: #CC3333
 }
 
 .color--spot-border,
@@ -1108,7 +1108,7 @@ select:focus:invalid,
 .flexbox-component-accordion.flexbox-theme--spot .flexbox-component__button-link:focus,
 .flexbox-component-spacer-to-top.flexbox-theme--spot .flexbox-component__button-link:hover,
 .flexbox-component-spacer-to-top.flexbox-theme--spot .flexbox-component__button-link:focus {
-    border-color: #f8bdb9
+    border-color: #CC3333
 }
 
 .color--spot-background,
@@ -1125,17 +1125,17 @@ select:focus:invalid,
 .flexbox-component-spacer-to-top.flexbox-theme--spot,
 .flexbox-component-spacer-to-top.flexbox-theme--spot .section-heading,
 .flexbox-component-spacer-to-top.flexbox-theme--spot .flexbox-component__button-link {
-    background-color: #f8bdb9
+    background-color: #CC3333
 }
 
 .color--spot-fill,
 .footer__back-to-top--arrow {
-    fill: #f8bdb9
+    fill: #CC3333
 }
 
 .color--spot-stroke,
 .loading__rectangle {
-    stroke: #f8bdb9
+    stroke: #CC3333
 }
 
 .color--tint-background,
@@ -1269,7 +1269,7 @@ textarea:hover:focus,
 input:focus,
 select:focus,
 textarea:focus {
-    box-shadow: 0 0 4px 0 #f8bdb9
+    box-shadow: 0 0 4px 0 #CC3333
 }
 
 .color--table-shadow,
@@ -1343,7 +1343,7 @@ table,
 .flexbox-component-table-layout article.flexbox-theme--white a:focus,
 .flexbox-component-table-layout.flexbox-theme--lt-gray a:focus,
 .flexbox-component-table-layout article.flexbox-theme--lt-gray a:focus {
-    box-shadow: 0 1px 0 0 #f8bdb9
+    box-shadow: 0 1px 0 0 #CC3333
 }
 
 .color--box-shadow-hover-alt,
@@ -1419,7 +1419,7 @@ table,
 .base-tease__meta-item--category-link:focus,
 .base-tease__meta-item--link:focus,
 .base-body .l--post-list-list .base-tease__heading--link:focus {
-    box-shadow: 0 1px 0 0 #f8bdb9
+    box-shadow: 0 1px 0 0 #CC3333
 }
 
 .color--box-shadow-hover-alt-selected,
@@ -1444,7 +1444,7 @@ table,
 .feed-filter__radio:checked+.feed-filter__label--radio:focus,
 .feed-filter__checkbox:checked+.feed-filter__label--checkbox:focus,
 .feed-filter__label--checkbox-active:focus {
-    box-shadow: 0 2px 0 0 #f8bdb9
+    box-shadow: 0 2px 0 0 #CC3333
 }
 
 .color--footer-box-shadow-hover,
@@ -1460,7 +1460,7 @@ table,
 .color--footer-box-shadow-hover:focus,
 .footer-news-feed .base-tease__heading--link:focus,
 .footer-events-feed .base-tease__heading--link:focus {
-    box-shadow: 0 1px 0 0 #f8bdb9
+    box-shadow: 0 1px 0 0 #CC3333
 }
 
 .color--program-box-shadow:hover,
@@ -11788,7 +11788,7 @@ h6 .theme--white small,
 .flexbox-component-spacer-to-top.flexbox-theme--spot .theme--white .flexbox-component__button-link:hover,
 .theme--white .flexbox-component-spacer-to-top.flexbox-theme--spot .flexbox-component__button-link:focus,
 .flexbox-component-spacer-to-top.flexbox-theme--spot .theme--white .flexbox-component__button-link:focus {
-    color: #f8bdb9
+    color: #CC3333
 }
 
 .theme--white .color--spot-border,
@@ -11807,7 +11807,7 @@ h6 .theme--white small,
 .flexbox-component-spacer-to-top.flexbox-theme--spot .theme--white .flexbox-component__button-link:hover,
 .theme--white .flexbox-component-spacer-to-top.flexbox-theme--spot .flexbox-component__button-link:focus,
 .flexbox-component-spacer-to-top.flexbox-theme--spot .theme--white .flexbox-component__button-link:focus {
-    border-color: #f8bdb9
+    border-color: #CC3333
 }
 
 .theme--white .color--spot-background,
@@ -11834,17 +11834,17 @@ h6 .theme--white small,
 .flexbox-component-spacer-to-top.flexbox-theme--spot .theme--white .section-heading,
 .theme--white .flexbox-component-spacer-to-top.flexbox-theme--spot .flexbox-component__button-link,
 .flexbox-component-spacer-to-top.flexbox-theme--spot .theme--white .flexbox-component__button-link {
-    background-color: #f8bdb9
+    background-color: #CC3333
 }
 
 .theme--white .color--spot-fill,
 .theme--white .footer__back-to-top--arrow {
-    fill: #f8bdb9
+    fill: #CC3333
 }
 
 .theme--white .color--spot-stroke,
 .theme--white .loading__rectangle {
-    stroke: #f8bdb9
+    stroke: #CC3333
 }
 
 .theme--white .color--tint-background,
@@ -12041,7 +12041,7 @@ table .theme--white thead,
 .theme--white input:focus,
 .theme--white select:focus,
 .theme--white textarea:focus {
-    box-shadow: 0 0 4px 0 #f8bdb9
+    box-shadow: 0 0 4px 0 #CC3333
 }
 
 .theme--white .color--table-shadow,
@@ -12167,7 +12167,7 @@ table .theme--white thead,
 .flexbox-component-table-layout.flexbox-theme--lt-gray .theme--white a:focus,
 .theme--white .flexbox-component-table-layout article.flexbox-theme--lt-gray a:focus,
 .flexbox-component-table-layout article.flexbox-theme--lt-gray .theme--white a:focus {
-    box-shadow: 0 1px 0 0 #f8bdb9
+    box-shadow: 0 1px 0 0 #CC3333
 }
 
 .theme--white .color--box-shadow-hover-alt,
@@ -12246,7 +12246,7 @@ table .theme--white thead,
 .theme--white .base-tease__heading--link:focus,
 .theme--white .base-tease__meta-item--category-link:focus,
 .theme--white .base-tease__meta-item--link:focus {
-    box-shadow: 0 1px 0 0 #f8bdb9
+    box-shadow: 0 1px 0 0 #CC3333
 }
 
 .theme--white .color--box-shadow-hover-alt-selected,
@@ -12274,7 +12274,7 @@ table .theme--white thead,
 .theme--white .feed-filter__radio:checked+.feed-filter__label--radio:focus,
 .theme--white .feed-filter__checkbox:checked+.feed-filter__label--checkbox:focus,
 .theme--white .feed-filter__label--checkbox-active:focus {
-    box-shadow: 0 2px 0 0 #f8bdb9
+    box-shadow: 0 2px 0 0 #CC3333
 }
 
 .theme--white .color--footer-box-shadow-hover,
@@ -12296,7 +12296,7 @@ table .theme--white thead,
 .footer-news-feed .theme--white .base-tease__heading--link:focus,
 .theme--white .footer-events-feed .base-tease__heading--link:focus,
 .footer-events-feed .theme--white .base-tease__heading--link:focus {
-    box-shadow: 0 1px 0 0 #f8bdb9
+    box-shadow: 0 1px 0 0 #CC3333
 }
 
 .theme--white .color--program-box-shadow:hover,
@@ -14420,12 +14420,12 @@ table .theme--white thead,
 
 .wrapper .feature-theme--salmon {
     color: #132631;
-    background: linear-gradient(to right, #f8bdb9, #f8bdb9 70%, #f6bbb8 70%, #f6bbb8)
+    background: linear-gradient(to right, #CC3333, #CC3333 70%, #f6bbb8 70%, #f6bbb8)
 }
 
 .wrapper .feature-theme--salmon ::selection {
     background: #132631;
-    color: #f8bdb9
+    color: #CC3333
 }
 
 .wrapper .feature-theme--salmon .base-feature__text .section-heading {
@@ -14515,11 +14515,11 @@ table .theme--white thead,
 .wrapper .feature-theme--salmon .resource-filter__section--search .feed__submit-button:focus,
 .resource-filter__section--search .wrapper .feature-theme--salmon .feed__submit-button:focus,
 .wrapper .feature-theme--salmon .event-feature__livestream-link {
-    color: #f8bdb9
+    color: #CC3333
 }
 
 .wrapper .feature-theme--salmon .feature-color--secondary-background {
-    background-color: #f8bdb9
+    background-color: #CC3333
 }
 
 .wrapper .feature-theme--salmon .feature-color--box-shadow-hover-alt,
@@ -14540,7 +14540,7 @@ table .theme--white thead,
 
 .wrapper .feature-theme--salmon.feature-color--background-gradient-alt,
 .wrapper .feature-theme--salmon.topic-feature {
-    background: linear-gradient(to right, #f8bdb9, #f8bdb9 50%, #f6bbb8 50%, #f6bbb8)
+    background: linear-gradient(to right, #CC3333, #CC3333 50%, #f6bbb8 50%, #f6bbb8)
 }
 
 .wrapper .feature-theme--salmon.is--over-feature .site-branding--link-svg {
@@ -14557,12 +14557,12 @@ table .theme--white thead,
 
 .wrapper .feature-theme--salmon.is--over-feature .site-nav-link:hover,
 .wrapper .feature-theme--salmon.is--over-feature .site-nav-link:focus {
-    color: #f8bdb9;
+    color: #CC3333;
     background-color: #132631
 }
 
 .feature-theme--salmon .footer__back-to-top--arrow {
-    fill: #f8bdb9 !important
+    fill: #CC3333 !important
 }
 
 *,
@@ -25389,7 +25389,7 @@ form .truncatable--show {
 .student-guide-inner.feature-theme--black a:hover,
 .student-guide-inner.feature-theme--black a:focus,
 .student-guide-inner.feature-theme--black a:visited {
-    box-shadow: 0 1px 0 0 #f8bdb9
+    box-shadow: 0 1px 0 0 #CC3333
 }
 
 .student-guide-inner.feature-theme--black .page_item a {
@@ -29287,7 +29287,7 @@ form .truncatable--show {
 
 .flexbox-component-content-buttons-inner.flexbox-theme--black a:hover,
 .flexbox-component-content-buttons-inner.flexbox-theme--black a:focus {
-    box-shadow: 0 1px 0 0 #f8bdb9
+    box-shadow: 0 1px 0 0 #CC3333
 }
 
 .flexbox-component-content-buttons-inner.flexbox-theme--lt-gray+div.section-header {
@@ -29835,7 +29835,7 @@ form .truncatable--show {
 
 .link_panel .visual-content-panel__item--content .visual-content-panel__item--link .visual-content-panel__content .visual-content-panel__heading:hover,
 .link_panel .visual-content-panel__item--content .visual-content-panel__item--link .visual-content-panel__content .visual-content-panel__heading:focus {
-    box-shadow: 0 1px 0 0 #f8bdb9
+    box-shadow: 0 1px 0 0 #CC3333
 }
 
 .visual-content-panel__description {
@@ -30028,7 +30028,7 @@ form .truncatable--show {
 .flexbox-component-subsection-content-inner.flexbox-theme--black a:focus,
 .flexbox-component-subsection-content-inner article.flexbox-theme--black a:hover,
 .flexbox-component-subsection-content-inner article.flexbox-theme--black a:focus {
-    box-shadow: 0 1px 0 0 #f8bdb9
+    box-shadow: 0 1px 0 0 #CC3333
 }
 
 .flexbox-component-subsection-content-inner.flexbox-theme--lt-gray+div.section-header,
@@ -30210,7 +30210,7 @@ form .truncatable--show {
 
 .flexbox-component-accordion.flexbox-theme--black a:hover,
 .flexbox-component-accordion.flexbox-theme--black a:focus {
-    box-shadow: 0 1px 0 0 #f8bdb9
+    box-shadow: 0 1px 0 0 #CC3333
 }
 
 .flexbox-component-accordion.flexbox-theme--white details[open] summary {
@@ -30307,7 +30307,7 @@ form .truncatable--show {
 
 .flexbox-component-spacer-to-top.flexbox-theme--black a:hover,
 .flexbox-component-spacer-to-top.flexbox-theme--black a:focus {
-    box-shadow: 0 1px 0 0 #f8bdb9
+    box-shadow: 0 1px 0 0 #CC3333
 }
 
 .flexbox-component-spacer-to-top.flexbox-theme--white details[open] summary {
@@ -30376,7 +30376,7 @@ form .truncatable--show {
 .flexbox-component-table-layout.flexbox-theme--black a:focus,
 .flexbox-component-table-layout article.flexbox-theme--black a:hover,
 .flexbox-component-table-layout article.flexbox-theme--black a:focus {
-    box-shadow: 0 1px 0 0 #f8bdb9
+    box-shadow: 0 1px 0 0 #CC3333
 }
 
 .flexbox-component-table-layout.flexbox-theme--lt-gray+div.section-header,
