@@ -921,56 +921,6 @@
   <meta name="theme-color" content="#ffffff">
 
 
-  <style>
-		#seismograph-container {
-			height: 100vh;
-			background-color: white;
-			position: fixed;
-			top: 0;
-			left: 0;
-			right: 0;
-			bottom: 0;
-			z-index: 9999;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-
-  		}
-
-
-		.seismograph-max {
-			display: none;
-		}
-
-		.seismograph-intense {
-			background-color: red;
-		}
-
-		.section {
-			height: 100vh;
-			display: none;
-		}
-
-		.section.active {
-			display: block;
-		}
-
-    #seismograph-container p {
-		font-size: 22px;
-		line-height: 1.5;
-    padding-left: 70px;
-	}
-
-  .positionhero {
-  position: absolute;
-  top: 50%;
-  left: 15%;
-  transform: translate(-50%, -50%);
-  margin-top: -10px; /* adjust this value to move the text closer or farther from the line */
-}
-
-
-	</style>
 
 </head>
 
@@ -1353,7 +1303,7 @@ animate();
                         <script>
                           let slideIndex_2 = 0;
                           showSlides_2();
-  
+                        
                           function showSlides_2() {
                             let i;
                             let slides = document.getElementsByClassName("mySlides_2");
@@ -1368,9 +1318,17 @@ animate();
                             }
                             slides[slideIndex_2 - 1].style.display = "block";
                             dots[slideIndex_2 - 1].className += " active";
-                            setTimeout(showSlides_2, 1000); // Change image every 2 seconds
+                            setTimeout(showSlides_2, 1000); // Change image every 1 second
                           }
+                        
+                          window.addEventListener('pageshow', function(event) {
+                            // Only update slideshow if the page is shown from cache (i.e. navigating back)
+                            if (event.persisted) {
+                              showSlides_2();
+                            }
+                          });
                         </script>
+                        
 
 
 </figure>
@@ -1430,17 +1388,17 @@ animate();
                       <div class="slideshow-container">
 
                         <div class="mySlides">
-                          <img src="GAMMA/cut1fp.jpeg" style="width:100%">
+                          <img src="./GAMMA/cut1fp.jpeg" style="width:100%">
                           <div class="text"></div>
                         </div>
 
                         <div class="mySlides">
-                          <img src="GAMMA/cut2fp.jpeg" style="width:100%">
+                          <img src="./GAMMA/cut2fp.jpeg" style="width:100%">
                           <div class="text"></div>
                         </div>
 
                         <div class="mySlides">
-                          <img src="GAMMA/cut3fp.jpeg" style="width:100%">
+                          <img src="./GAMMA/cut3fp.jpeg" style="width:100%">
                           <div class="text"></div>
                         </div>
 
@@ -1456,7 +1414,7 @@ animate();
                       <script>
                         let slideIndex = 0;
                         showSlides();
-
+                      
                         function showSlides() {
                           let i;
                           let slides = document.getElementsByClassName("mySlides");
@@ -1471,9 +1429,17 @@ animate();
                           }
                           slides[slideIndex - 1].style.display = "block";
                           dots[slideIndex - 1].className += " active";
-                          setTimeout(showSlides, 1000); // Change image every 2 seconds
+                          setTimeout(showSlides, 1000); // Change image every 1 second
                         }
+                      
+                        window.addEventListener('pageshow', function(event) {
+                          // Only update slideshow if the page is shown from cache (i.e. navigating back)
+                          if (event.persisted) {
+                            showSlides();
+                          }
+                        });
                       </script>
+                      
 
 
                     </figure>
