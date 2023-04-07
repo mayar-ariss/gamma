@@ -1246,9 +1246,13 @@ animate();
                       </div>
 
                       <script>
+                        if (performance.navigation.type === 2) {
+                          location.reload(true);
+                        }
+                      
                         let slideIndex = 0;
                         showSlides();
-
+                      
                         function showSlides() {
                           let i;
                           let slides = document.getElementsByClassName("mySlides");
@@ -1257,7 +1261,9 @@ animate();
                             slides[i].style.display = "none";
                           }
                           slideIndex++;
-                          if (slideIndex > slides.length) { slideIndex = 1 }
+                          if (slideIndex > slides.length) {
+                            slideIndex = 1
+                          }
                           for (i = 0; i < dots.length; i++) {
                             dots[i].className = dots[i].className.replace(" active", "");
                           }
@@ -1266,6 +1272,7 @@ animate();
                           setTimeout(showSlides, 2000); // Change image every 2 seconds
                         }
                       </script>
+                      
 
 
                     </figure>
