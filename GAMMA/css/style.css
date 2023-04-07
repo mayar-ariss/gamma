@@ -30819,3 +30819,52 @@ img {
             opacity: 1;
           }
           
+
+          /* SEISMOGRAPH EFFECT */
+
+          #seismograph-container {
+			height: 100vh;
+			background-color: white;
+			position: fixed;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			z-index: 9999;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+  		}
+
+
+		.seismograph-max {
+			display: none;
+		}
+
+		.seismograph-intense {
+			background-color: red;
+		}
+
+		.section {
+			height: 100vh;
+			display: none;
+		}
+
+		.section.active {
+			display: block;
+		}
+
+    #seismograph-container p {
+		font-size: 22px;
+		line-height: 1.5;
+    padding-left: 70px;
+	}
+
+  .positionhero {
+  position: absolute;
+  top: 50%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+  margin-top: -10px; /* adjust this value to move the text closer or farther from the line */
+}
