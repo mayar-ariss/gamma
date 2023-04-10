@@ -967,7 +967,7 @@
 
       if (delta < 0) {
         // Decrement magnitude as user scrolls up
-        magnitude -= 1;
+        magnitude -= 1.2;
 
         // Decrement counter as user scrolls up, down to a minimum of 0
         counter = Math.max(magnitude / 5.27, 0);
@@ -984,7 +984,7 @@
         }
       } else {
         // Increase magnitude as user scrolls down
-        magnitude += 1;
+        magnitude += 1.2;
 
         // Increase counter as user scrolls down, up to a maximum of 9.5
         counter = Math.min(magnitude / 5.27, 9.5);
