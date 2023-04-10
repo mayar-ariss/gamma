@@ -1162,7 +1162,8 @@
                         "iso-a3": "GRC",
                         "iso-a2": "GR",
                         "woe-id": "23424833",
-                        "continent": "Europe"
+                        "continent": "Europe",
+                        "value":1
                     }
                 },
                 {
