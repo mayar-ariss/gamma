@@ -955,11 +955,55 @@
         src="/wp-content/themes/gsd-wp-theme/static/js/dist/3.d81c77e6eff7879e5ea8.js"></script>
 
 
-  <link rel="stylesheet" href="https://code.highcharts.com/css/highcharts.css">
   <link href="./css/anychart-ui.min.css" type="text/css" rel="stylesheet">
   <link href="./css/anychart-font.min.css" type="text/css" rel="stylesheet">
 
-        
+
+  <script src="./js/anychart-base.min.js?v=1"></script>
+  <script src="./js/anychart-ui.min.js?v=1"></script>
+  <script src="./js/monochrome.min.js?v=1"></script>
+  <script src="./js/anychart-exports.min.js?v=1"></script>
+
+  <script>   anychart.onDocumentReady(function () {
+      // set chart theme
+  anychart.theme('monochrome');
+        // create pie chart with passed data
+        var chart = anychart.pie([
+        ['Structure', 42000],
+          ['Windows+Doors', 4000],
+          ['Electricity+Plumbing', 4000],
+          ['Kitchen + Bath', 7000],
+          ['Solar Panels', 3000]
+        ]);
+  
+        // set chart title text settings
+        chart.title('Module (rounded costs)');
+        // set chart labels position to outside
+        chart.labels().position('outside');
+        // set legend title settings
+        chart
+          .legend()
+          .title()
+          .enabled(true)
+          .text('')
+          .padding([0, 0, 10, 0]);
+  
+        // set legend position and items layout
+        chart
+          .legend()
+          .position('center-bottom')
+          .itemsLayout('horizontal')
+          .align('center');
+  
+        // set container id for the chart
+        chart.container('pie-container');
+        // initiate chart drawing
+        chart.draw();
+      });
+  
+      
+    </script>
+
 </head>
 
 <body class="page-template-default page page-id-2536295" style="overflow-x: hidden;">
@@ -1075,10 +1119,7 @@
 
 
 
-                <script src="./js/anychart-base.min.js?v=1"></script>
-                <script src="./js/anychart-ui.min.js?v=1"></script>
-                <script src="./js/monochrome.min.js?v=1"></script>
-                <script src="./js/anychart-exports.min.js?v=1"></script>
+               
                 
 
 
@@ -1088,45 +1129,7 @@
                                 
                                 <div id="pie-container"></div>
                                 
-<script>   anychart.onDocumentReady(function () {
-	// set chart theme
-anychart.theme('monochrome');
-      // create pie chart with passed data
-      var chart = anychart.pie([
-      ['Structure', 42000],
-        ['Windows+Doors', 4000],
-        ['Electricity+Plumbing', 4000],
-        ['Kitchen + Bath', 7000],
-        ['Solar Panels', 3000]
-      ]);
 
-      // set chart title text settings
-      chart.title('Module (rounded costs)');
-      // set chart labels position to outside
-      chart.labels().position('outside');
-      // set legend title settings
-      chart
-        .legend()
-        .title()
-        .enabled(true)
-        .text('')
-        .padding([0, 0, 10, 0]);
-
-      // set legend position and items layout
-      chart
-        .legend()
-        .position('center-bottom')
-        .itemsLayout('horizontal')
-        .align('center');
-
-      // set container id for the chart
-      chart.container('pie-container');
-      // initiate chart drawing
-      chart.draw();
-    });
-
-    
-  </script>
 
 <br>
 <div class="section-header">
