@@ -1165,40 +1165,46 @@ require(['jquery', 'anychart', 'monochrome'], function($, anychart, monochrome) 
 
 
 <div class="td_slider">
-    <div class="td_slider_images">
-      <img src="./images/slide1.png" alt="Image 1">
-      <img src="./images/slide2.png" alt="Image 2">
+    <div class="td_slider_container">
+        <div class="td_slider_item">
+      <img src="./images/slide1.png" alt="Image 1"></div>
+      <div class="td_slider_item">
+      <img src="./images/slide2.png" alt="Image 2"></div>
     </div>
-    <button class="td_slider_arrow td_slider_arrow_prev">&#8249;</button>
-    <button class="td_slider_arrow td_slider_arrow_next">&#8250;</button>
+    <a class="td_slider_prev" href="#"></a>
+    <a class="td_slider_next" href="#"></a>
   </div>
-
+  
   <script>
-const sliderImages = document.querySelector('.td_slider_images');
-const prevArrow = document.querySelector('.td_slider_arrow_prev');
-const nextArrow = document.querySelector('.td_slider_arrow_next');
-const imageWidth = document.querySelector('.td_slider_images img').clientWidth;
-let slideIndex = 0;
+var tdSliderIndex = 1;
+showTdSlides(tdSliderIndex);
 
-function slideTo(index) {
-  sliderImages.style.transform = `translateX(-${index * imageWidth}px)`;
-  slideIndex = index;
+function tdSliderPlus(n) {
+  showTdSlides(tdSliderIndex += n);
 }
 
-prevArrow.addEventListener('click', () => {
-  if (slideIndex > 0) {
-    slideTo(slideIndex - 1);
+function showTdSlides(n) {
+  var i;
+  var tdSlides = document.getElementsByClassName("td_slider_item");
+  if (n > tdSlides.length) {tdSliderIndex = 1}
+  if (n < 1) {tdSliderIndex = tdSlides.length}
+  for (i = 0; i < tdSlides.length; i++) {
+      tdSlides[i].style.display = "none";
   }
+  tdSlides[tdSliderIndex-1].style.display = "flex";
+}
+
+var tdPrevBtn = document.querySelector('.td_slider_prev');
+var tdNextBtn = document.querySelector('.td_slider_next');
+
+tdPrevBtn.addEventListener('click', function(e){
+  e.preventDefault();
+  tdSliderPlus(-1);
 });
 
-nextArrow.addEventListener('click', () => {
-  if (slideIndex < sliderImages.children.length - 1) {
-    slideTo(slideIndex + 1);
-  }
-});
-
-window.addEventListener('resize', () => {
-  slideTo(slideIndex);
+tdNextBtn.addEventListener('click', function(e){
+  e.preventDefault();
+  tdSliderPlus(1);
 });
 
 
