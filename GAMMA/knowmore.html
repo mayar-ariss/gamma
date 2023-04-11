@@ -1073,10 +1073,10 @@
 
 
 
-                <script src="./js/anychart-base.min.js?v=1" defer></script>
-                <script src="./js/monochrome.min.js?v=1" defer></script>
-                
+
+                <script src="./js/anychart-base.min.js?v=2"></script>
                 <!-- <script src="./js/anychart-ui.min.js?v=1"></script> -->
+                <script src="./js/monochrome.min.js?v=2"></script>
                 <!-- <script src="./js/anychart-exports.min.js?v=1"></script> -->
                 
 
@@ -1087,8 +1087,7 @@
                                 
                                 <div id="pie-container"></div>
                                 
-<script>   setTimeout(function() {
-    anychart.onDocumentReady(function () {  anychart.onDocumentReady(function () {
+<script>   anychart.onDocumentReady(function () {
 	// set chart theme
 anychart.theme('monochrome');
       // create pie chart with passed data
@@ -1125,8 +1124,7 @@ anychart.theme('monochrome');
       chart.draw();
     });
 
-});
-  }, 1200);
+    
   </script>
 
 <br>
