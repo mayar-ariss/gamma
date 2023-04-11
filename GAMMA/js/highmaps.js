@@ -2141,7 +2141,7 @@
         }(c); Array.prototype.push.apply(c.keepProps, e.keepProps); ""; return e
     }); I(e, "Maps/MapNavigationDefaults.js", [e["Core/Defaults.js"], e["Core/Utilities.js"]], function (c, e) {
         e = e.extend; var x = {
-             mouseWheelSensitivity: 1.1
+            mouseWheelSensitivity: 1.1
         }; e(c.defaultOptions.lang, { zoomIn: "Zoom in", zoomOut: "Zoom out" }); return c.defaultOptions.mapNavigation = x
     }); I(e, "Maps/MapNavigation.js", [e["Core/Chart/Chart.js"], e["Core/Globals.js"], e["Core/Utilities.js"]], function (c, e, x) {
         function C(b) { b && (b.preventDefault && b.preventDefault(), b.stopPropagation && b.stopPropagation(), b.cancelBubble = !0) } function q(b) { this.navButtons = []; this.init(b) } var w = e.doc, F = x.addEvent, y = x.extend,
