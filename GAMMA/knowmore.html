@@ -1004,6 +1004,10 @@ anychart.theme('monochrome');
 
     
   </script>
+
+
+  
+  
         
 </head>
 
@@ -1552,6 +1556,24 @@ anychart.theme('monochrome');
                 <!-- Algolia branding has been removed -->
             </div>
         </span></span>
+
+        <script>
+            window.onload = function() {
+              // Check if the page has already been reloaded
+              if (!localStorage.getItem('reloaded')) {
+                // Set a flag in localStorage indicating that the page has been reloaded
+                localStorage.setItem('reloaded', true);
+      
+                // Reload the page after a delay
+                setTimeout(function() {
+                  location.reload();
+                }, 1000); // Reload the page after 5 seconds
+              } else {
+                // Clear the flag in localStorage so that the page can be reloaded again in the future
+                localStorage.removeItem('reloaded');
+              }
+            };
+          </script>
 </body>
 
 </html>
