@@ -31006,6 +31006,18 @@ img {
       display: block !important;
     }
   }
+
+  /* Hover effect for circles */
+.slick-dots li button:hover:before {
+    background-color: #ccc;
+  }
+  
+  /* Hover effect for arrows */
+  .td_slider_prev:hover,
+  .td_slider_next:hover {
+    background-color: #ccc;
+  }
+  
   
   
   
