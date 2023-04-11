@@ -1006,6 +1006,24 @@ anychart.theme('monochrome');
   </script>
 
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js"></script>
+<script>
+require.config({
+  paths: {
+    'jquery': 'https://code.jquery.com/jquery-3.6.0.min',
+    'anychart': './js/anychart-base.min',
+    'monochrome': './js/monochrome.min'
+  }
+});
+
+require(['jquery', 'anychart', 'monochrome'], function($, anychart, monochrome) {
+  anychart.onDocumentReady(function() {
+    // create pie chart here
+  });
+});
+</script>
+
+
   
   
         
@@ -1557,23 +1575,8 @@ anychart.theme('monochrome');
             </div>
         </span></span>
 
-        <script>
-            window.onload = function() {
-              // Check if the page has already been reloaded
-              if (!localStorage.getItem('reloaded')) {
-                // Set a flag in localStorage indicating that the page has been reloaded
-                localStorage.setItem('reloaded', true);
-      
-                // Reload the page after a delay
-                setTimeout(function() {
-                  location.reload();
-                }, 1000); // Reload the page after 5 seconds
-              } else {
-                // Clear the flag in localStorage so that the page can be reloaded again in the future
-                localStorage.removeItem('reloaded');
-              }
-            };
-          </script>
+
+
 </body>
 
 </html>
