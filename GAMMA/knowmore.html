@@ -958,12 +958,6 @@
   <!-- <link href="./css/anychart-ui.min.css" type="text/css" rel="stylesheet"> -->
   <!-- <link href="./css/anychart-font.min.css" type="text/css" rel="stylesheet"> -->
   
-
-  <script src="./js/anychart-base.min.js?v=2"></script>
-  <!-- <script src="./js/anychart-ui.min.js?v=1"></script> -->
-  <script src="./js/monochrome.min.js?v=2"></script>
-  <!-- <script src="./js/anychart-exports.min.js?v=1"></script> -->
-  
   
   
 
@@ -1111,15 +1105,21 @@ require(['jquery', 'anychart', 'monochrome'], function($, anychart, monochrome) 
                                 
                                 <div id="pie-container"></div>
 
+                                <script src="./js/anychart-base.min.js?v=2"></script>
+                                <!-- <script src="./js/anychart-ui.min.js?v=1"></script> -->
+                                <script src="./js/monochrome.min.js?v=2"></script>
+                                <!-- <script src="./js/anychart-exports.min.js?v=1"></script> -->
+                                
+
                                 <script>   anychart.onDocumentReady(function () {
                                     // set chart theme
                                 anychart.theme('monochrome');
                                       // create pie chart with passed data
                                       var chart = anychart.pie([
-                                      ['Structure', 42000],
+                                      ['Timber Structure', 42000],
                                         ['Windows+Doors', 4000],
                                         ['Electricity+Plumbing', 4000],
-                                        ['Kitchen + Bath', 7000],
+                                        ['Kitchen+Bath', 7000],
                                         ['Solar Panels', 3000]
                                       ]);
                                 
