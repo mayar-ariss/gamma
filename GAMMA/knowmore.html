@@ -1162,6 +1162,49 @@ require(['jquery', 'anychart', 'monochrome'], function($, anychart, monochrome) 
 
 <br>
 
+
+
+<div class="td_slider">
+    <div class="td_slider_images">
+      <img src="./images/slide1.png" alt="Image 1">
+      <img src="./images/slide2.png" alt="Image 2">
+    </div>
+    <button class="td_slider_arrow td_slider_arrow_prev">&#8249;</button>
+    <button class="td_slider_arrow td_slider_arrow_next">&#8250;</button>
+  </div>
+
+  <script>
+const sliderImages = document.querySelector('.td_slider_images');
+const prevArrow = document.querySelector('.td_slider_arrow_prev');
+const nextArrow = document.querySelector('.td_slider_arrow_next');
+const imageWidth = document.querySelector('.td_slider_images img').clientWidth;
+let slideIndex = 0;
+
+function slideTo(index) {
+  sliderImages.style.transform = `translateX(-${index * imageWidth}px)`;
+  slideIndex = index;
+}
+
+prevArrow.addEventListener('click', () => {
+  if (slideIndex > 0) {
+    slideTo(slideIndex - 1);
+  }
+});
+
+nextArrow.addEventListener('click', () => {
+  if (slideIndex < sliderImages.children.length - 1) {
+    slideTo(slideIndex + 1);
+  }
+});
+
+window.addEventListener('resize', () => {
+  slideTo(slideIndex);
+});
+
+
+    </script>
+  
+
 <div class="base-inner">
 
     <div class="l--main">
@@ -1182,6 +1225,35 @@ require(['jquery', 'anychart', 'monochrome'], function($, anychart, monochrome) 
 
 
             </section> <!-- /.l--content -->
+
+            <!-- Slideshow -->
+      <section class="base-slideshow">
+
+        <div class="base-slideshow-inner">
+
+          <div class="slideshow-slides">
+
+          </div>
+
+          <div class="slideshow-pagination">
+
+            <div class="pagination-previous">
+              <button class="pagination-previous-link">Prev</button>
+            </div>
+
+            <div class="pagination-next">
+              <button class="pagination-next-link">Next</button>
+            </div>
+
+          </div>
+
+          <div class="slideshow-close">
+            <button class="slideshow-close__link">Close Slideshow</button>
+          </div>
+
+        </div>
+
+      </section>
 
      
 
