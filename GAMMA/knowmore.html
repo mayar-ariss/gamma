@@ -15,7 +15,7 @@
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
 
     <!-- This site is optimized with the Yoast SEO Premium plugin v19.7 (Yoast SEO v19.14) - https://yoast.com/wordpress/plugins/seo/ -->
-    <title>Privacy Policy - GAMMA</title>
+    <title>More - GAMMA</title>
     <link rel="canonical" href="https://www.gammarelief.org">
     <meta property="og:locale" content="en_US">
     <meta property="og:type" content="website">
@@ -40,6 +40,10 @@
     <meta name="google-site-verification" content="a-disable-UA-80325496-2">
     <!-- / Yoast SEO Premium plugin. -->
 
+
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
 
     <!-- This site uses the Google Analytics by MonsterInsights plugin v8.10.0 - Using Analytics tracking - https://www.monsterinsights.com/ -->
     <script src="//www.googletagmanager.com/gtag/js?id=UA-80325496-2" data-cfasync="false" data-wpfc-render="false"
@@ -1083,30 +1087,44 @@
                                 
                                 <div id="pie-container"></div>
                                 
-<script>    anychart.onDocumentReady(function () {
+<script>   anychart.onDocumentReady(function () {
 	// set chart theme
 anychart.theme('monochrome');
       // create pie chart with passed data
-      var chart = anychart.pie3d([
-        ['Structure', 40000],
-        ['Windows + Doors', 7000],
-        ['Solar Panels', 4000],
-        ['Kitchen + WC', 6000],
-        ['Plumbery + Electricity', 3000],
-        ['Transport + Logistics', 6000]
+      var chart = anychart.pie([
+      ['Structure', 42000],
+        ['Windows+Doors', 4000],
+        ['Electricity+Plumbing', 4000],
+        ['Kitchen + Bath', 7000],
+        ['Solar Panels', 3000]
       ]);
 
       // set chart title text settings
+      chart.title('Module (rounded costs)');
+      // set chart labels position to outside
+      chart.labels().position('outside');
+      // set legend title settings
       chart
-        .title('Click on the Pie!')
-        // set chart radius
-        .radius('43%');
+        .legend()
+        .title()
+        .enabled(true)
+        .text('')
+        .padding([0, 0, 10, 0]);
+
+      // set legend position and items layout
+      chart
+        .legend()
+        .position('center-bottom')
+        .itemsLayout('horizontal')
+        .align('center');
 
       // set container id for the chart
       chart.container('pie-container');
       // initiate chart drawing
       chart.draw();
     });
+
+    
   </script>
 
 <br>
