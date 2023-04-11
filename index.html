@@ -937,6 +937,10 @@
       style="font-size: 22px; position: fixed; bottom: 20px; right: 20px;">0</span>
   </div>
 
+
+
+
+  
   <script>
     const canvas = document.getElementById('seismograph-canvas');
     const ctx = canvas.getContext('2d');
@@ -952,6 +956,9 @@
     let counter = 0;
   
     // Add wheel and touchmove event listeners for scrolling up and down
+    window.addEventListener('touchstart', (event) => {
+  startY = event.touches[0].clientY;
+});
     window.addEventListener('wheel', handleScroll);
     window.addEventListener('touchmove', handleScroll);
     window.addEventListener('touchend', handleTouchEnd);
