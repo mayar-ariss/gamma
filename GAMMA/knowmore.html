@@ -1094,12 +1094,11 @@
                     <h2 id="Costs" class="section-heading">Costs Breakup</h2>
                 </div>
 
-                <div id="pie-container"></div>
+                <div id="pie-container" style="display: block;"></div>
 
 
 
-                <script>   function drawChart() {
-                     anychart.onDocumentReady(function () {
+                <script>   anychart.onDocumentReady(function () {
                         // set chart theme
                         anychart.theme('monochrome');
                         // create pie chart with passed data
@@ -1135,8 +1134,6 @@
                         // initiate chart drawing
                         chart.draw();
                     });
-}
-drawChart(); // Call the function on page load
 
 
                 </script>
