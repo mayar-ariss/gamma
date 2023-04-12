@@ -968,15 +968,14 @@ function handleTouchStart(event) {
 }
 
 function handleScroll(event) {
-  let deltaY;
-
-  if (event.type === 'wheel') {
-    deltaY = event.deltaY;
+  let delta;
+  if (event.type === 'touchmove') {
+    // For touch devices, calculate delta based on touch event
+    delta = startY - event.touches[0].clientY;
   } else {
-    deltaY = event.touches[0].clientY - startY;
+    // For non-touch devices, calculate delta based on scroll event
+    delta = window.scrollY - startY;
   }
-
-  const delta = deltaY * 2;
 
   if (delta < 0) {
     // Decrement magnitude as user scrolls up
@@ -1019,6 +1018,8 @@ function handleScroll(event) {
 
   event.preventDefault(); // Prevent default scrolling behavior
 }
+
+
 
 let startY = window.scrollY; // Initialize startY outside handleScroll
 
