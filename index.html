@@ -945,7 +945,7 @@
 
   
   <script>
-    const canvas = document.getElementById('seismograph-canvas');
+const canvas = document.getElementById('seismograph-canvas');
 const ctx = canvas.getContext('2d');
 
 // Draw initial seismograph function as straight line
@@ -958,72 +958,7 @@ ctx.stroke();
 let magnitude = 0;
 let counter = 0;
 
-// Add wheel, touchmove, and touchstart event listeners for scrolling
-window.addEventListener('wheel', handleScroll);
-window.addEventListener('touchmove', handleScroll);
-window.addEventListener('touchstart', handleTouchStart);
-
-function handleTouchStart(event) {
-  startY = event.touches[0].clientY;
-}
-
-function handleScroll(event) {
-  let delta;
-  if (event.type === 'touchmove') {
-    // For touch devices, calculate delta based on touch event
-    delta = startY - event.touches[0].clientY;
-  } else {
-    // For non-touch devices, calculate delta based on scroll event
-    delta = window.scrollY - startY;
-  }
-
-  if (delta < 0) {
-    // Decrement magnitude as user scrolls up
-    magnitude -= 1.5;
-
-    // Decrement counter as user scrolls up, down to a minimum of 0
-    counter = Math.max(magnitude / 5.27, 0);
-
-    // Round counter to the nearest decimal
-    counter = Number(counter.toFixed(1));
-
-    // Update counter display
-    document.getElementById('counter').textContent = counter;
-
-    // Clamp magnitude to 0
-    if (magnitude < 0) {
-      magnitude = 0;
-    }
-  } else {
-    // Increase magnitude as user scrolls down
-    magnitude += 1.5;
-
-    // Increase counter as user scrolls down, up to a maximum of 9.5
-    counter = Math.min(magnitude / 5.27, 9.5);
-
-    // Round counter to the nearest decimal
-    counter = Number(counter.toFixed(1));
-
-    // Update counter display
-    document.getElementById('counter').textContent = counter;
-
-    // Check if magnitude has reached maximum
-    if (magnitude >= 50) {
-      // Hide seismograph and show message
-      document.getElementById('seismograph-container').style.display = 'none';
-      document.getElementById('seismograph-max').style.display = 'block';
-    }
-  }
-  animate(magnitude);
-
-  // event.preventDefault(); 
-}
-
-
-
-let startY = window.scrollY; // Initialize startY outside handleScroll
-
-function animate(magnitude) {
+function animate() {
   // Clear canvas before drawing updated seismograph function
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -1044,13 +979,29 @@ function animate(magnitude) {
 
   ctx.stroke();
 
+  // Update counter value
+  counter = magnitude / 5.27;
+  counter = Number(counter.toFixed(1));
+  document.getElementById('counter').textContent = counter;
+
+  // Check if magnitude has reached maximum
+  if (magnitude >= 50) {
+    // Hide seismograph and show message
+    document.getElementById('seismograph-container').style.display = 'none';
+    document.getElementById('seismograph-max').style.display = 'block';
+  }
+
   // Request next frame
-  requestAnimationFrame(() => animate(magnitude));
+  requestAnimationFrame(animate);
 }
 
-// Start animation loop with initial counter value
-animate(counter);
+// Listen for scroll event and update magnitude
+window.addEventListener('scroll', () => {
+  magnitude = window.scrollY / 5;
+});
 
+// Start animation loop
+animate();
   </script>
   
   
