@@ -954,11 +954,10 @@ ctx.moveTo(canvas.width / 2, 0);
 ctx.lineTo(canvas.width / 2, canvas.height);
 ctx.stroke();
 
-// Set initial magnitude to 0 and counter to 0
+// Set initial magnitude to 0
 let magnitude = 0;
-let counter = 0;
 
-function animate() {
+function animate(magnitude) {
   // Clear canvas before drawing updated seismograph function
   ctx.clearRect(0, 0, canvas.width, canvas.height);
 
@@ -978,30 +977,28 @@ function animate() {
   ctx.strokeStyle = '#CC3333'; // Set stroke style to red
 
   ctx.stroke();
-
-  // Update counter value
-  counter = magnitude / 5.27;
-  counter = Number(counter.toFixed(1));
-  document.getElementById('counter').textContent = counter;
-
-  // Check if magnitude has reached maximum
-  if (magnitude >= 50) {
-    // Hide seismograph and show message
-    document.getElementById('seismograph-container').style.display = 'none';
-    document.getElementById('seismograph-max').style.display = 'block';
-  }
-
-  // Request next frame
-  requestAnimationFrame(animate);
 }
 
-// Listen for scroll event and update magnitude
-window.addEventListener('scroll', () => {
-  magnitude = window.scrollY / 5;
+// Update seismograph and magnitude on scroll
+window.addEventListener('scroll', function() {
+  // Update magnitude based on scroll position
+  magnitude = Math.min(window.scrollY / 10, 50);
+
+  // Update counter display
+  const counter = Math.min(magnitude / 5.27, 9.5);
+  document.getElementById('counter').textContent = counter.toFixed(1);
+
+  // Animate seismograph with updated magnitude
+  animate(magnitude);
+
+  // Collapse page if magnitude has reached maximum
+  if (magnitude >= 50) {
+    document.body.style.height = '100vh';
+  } else {
+    document.body.style.height = 'auto';
+  }
 });
 
-// Start animation loop
-animate();
   </script>
   
   
