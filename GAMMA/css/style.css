@@ -17527,7 +17527,7 @@ img.wide+figcaption {
 
 .view-all {
     clear: both;
-    margin-bottom: 30px;
+    margin-bottom: 0px;
     text-align: center;
     width: 100%
 }
@@ -17541,23 +17541,23 @@ img.wide+figcaption {
 
 @media (min-width: 768px) {
     .view-all {
-        margin-bottom: 60px
+        margin-bottom: 0px
     }
 }
 
 .view-all--inline {
-    margin-bottom: 60px
+    margin-bottom: 0px
 }
 
 @media (min-width: 768px) {
     .view-all--inline {
-        margin-bottom: 30px
+        margin-bottom: 0px
     }
 }
 
 /* BEGIN ADDED  */
 .view-all .view-all-link:first-child {
-    margin-bottom: 12px;
+    margin-bottom: 0px;
     margin-right:12px;
 
   }
@@ -17619,7 +17619,7 @@ img.wide+figcaption {
     }
 
     .view-all .view-all-link:first-child {
-        margin-bottom: 12px;
+        margin-bottom: 0px;
         margin-right:12px;
       }
       
@@ -17644,7 +17644,7 @@ img.wide+figcaption {
     }
 
     .view-all .view-all-link:first-child {
-        margin-bottom: 12px;
+        margin-bottom: 0px;
         margin-right:12px;
       }
       
@@ -17668,7 +17668,7 @@ img.wide+figcaption {
     }
 
     .view-all .view-all-link:first-child {
-        margin-bottom: 12px;
+        margin-bottom: 0px;
         margin-right:12px;
       }
       
@@ -17681,6 +17681,9 @@ img.wide+figcaption {
 }
 
 /* END ADDED */
+
+
+
 
 .js .js--hidden {
     display: none
