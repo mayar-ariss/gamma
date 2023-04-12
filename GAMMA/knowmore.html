@@ -1138,7 +1138,7 @@
                         .title('Total: 69,500$ (rounded costs)');
 
                         // set chart labels position to outside
-                        chart.labels().position('outside');
+                        chart.labels().position('inside');
 
                         // set legend title settings
                         chart
@@ -1146,7 +1146,7 @@
                             .title()
                             .enabled(true)
                             .text('')
-                            .padding([0, 0, 10, 0]);
+                            .padding([0, 0, 0, 0]);
 
                         // set legend position and items layout
                         chart
@@ -1154,6 +1154,8 @@
                             .position('center-bottom')
                             .itemsLayout('horizontal-expandable')
                             .align('center');
+                        // set the position mode of the legend
+                        chart.legend().positionMode("outside");
 
                         // set container id for the chart
                         chart.container('pie-container');
