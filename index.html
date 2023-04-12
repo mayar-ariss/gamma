@@ -1374,7 +1374,7 @@
                     <script>
                       let slideIndex = 0;
                       let slides = document.getElementsByClassName("mySlides");
-                
+                    
                       function showSlides() {
                         for (let i = 0; i < slides.length; i++) {
                           slides[i].style.display = "none";
@@ -1385,22 +1385,23 @@
                         }
                         slides[slideIndex - 1].style.display = "block";
                       }
-                
+                    
                       function startSlideShow() {
                         showSlides();
                         setInterval(showSlides, 1000); // Change image every 1 second
                       }
-                
+                    
                       window.addEventListener("load", startSlideShow);
-                
-                      window.addEventListener("pageshow", function (event) {
+                    
+                      window.addEventListener("pageshow", function(event) {
                         if (event.persisted) {
                           // Page was cached, so restart the slideshow
                           startSlideShow();
                         }
                       });
-                
+                    
                     </script>
+                    
                   </figure>
                 </div> <!-- ./base-tease__image-container -->
                 
@@ -1511,7 +1512,7 @@
             <div class="view-all">
               <a href="https://www.donate-link.com" class="view-all-link">Donate</a>
               <!-- <br><br> -->
-              <a href="./GAMMA/joinus.html" class="view-all-link">Join</a>
+              <a href="./GAMMA/joinus.html" class="view-all-link" target="blank">Join</a>
             </div>
 
           </div>
