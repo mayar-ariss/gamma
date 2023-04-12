@@ -1276,35 +1276,7 @@
                                   <div class="text"></div>
                               </div>
                           </div>
-                          <script>
-                            let slideIndex_2 = 0;
-                            let slides_2 = document.getElementsByClassName("mySlides_2");
                           
-                            function showSlides_2() {
-                              for (let i = 0; i < slides_2.length; i++) {
-                                slides_2[i].style.display = "none";
-                              }
-                              slideIndex_2++;
-                              if (slideIndex_2 > slides_2.length) {
-                                slideIndex_2 = 1;
-                              }
-                              slides_2[slideIndex_2 - 1].style.display = "block";
-                            }
-                          
-                            function startSlideShow_2() {
-                              showSlides_2();
-                              setInterval(showSlides_2, 1000); // Change image every 1 seconds
-                            }
-                          
-                            window.addEventListener("load", startSlideShow_2);
-                          
-                            window.addEventListener("pageshow", function (event) {
-                              if (event.persisted) {
-                                // Page was cached, so restart the slideshow
-                                startSlideShow_2();
-                              }
-                            });
-                          </script>
                           
                     </figure>
                   </div> <!-- ./base-tease__image-container -->
@@ -1371,37 +1343,8 @@
                         <div class="text"></div>
                       </div>
                     </div>
-                    <script>
-                      let slideIndex = 0;
-                      let slides = document.getElementsByClassName("mySlides");
-                    
-                      function showSlides() {
-                        for (let i = 0; i < slides.length; i++) {
-                          slides[i].style.display = "none";
-                        }
-                        slideIndex++;
-                        if (slideIndex > slides.length) {
-                          slideIndex = 1;
-                        }
-                        slides[slideIndex - 1].style.display = "block";
-                      }
-                    
-                      function startSlideShow() {
-                        showSlides();
-                        setInterval(showSlides, 1000); // Change image every 1 second
-                      }
-                    
-                      window.addEventListener("load", startSlideShow);
-                    
-                      window.addEventListener("pageshow", function(event) {
-                        if (event.persisted) {
-                          // Page was cached, so restart the slideshow
-                          startSlideShow();
-                        }
-                      });
-                    
-                    </script>
-                    
+                     
+                
                   </figure>
                 </div> <!-- ./base-tease__image-container -->
                 
