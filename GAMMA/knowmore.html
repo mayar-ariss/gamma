@@ -1134,9 +1134,12 @@
                         ]);
 
                         // set chart title text settings
-                        chart.title('Total: 69,500$ (rounded costs)');
+                        chart
+                        .title('Total: 69,500$ (rounded costs)');
+
                         // set chart labels position to outside
                         chart.labels().position('outside');
+
                         // set legend title settings
                         chart
                             .legend()
@@ -1149,7 +1152,7 @@
                         chart
                             .legend()
                             .position('center-bottom')
-                            .itemsLayout('horizontal')
+                            .itemsLayout('horizontal-expandable')
                             .align('center');
 
                         // set container id for the chart
