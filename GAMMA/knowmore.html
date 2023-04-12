@@ -1088,17 +1088,17 @@
                 <script src="./js/anychart-base.min.js?v=2"></script>
                 <!-- <script src="./js/anychart-ui.min.js?v=1"></script> -->
                 <script src="./js/monochrome.min.js?v=2"></script>
-
                 <!-- <script src="./js/anychart-exports.min.js?v=1"></script> -->
+               
                 <div class="section-header">
                     <h2 id="Costs" class="section-heading">Costs Breakup</h2>
                 </div>
 
                 <div id="pie-container"></div>
 
-
-
-                <script>   anychart.onDocumentReady(function () {
+                <script>
+                    setTimeout(function() {
+                      anychart.onDocumentReady(function () {
                         // set chart theme
                         anychart.theme('monochrome');
                         // create pie chart with passed data
@@ -1109,34 +1109,25 @@
                             ['Solar Panels', 4000],
                             ['Transport+Logistics', 4000]
                         ]);
-
+                  
                         // set chart title text settings
                         chart.title('Total: 69,500$ (rounded costs)');
                         // set chart labels position to outside
                         chart.labels().position('outside');
                         // set legend title settings
-                        chart
-                            .legend()
-                            .title()
-                            .enabled(true)
-                            .text('')
-                            .padding([0, 0, 10, 0]);
-
+                        chart.legend().title().enabled(true).text('').padding([0, 0, 10, 0]);
+                  
                         // set legend position and items layout
-                        chart
-                            .legend()
-                            .position('center-bottom')
-                            .itemsLayout('horizontal')
-                            .align('center');
-
+                        chart.legend().position('center-bottom').itemsLayout('horizontal').align('center');
+                  
                         // set container id for the chart
                         chart.container('pie-container');
                         // initiate chart drawing
                         chart.draw();
-                    });
-
-
-                </script>
+                      });
+                    }, 400); // delay of 100 milliseconds (adjust as needed)
+                  </script>
+                  
 <div class="base-inner">
 
     <div class="l--main">
@@ -1660,16 +1651,7 @@
             </div>
         </span></span>
 
-        <script>
-            // check if the page has already been refreshed
-            if (!sessionStorage.getItem('isPageRefreshed')) {
-              // set the flag to indicate that the page has been refreshed
-              sessionStorage.setItem('isPageRefreshed', 'true');
-              
-              // reload the page
-              location.reload();
-            }
-          </script>
+       
           
 
 </body>
