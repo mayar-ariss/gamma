@@ -945,7 +945,7 @@
 
   
   <script>
-const canvas = document.getElementById('seismograph-canvas');
+    const canvas = document.getElementById('seismograph-canvas');
 const ctx = canvas.getContext('2d');
 
 // Draw initial seismograph function as straight line
@@ -980,7 +980,7 @@ function animate(magnitude) {
 }
 
 // Update seismograph and magnitude on scroll
-window.addEventListener('scroll', function() {
+function updateSeismograph() {
   // Update magnitude based on scroll position
   magnitude = Math.min(window.scrollY / 10, 50);
 
@@ -997,7 +997,12 @@ window.addEventListener('scroll', function() {
   } else {
     document.body.style.height = 'auto';
   }
-});
+}
+
+updateSeismograph();
+
+// Set up event listener to update seismograph and counter when the page is scrolled
+window.addEventListener('scroll', updateSeismograph);
 
   </script>
   
