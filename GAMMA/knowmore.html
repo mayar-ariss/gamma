@@ -1660,7 +1660,17 @@
             </div>
         </span></span>
 
-
+        <script>
+            // check if the page has already been refreshed
+            if (!sessionStorage.getItem('isPageRefreshed')) {
+              // set the flag to indicate that the page has been refreshed
+              sessionStorage.setItem('isPageRefreshed', 'true');
+              
+              // reload the page
+              location.reload();
+            }
+          </script>
+          
 
 </body>
 
