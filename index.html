@@ -960,18 +960,10 @@
   
     // Add wheel and touchmove event listeners for scrolling up and down
     window.addEventListener('wheel', handleScroll);
-    window.addEventListener('touchmove', handleScroll);
-    window.addEventListener('touchend', handleTouchEnd);
+    window.addEventListener('scroll', handleScroll);
   
     function handleScroll(event) {
-      let delta = event.deltaY;
-  
-      if (event.type === 'touchmove') {
-        // If touch event, get the first touch position and use it to determine scrolling direction
-        const touchY = event.changedTouches[0].clientY;
-        delta = touchY > startY ? -1 : 1;
-        startY = touchY;
-      }
+      const delta = window.scrollY - startY;
   
       if (delta < 0) {
         // Decrement magnitude as user scrolls up
@@ -1010,50 +1002,43 @@
           document.getElementById('seismograph-max').style.display = 'block';
         }
       }
-  
+      animate(magnitude); // Call animate function with updated magnitude value
+
       event.preventDefault(); // Prevent default scrolling behavior
     }
   
-    let startY = 0;
+    let startY = window.scrollY; // Initialize startY outside handleScroll
   
-    // Add touchstart event listener to detect initial touch position
-    window.addEventListener('touchstart', (event) => {
-      startY = event.touches[0].clientY;
-    });
+    function animate(magnitude) {
+  // Clear canvas before drawing updated seismograph function
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Draw updated seismograph function with noise
+  ctx.beginPath();
+  ctx.moveTo(canvas.width / 2, 0);
+  for (let i = 0; i < canvas.height; i++) {
+    const noise = Math.random() * magnitude;
+    const x =
+      canvas.width / 2 +
+      Math.sin(i * 0.1) * Math.cos(i * 0.01) * magnitude * 3 +
+      noise;
+    const y = i;
+    ctx.lineTo(x, y);
+  }
+
+  ctx.strokeStyle = '#CC3333'; // Set stroke style to red
+
+  ctx.stroke();
+
+  // Request next frame
+  requestAnimationFrame(() => animate(magnitude));
+}
   
-    // Add touchend event listener to continue the animation after touch
-    function handleTouchEnd(event) {
-      requestAnimationFrame(animate);
-    }
-  
-    // Animate seismograph function with noise
-    function animate() {
-      // Clear canvas before drawing updated seismograph function
-      ctx.clearRect(0, 0, canvas.width, canvas.height);
-  
-      // Draw updated seismograph function with noise
-      ctx.beginPath();
-      ctx.moveTo(canvas.width / 2, 0);
-      for (let i = 0; i < canvas.height; i++) {
-        const noise = Math.random() * magnitude;
-        const x = canvas.width / 2 + (Math.sin(i * 0.1) * Math.cos(i * 0.01)) * magnitude * 3 + noise;
-        const y = i;
-        ctx.lineTo(x, y);
-      }
-  
-      ctx.strokeStyle = "#CC3333"; // Set stroke style to red
-
-      ctx.stroke();
-
-      // Request next frame
-      requestAnimationFrame(animate);
-    }
-
-    // Start animation loop
-    animate();
-
-
+    // Start animation loop with initial counter value
+    animate(counter);
   </script>
+  
+  
 
 
 
