@@ -945,7 +945,7 @@
 
   
   <script>
-    const canvas = document.getElementById('seismograph-canvas');
+const canvas = document.getElementById('seismograph-canvas');
 const ctx = canvas.getContext('2d');
 
 // Draw initial seismograph function as straight line
@@ -993,7 +993,8 @@ function updateSeismograph() {
 
   // Collapse page if magnitude has reached maximum
   if (magnitude >= 50) {
-    document.body.style.height = '100vh';
+    // document.body.style.height = '100vh';
+    
   } else {
     document.body.style.height = 'auto';
   }
