@@ -1098,45 +1098,29 @@
                 <div id="pie-container"></div>
 
 
-                <script defer>   anychart.onDocumentReady(function () {
-                        // set chart theme
-                        anychart.theme('monochrome');
-                        // create pie chart with passed data
-                        var chart = anychart.pie([
-                            ['Structure+Doors+Windows', 48000],
-                            ['MEP+Insulation', 6500],
-                            ['Kitchen+Bath', 7000],
-                            ['Solar Panels', 4000],
-                            ['Transport+Logistics', 4000]
-                        ]);
-
-                        // set chart title text settings
-                        chart.title('Total: 69,500$ (rounded costs)');
-                        // set chart labels position to outside
-                        chart.labels().position('outside');
-                        // set legend title settings
-                        chart
-                            .legend()
-                            .title()
-                            .enabled(true)
-                            .text('')
-                            .padding([0, 0, 10, 0]);
-
-                        // set legend position and items layout
-                        chart
-                            .legend()
-                            .position('center-bottom')
-                            .itemsLayout('horizontal')
-                            .align('center');
-
-                        // set container id for the chart
-                        chart.container('pie-container');
-                        // initiate chart drawing
-                        chart.draw();
-                    });
-
-
-                </script>
+                <script>
+                    // create chart object
+                    var chart = anychart.pie([
+                      ['Structure+Doors+Windows', 48000],
+                      ['MEP+Insulation', 6500],
+                      ['Kitchen+Bath', 7000],
+                      ['Solar Panels', 4000],
+                      ['Transport+Logistics', 4000]
+                    ]);
+                    anychart.theme('monochrome');
+                    // set chart title text settings
+                    chart.title('Total: 69,500$ (rounded costs)');
+                    // set chart labels position to outside
+                    chart.labels().position('outside');
+                    // set legend title settings
+                    chart.legend().title().enabled(true).text('').padding([0, 0, 10, 0]);
+                    // set legend position and items layout
+                    chart.legend().position('center-bottom').itemsLayout('horizontal').align('center');
+                    // set container id for the chart
+                    chart.container(anychart.graphics.create('pie-container'));
+                    // initiate chart drawing
+                    chart.draw();
+                  </script>
                 <div class="base-inner">
 
                     <div class="l--main">
