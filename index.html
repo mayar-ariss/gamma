@@ -934,7 +934,7 @@
 
   <div id="seismograph-container">
     <p class="hero-caption positionhero">Scroll <br> <span style='font-size:40px;'>&#8595;</span></p>
-    <canvas id="seismograph-canvas" width="500" height="1200"></canvas>
+    <canvas id="seismograph-canvas" width="700" height="3000"></canvas>
     <span id="magnitude-word" class="hero-caption" style="font-size: 22px; position: fixed; bottom: 70px; right: 20px;">Magnitude</span>
     <span id="counter" class="hero-caption"
       style="font-size: 22px; position: fixed; bottom: 20px; right:20px;">0</span>
@@ -983,10 +983,10 @@ function animate(magnitude) {
 // Update seismograph and magnitude on scroll
 function updateSeismograph() {
   // Update magnitude based on scroll position
-  magnitude = Math.min(window.scrollY / 17, 50);
+  magnitude = Math.min(window.scrollY / 60, 50);
 
   // Update counter display
-  const counter = Math.min(magnitude/3, 9.5);
+  const counter = Math.min(magnitude/5, 9.5);
   document.getElementById('counter').textContent = counter.toFixed(1);
 
   // Animate seismograph with updated magnitude
