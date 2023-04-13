@@ -1218,62 +1218,73 @@ chart.select([0, 1,2,3,4]);
 
                 </div> <!-- /.base-inner -->
 
-                <div class="td_slider">
-                    <div class="td_slider_container">
-                        <div class="td_slider_item">
+                <div class="td_slideshow-container">
+                    <div class="td_slideshow-wrapper">
                             <img src="./images/slide1.png" alt="Image 1">
-                        </div>
-                        <div class="td_slider_item">
                             <img src="./images/slide2.png" alt="Image 2">
-                        </div>
-                        <div class="td_slider_item">
                             <img src="./images/slide3.png" alt="Image 3">
-                        </div>
-                        <div class="td_slider_item">
                             <img src="./images/slide4.png" alt="Image 4">
-                        </div>
-                        <div class="td_slider_item">
                             <img src="./images/slide5.png" alt="Image 5">
+                            <img src="./images/slide6.png" alt="Image 5">
+                            <img src="./images/slide7.png" alt="Image 5">
+                            <img src="./images/slide8.png" alt="Image 5">
+                            <img src="./images/slide9.png" alt="Image 5">
+                            <img src="./images/slide10.png" alt="Image 5">
+                            <img src="./images/slide11.png" alt="Image 5">
+                            <img src="./images/slide12.png" alt="Image 5">
+                            <img src="./images/slide13.png" alt="Image 5">
+                            <img src="./images/slide14.png" alt="Image 5">
+                            <img src="./images/slide15.png" alt="Image 5">
+                            <img src="./images/slide16.png" alt="Image 5">
+                            <img src="./images/slide17.png" alt="Image 5">
+                            <img src="./images/slide18.png" alt="Image 5">
                         </div>
                     </div>
-                    <a class="td_slider_prev" href="#"></a>
-                    <a class="td_slider_next" href="#"></a>
-                </div>
+            
+            
 
                 <script>
-                    var tdSliderIndex = 1;
-                    showTdSlides(tdSliderIndex);
+                    
+                    window.addEventListener('load', function() {
+  var slideshow = document.querySelector('.td_slideshow-wrapper');
+  var images = slideshow.children;
 
-                    function tdSliderPlus(n) {
-                        showTdSlides(tdSliderIndex += n);
-                    }
+  // Calculate width and height of each image
+  var imageWidth = images[0].offsetWidth;
+  var maxHeight = 0;
+  for (var i = 0; i < images.length; i++) {
+    var imageHeight = images[i].offsetHeight;
+    if (imageHeight > maxHeight) {
+      maxHeight = imageHeight;
+    }
+  }
 
-                    function showTdSlides(n) {
-                        var i;
-                        var tdSlides = document.getElementsByClassName("td_slider_item");
-                        if (n > tdSlides.length) { tdSliderIndex = 1 }
-                        if (n < 1) { tdSliderIndex = tdSlides.length }
-                        for (i = 0; i < tdSlides.length; i++) {
-                            tdSlides[i].style.display = "none";
-                        }
-                        tdSlides[tdSliderIndex - 1].style.display = "flex";
-                    }
+  // Set wrapper width and height to sum of all image widths and tallest image height
+  slideshow.style.width = (imageWidth * images.length) + 'px';
+  slideshow.style.height = maxHeight + 'px';
 
-                    var tdPrevBtn = document.querySelector('.td_slider_prev');
-                    var tdNextBtn = document.querySelector('.td_slider_next');
+  // Add event listener for window resize
+  window.addEventListener('resize', function() {
+    // Recalculate image width and height
+    imageWidth = images[0].offsetWidth;
+    maxHeight = 0;
+    for (var i = 0; i < images.length; i++) {
+      var imageHeight = images[i].offsetHeight;
+      if (imageHeight > maxHeight) {
+        maxHeight = imageHeight;
+      }
+    }
 
-                    tdPrevBtn.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        tdSliderPlus(-1);
-                    });
+    // Reset wrapper width and height
+    slideshow.style.width = (imageWidth * images.length) + 'px';
+    slideshow.style.height = maxHeight + 'px';
+  });
+});
 
-                    tdNextBtn.addEventListener('click', function (e) {
-                        e.preventDefault();
-                        tdSliderPlus(1);
-                    });
 
 
                 </script>
+                
 
 
                 <div class="base-inner">
