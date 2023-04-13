@@ -983,7 +983,7 @@ function animate(magnitude) {
 // Update seismograph and magnitude on scroll
 function updateSeismograph() {
   // Update magnitude based on scroll position
-  magnitude = Math.min(window.scrollY / 60, 50);
+  magnitude = Math.min(window.scrollY / 100, 50);
 
   // Update counter display
   const counter = Math.min(magnitude/5, 9.5);
