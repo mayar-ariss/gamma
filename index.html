@@ -934,10 +934,10 @@
 
   <div id="seismograph-container">
     <p class="hero-caption positionhero">Scroll <br> <span style='font-size:40px;'>&#8595;</span></p>
-    <canvas id="seismograph-canvas" width="500" height="1000"></canvas>
-    <span class="hero-caption" style="font-size: 22px; position: fixed; bottom: 70px; right: 20px;">Magnitude</span>
+    <canvas id="seismograph-canvas" width="500" height="1200"></canvas>
+    <span class="hero-caption" style="font-size: 22px; position: fixed; bottom: 70px; right: 40px;">Magnitude</span>
     <span id="counter" class="hero-caption"
-      style="font-size: 22px; position: fixed; bottom: 20px; right: 20px;">0</span>
+      style="font-size: 22px; position: fixed; bottom: 20px; right: 40px;">0</span>
   </div>
 
 
@@ -965,10 +965,10 @@ function animate(magnitude) {
   ctx.beginPath();
   ctx.moveTo(canvas.width / 2, 0);
   for (let i = 0; i < canvas.height; i++) {
-    const noise = Math.random() * magnitude;
+    const noise = Math.random() * magnitude*2;
     const x =
       canvas.width / 2 +
-      Math.sin(i * 0.1) * Math.cos(i * 0.01) * magnitude * 3 +
+      Math.sin(i * 0.2) * Math.cos(i * 0.02) * magnitude * 5 +
       noise;
     const y = i;
     ctx.lineTo(x, y);
@@ -979,13 +979,14 @@ function animate(magnitude) {
   ctx.stroke();
 }
 
+
 // Update seismograph and magnitude on scroll
 function updateSeismograph() {
   // Update magnitude based on scroll position
-  magnitude = Math.min(window.scrollY / 10, 50);
+  magnitude = Math.min(window.scrollY / 17, 50);
 
   // Update counter display
-  const counter = Math.min(magnitude / 5.27, 9.5);
+  const counter = Math.min(magnitude/3, 9.5);
   document.getElementById('counter').textContent = counter.toFixed(1);
 
   // Animate seismograph with updated magnitude
@@ -1402,7 +1403,7 @@ window.addEventListener('scroll', updateSeismograph);
               <br><br>
             </div> <!-- /.event-header-bottom-inner -->
 
-            <br><br>
+            <br>
             <div class="view-all">
             <a href="https://gammarelief.org/GAMMA/knowmore.html" class="view-all-link" target="blank">More</a>
           </div>
