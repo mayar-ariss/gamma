@@ -935,9 +935,9 @@
   <div id="seismograph-container">
     <p class="hero-caption positionhero">Scroll <br> <span style='font-size:40px;'>&#8595;</span></p>
     <canvas id="seismograph-canvas" width="500" height="1200"></canvas>
-    <span class="hero-caption" style="font-size: 22px; position: fixed; bottom: 70px; right: 0px;">Magnitude</span>
+    <span id="magnitude-word" class="hero-caption" style="font-size: 22px; position: fixed; bottom: 70px; right: 20px;">Magnitude</span>
     <span id="counter" class="hero-caption"
-      style="font-size: 22px; position: fixed; bottom: 20px; right: 0px;">0</span>
+      style="font-size: 22px; position: fixed; bottom: 20px; right:20px;">0</span>
   </div>
 
 
@@ -993,12 +993,13 @@ function updateSeismograph() {
   animate(magnitude);
 
   // Collapse page if magnitude has reached maximum
-  if (magnitude >= 50) {
+  if (counter >= 9.5) {
     // document.body.style.height = '100vh';
     document.getElementById('counter').style.display = 'none'; // hide counter element
-    document.querySelector('.hero-caption.positionhero').style.display = 'none'; // hide magnitude element
+    document.getElementById('magnitude-word').style.display = 'none'; // hide counter element
   } else {
     document.getElementById('counter').style.display = 'block'; // show counter element
+    document.getElementById('magnitude-word').style.display = 'block'; // hide counter element
     document.body.style.height = 'auto';
   }
 }
