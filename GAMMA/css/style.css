@@ -30973,7 +30973,9 @@ img {
     to { width: calc(100% * var(--partialAmount) / var(--maxAmount)); }
   }
 
-  
+  .progress-text{
+    font-family: "office-code", monospace;
+  }
   
   
   
