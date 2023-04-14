@@ -1053,35 +1053,63 @@
 
                 </header>
 
+                <div class="base-inner">
+
+                    <div class="l--main">
+                        <div class="base-body page-body">
 
 
-                <article class="l--tease l--post-tease tease-md  l--format-quote tease-has-thumbnail ">
-
-                    <div class="base-tease-inner post-tease-inner">
+                            <div class="base-main-inner">
 
 
+                                <article class="l--tease l--post-tease tease-md  l--format-quote tease-has-thumbnail ">
 
-                        <div class="base-tease__text post-tease__text">
-
-
-                            <div class="base-tease__header base-tease__header--quote">
-                                <h1 class="base-tease__heading"><br>
-                                    <p>The flatpack system is a fully-equipped modular home designed to accomodate an
-                                        entire family immediately
-                                        : Design -> Ship -> Assemble -> Move in!</p>
-
-                                </h1>
-                                <p class="base-tease__subheading base-tease__quote-attriubtion">Paul Carluy</p>
-                                <br>
-                            </div> <!-- /.base-tease__headings -->
+                                    <div class="base-tease-inner post-tease-inner">
 
 
 
-                        </div> <!-- /.base-tease__text -->
+                                        <div class="base-tease__text post-tease__text">
 
-                    </div> <!-- /.base-tease-inner -->
 
-                </article>
+                                            <div class="base-tease__header base-tease__header--quote">
+                                                <h1 class="base-tease__heading"><br>
+                                                    <p> Designed to serve as a permanent residence, the system is built
+                                                        to
+                                                        withstand harsh external conditions. Inside, it is fully
+                                                        equipped with all
+                                                        essential amenities for a family's comfortable living.
+                                                        Furthermore, given the
+                                                        unstable energy situation in the region, the module is
+                                                        self-sufficient and
+                                                        generates
+                                                        its own electricity. In short, the flatpack is a fully-equipped
+                                                        modular home
+                                                        designed to accomodate an
+                                                        entire family immediately: Design -> Ship -> Assemble -> Move
+                                                        in!</p>
+
+                                                </h1>
+                                                <p class="base-tease__subheading base-tease__quote-attriubtion">Paul
+                                                    Carluy</p>
+                                                <br>
+                                            </div> <!-- /.base-tease__headings -->
+
+
+
+                                        </div> <!-- /.base-tease__text -->
+
+                                    </div> <!-- /.base-tease-inner -->
+
+                                </article>
+
+
+                            </div> <!-- /.page-body -->
+
+                        </div> <!-- /.base-main-inner -->
+                    </div> <!-- /.l--main -->
+
+                </div> <!-- /.base-inner -->
+
 
 
 
@@ -1092,28 +1120,7 @@
                 </div>
                 <br>
 
-                <div class="base-inner">
 
-                    <div class="l--main">
-                        <div class="base-body page-body">
-
-
-                            <div class="base-main-inner">
-
-                                <p>Designed to serve as a permanent residence, the flatpack system is built to endure
-                                    and withstand harsh external conditions. Inside, it is fully equipped with all
-                                    essential amenities for a family's comfortable living. Furthermore, given the
-                                    unstable energy situation in the region, the module is self-sufficient and generates
-                                    its own electricity.
-                                </p>
-
-
-                            </div> <!-- /.page-body -->
-
-                        </div> <!-- /.base-main-inner -->
-                    </div> <!-- /.l--main -->
-
-                </div> <!-- /.base-inner -->
 
 
                 <script src="./js/anychart-base.min.js?v=2"></script>
@@ -1138,7 +1145,7 @@
                             ['Transport+Logistics', 4000]
                         ]);
                         // set the explosion range in selected state
-                        chart.selected().explode("5%");
+                        chart.selected().explode("3%");
                         // explode the fourth and fifth slices
                         chart.select([0, 1, 2, 3, 4]);
                         // set chart title text settings
@@ -1147,7 +1154,7 @@
                         // chart.title().orientation("bottom");
 
                         // set chart labels position to outside
-                        chart.labels().position('outside');
+                        chart.labels().position('inside');
 
                         // set legend title settings
                         chart
@@ -1160,7 +1167,7 @@
                         // set legend position and items layout
                         chart
                             .legend()
-                            .position('centre-bottom')
+                            .position('center')
                             .itemsLayout('horizontal-expandable')
                             .align('center');
                         // set the position mode of the legend
@@ -1195,6 +1202,88 @@
                     </div> <!-- /.l--main -->
 
                 </div> <!-- /.base-inner -->
+
+                <div class="view-all">
+                    <a href="https://www.donate-link.com" class="view-all-link">Donate</a>
+                </div>
+                <br><br>
+                <div class="progress-text">$1,200</div>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <span class="donation-amount" style="display: none;">1200</span>
+
+
+                <script>
+                    const progressBar = document.querySelector('.progress');
+                    const progressBarContainer = document.querySelector('.progress-bar');
+
+                    let maxAmount = 69500;
+                    let partialAmount = parseInt(document.querySelector('.donation-amount').textContent);
+
+                    let isProgressComplete = false;
+
+                    function fillProgress(entries) {
+                        if (!isProgressComplete && entries[0].isIntersecting) {
+                            let animationName = 'fill-progress';
+                            let animationDuration = '2s';
+                            let endWidth = '100%';
+
+                            animationName = 'fill-progress-partial';
+                            endWidth = 'var(--partialAmount)';
+
+                            progressBar.style.animationName = animationName;
+                            progressBar.style.animationDuration = animationDuration;
+                            progressBar.style.setProperty('--maxAmount', maxAmount);
+                            progressBar.style.setProperty('--partialAmount', partialAmount);
+                            progressBar.style.width = endWidth;
+
+                            isProgressComplete = true;
+
+                            const progressText = document.querySelector('.progress-text');
+                            progressText.textContent = '$0';
+                            let currentAmount = 0;
+                            const duration = 2000; // desired duration of the animation in milliseconds
+                            const increment = Math.ceil(partialAmount / (duration / 40)); // calculate the increment based on the final amount and duration
+                            const interval = setInterval(() => {
+                                if (currentAmount < partialAmount) {
+                                    currentAmount += increment;
+                                    if (currentAmount > partialAmount) { // make sure the final amount is not exceeded
+                                        currentAmount = partialAmount;
+                                    }
+                                    progressText.textContent = '$' + currentAmount;
+                                } else {
+                                    clearInterval(interval);
+                                }
+                            }, 20);
+                        } else if (isProgressComplete && !entries[0].isIntersecting) {
+                            resetProgress();
+                        }
+                    }
+
+                    function resetProgress() {
+                        progressBar.style.width = '0';
+                        progressBar.style.animationName = '';
+                        progressBar.style.animationDuration = '';
+                        isProgressComplete = false;
+                    }
+
+                    function updateProgressAmounts(newMaxAmount, newPartialAmount) {
+                        maxAmount = newMaxAmount;
+                        partialAmount = newPartialAmount;
+                        resetProgress();
+                    }
+
+                    const observer = new IntersectionObserver(fillProgress, {
+                        threshold: 0.5,
+                    });
+
+                    observer.observe(progressBarContainer);
+
+
+                </script>
+
+                <br><br>
 
 
                 <br>
@@ -1296,106 +1385,11 @@
 
 
 
-                <div class="base-inner">
-
-                    <div class="l--main">
-                        <div class="base-body page-body">
-
-
-                            <div class="base-main-inner">
-
-
-                            </div> <!-- /.page-body -->
-
-                        </div> <!-- /.base-main-inner -->
-
-                    </div> <!-- /.l--main -->
-
-
-                </div> <!-- /.base-inner -->
-
                 <br><br>
-                <div class="view-all">
-                    <a href="https://www.donate-link.com" class="view-all-link">Donate</a>
-                </div>
-                <br><br>
-                <div class="progress-text">$1,000</div>
-                <div class="progress-bar">
-                    <div class="progress"></div>
-                </div>
-                <span class="donation-amount" style="display: none;">1000</span>
 
 
-                <script>
-                    const progressBar = document.querySelector('.progress');
-                    const progressBarContainer = document.querySelector('.progress-bar');
-
-                    let maxAmount = 69500;
-                    let partialAmount = parseInt(document.querySelector('.donation-amount').textContent);
-
-                    let isProgressComplete = false;
-
-                    function fillProgress(entries) {
-                        if (!isProgressComplete && entries[0].isIntersecting) {
-                            let animationName = 'fill-progress';
-                            let animationDuration = '2s';
-                            let endWidth = '100%';
-
-                            animationName = 'fill-progress-partial';
-                            endWidth = 'var(--partialAmount)';
-
-                            progressBar.style.animationName = animationName;
-                            progressBar.style.animationDuration = animationDuration;
-                            progressBar.style.setProperty('--maxAmount', maxAmount);
-                            progressBar.style.setProperty('--partialAmount', partialAmount);
-                            progressBar.style.width = endWidth;
-
-                            isProgressComplete = true;
-
-                            const progressText = document.querySelector('.progress-text');
-                            progressText.textContent = '$0';
-                            let currentAmount = 0;
-                            const duration = 2000; // desired duration of the animation in milliseconds
-                            const increment = Math.ceil(partialAmount / (duration / 40)); // calculate the increment based on the final amount and duration
-                            const interval = setInterval(() => {
-                                if (currentAmount < partialAmount) {
-                                    currentAmount += increment;
-                                    if (currentAmount > partialAmount) { // make sure the final amount is not exceeded
-                                        currentAmount = partialAmount;
-                                    }
-                                    progressText.textContent = '$' + currentAmount;
-                                } else {
-                                    clearInterval(interval);
-                                }
-                            }, 20);
-                        } else if (isProgressComplete && !entries[0].isIntersecting) {
-                            resetProgress();
-                        }
-                    }
-
-                    function resetProgress() {
-                        progressBar.style.width = '0';
-                        progressBar.style.animationName = '';
-                        progressBar.style.animationDuration = '';
-                        isProgressComplete = false;
-                    }
-
-                    function updateProgressAmounts(newMaxAmount, newPartialAmount) {
-                        maxAmount = newMaxAmount;
-                        partialAmount = newPartialAmount;
-                        resetProgress();
-                    }
-
-                    const observer = new IntersectionObserver(fillProgress, {
-                        threshold: 0.5,
-                    });
-
-                    observer.observe(progressBarContainer);
 
 
-                </script>
-
-                <br><br>
 
 
 
