@@ -30947,7 +30947,7 @@ img {
     border: 1px solid #000;
     position: relative;
     overflow: hidden;
-    border-radius: 10px;
+    border-radius: 0px;
   }
   
   .progress {
@@ -30957,8 +30957,8 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
     animation-fill-mode: forwards;
 }
 
