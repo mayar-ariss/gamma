@@ -1416,11 +1416,82 @@ window.addEventListener('scroll', updateSeismograph);
             </div>
           </div>
           <br><br>
+          <div class="progress-text">$1,000</div>
+          <div class="progress-bar">
+              <div class="progress"></div>
+          </div>
+          <span class="donation-amount" style="display: none;">1000</span>
 
 
+          <script>
+              const progressBar = document.querySelector('.progress');
+              const progressBarContainer = document.querySelector('.progress-bar');
+
+              let maxAmount = 69500;
+              let partialAmount = parseInt(document.querySelector('.donation-amount').textContent);
+
+              let isProgressComplete = false;
+
+              function fillProgress(entries) {
+                  if (!isProgressComplete && entries[0].isIntersecting) {
+                      let animationName = 'fill-progress';
+                      let animationDuration = '2s';
+                      let endWidth = '100%';
+
+                      animationName = 'fill-progress-partial';
+                      endWidth = 'var(--partialAmount)';
+
+                      progressBar.style.animationName = animationName;
+                      progressBar.style.animationDuration = animationDuration;
+                      progressBar.style.setProperty('--maxAmount', maxAmount);
+                      progressBar.style.setProperty('--partialAmount', partialAmount);
+                      progressBar.style.width = endWidth;
+
+                      isProgressComplete = true;
+
+                      const progressText = document.querySelector('.progress-text');
+                      progressText.textContent = '$0';
+                      let currentAmount = 0;
+                      const duration = 2000; // desired duration of the animation in milliseconds
+                      const increment = Math.ceil(partialAmount / (duration / 40)); // calculate the increment based on the final amount and duration
+                      const interval = setInterval(() => {
+                          if (currentAmount < partialAmount) {
+                              currentAmount += increment;
+                              if (currentAmount > partialAmount) { // make sure the final amount is not exceeded
+                                  currentAmount = partialAmount;
+                              }
+                              progressText.textContent = '$' + currentAmount;
+                          } else {
+                              clearInterval(interval);
+                          }
+                      }, 20);
+                  } else if (isProgressComplete && !entries[0].isIntersecting) {
+                      resetProgress();
+                  }
+              }
+
+              function resetProgress() {
+                  progressBar.style.width = '0';
+                  progressBar.style.animationName = '';
+                  progressBar.style.animationDuration = '';
+                  isProgressComplete = false;
+              }
+
+              function updateProgressAmounts(newMaxAmount, newPartialAmount) {
+                  maxAmount = newMaxAmount;
+                  partialAmount = newPartialAmount;
+                  resetProgress();
+              }
+
+              const observer = new IntersectionObserver(fillProgress, {
+                  threshold: 0.5,
+              });
+
+              observer.observe(progressBarContainer);
 
 
-
+          </script>
+          <br><br>
 
 
 
