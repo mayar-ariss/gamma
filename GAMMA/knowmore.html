@@ -1021,7 +1021,8 @@
 
                         </a>
                         <h1 class="site-branding--title"><a href="https://gammarelief.org"
-                                class="site-branding--link-title" target="blank">GAMMA <span>Relief through Urban Design</span></a>
+                                class="site-branding--link-title" target="blank">GAMMA <span>Relief through Urban
+                                    Design</span></a>
                         </h1>
                     </div>
 
@@ -1343,6 +1344,8 @@
                         <img src="./images/slide23.png" alt="Image 23">
                     </div>
                 </div>
+                
+
 
 
 
@@ -1388,8 +1391,57 @@
 
                 </script>
 
+<br><br>
 
 
+<div class="td2_slideshow-container">
+    <div class="td2_slideshow-wrapper">
+        <img src="./images/slide2_1.png" alt="Image 2_1">
+        <img src="./images/slide2_2.png" alt="Image 2_2">
+    </div>
+</div>
+
+<script>
+
+    window.addEventListener('load', function () {
+        var slideshow = document.querySelector('.td2_slideshow-wrapper');
+        var images = slideshow.children;
+
+        // Calculate width and height of each image
+        var imageWidth = images[0].offsetWidth;
+        var maxHeight = 0;
+        for (var i = 0; i < images.length; i++) {
+            var imageHeight = images[i].offsetHeight;
+            if (imageHeight > maxHeight) {
+                maxHeight = imageHeight;
+            }
+        }
+
+        // Set wrapper width and height to sum of all image widths and tallest image height
+        slideshow.style.width = (imageWidth * images.length) + 'px';
+        slideshow.style.height = maxHeight + 'px';
+
+        // Add event listener for window resize
+        window.addEventListener('resize', function () {
+            // Recalculate image width and height
+            imageWidth = images[0].offsetWidth;
+            maxHeight = 0;
+            for (var i = 0; i < images.length; i++) {
+                var imageHeight = images[i].offsetHeight;
+                if (imageHeight > maxHeight) {
+                    maxHeight = imageHeight;
+                }
+            }
+
+            // Reset wrapper width and height
+            slideshow.style.width = (imageWidth * images.length) + 'px';
+            slideshow.style.height = maxHeight + 'px';
+        });
+    });
+
+
+
+</script>
                 <br><br>
 
 
@@ -1431,7 +1483,8 @@
                         <nav class="subfooter-general">
                             <ul class="subfooter-general__list">
                                 <li class="subfooter-general__item--logo"><a href="https://gammarelief.org"
-                                        class="subfooter-general__link--logo" title="GAMMA Relief through Urban Design" target="blank">
+                                        class="subfooter-general__link--logo" title="GAMMA Relief through Urban Design"
+                                        target="blank">
                                         <svg class="subfooter-general__logo" viewBox="0 0 345.000000 425.000000">
                                             <g transform="translate(0.000000,525.000000) scale(0.100000,-0.100000)"
                                                 fill="#000000" stroke="none">
@@ -1494,7 +1547,9 @@
 
                         <br><br>
                         <a href="https://www.linkedin.com/company/gamma-relief-through-urban-design/">
-                          <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn logo" width="25" height="25" style="object-fit: contain; filter: grayscale(100%);">
+                            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                                alt="LinkedIn logo" width="25" height="25"
+                                style="object-fit: contain; filter: grayscale(100%);">
                         </a>
                     </div><!-- /.l-subfooter -->
 
