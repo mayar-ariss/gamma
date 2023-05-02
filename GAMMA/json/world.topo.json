@@ -1077,7 +1077,8 @@
                         "iso-a3": "GBR",
                         "iso-a2": "GB",
                         "woe-id": "-90",
-                        "continent": "Europe"
+                        "continent": "Europe",
+                        "value":1
                     }
                 },
                 {
