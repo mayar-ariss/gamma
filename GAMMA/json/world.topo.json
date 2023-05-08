@@ -886,7 +886,8 @@
                         "iso-a3": "ESP",
                         "iso-a2": "ES",
                         "woe-id": "23424950",
-                        "continent": "Europe"
+                        "continent": "Europe",
+                        "value":1
                     }
                 },
                 {
