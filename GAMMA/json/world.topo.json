@@ -549,7 +549,8 @@
                         "iso-a3": "CHN",
                         "iso-a2": "CN",
                         "woe-id": "23424781",
-                        "continent": "Asia"
+                        "continent": "Asia",
+                        "value":1
                     }
                 },
                 {
