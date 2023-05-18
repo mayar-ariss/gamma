@@ -4959,7 +4959,8 @@
                         "iso-a3": "IRN",
                         "iso-a2": "IR",
                         "woe-id": "23424851",
-                        "continent": "Asia"
+                        "continent": "Asia",
+                        "value":1
                     }
                 },
                 {
