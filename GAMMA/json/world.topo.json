@@ -4448,7 +4448,8 @@
                         "iso-a3": "SAU",
                         "iso-a2": "SA",
                         "woe-id": "23424938",
-                        "continent": "Asia"
+                        "continent": "Asia",
+                        "value":1
                     }
                 },
                 {
