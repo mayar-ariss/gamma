@@ -394,7 +394,8 @@
                         "iso-a3": "IND",
                         "iso-a2": "IN",
                         "woe-id": "23424848",
-                        "continent": "Asia"
+                        "continent": "Asia",
+                        "value": 1
                     }
                 },
                 {
