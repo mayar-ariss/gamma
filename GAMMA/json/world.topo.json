@@ -2299,7 +2299,8 @@
                         "iso-a3": "CAN",
                         "iso-a2": "CA",
                         "woe-id": "23424775",
-                        "continent": "North America"
+                        "continent": "North America",
+                        "value":1
                     }
                 },
                 {
