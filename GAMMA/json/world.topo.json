@@ -3664,61 +3664,61 @@
                         "continent": "Asia"
                     }
                 },
-                // {
-                //     "type": "MultiPolygon",
-                //     "arcs": [
-                //         [
-                //             [
-                //                 -209,
-                //                 -208
-                //             ]
-                //         ],
-                //         [
-                //             [
-                //                 609,
-                //                 -207,
-                //                 610,
-                //                 611
-                //             ]
-                //         ],
-                //         [
-                //             [
-                //                 -199,
-                //                 612
-                //             ]
-                //         ],
-                //         [
-                //             [
-                //                 613,
-                //                 -212,
-                //                 614,
-                //                 615,
-                //                 616,
-                //                 617,
-                //                 618,
-                //                 -201
-                //             ]
-                //         ]
-                //     ],
-                //     "id": "CY",
-                //     "properties": {
-                //         "hc-group": "admin0",
-                //         "hc-middle-x": 0.39,
-                //         "hc-middle-y": 0.51,
-                //         "hc-key": "cy",
-                //         "hc-a2": "CY",
-                //         "name": "Cyprus",
-                //         "labelrank": "5",
-                //         "country-abbrev": "Cyp.",
-                //         "subregion": "Western Asia",
-                //         "region-wb": "Europe & Central Asia",
-                //         "iso-a3": "CYP",
-                //         "iso-a2": "CY",
-                //         "woe-id": "-90",
-                //         "continent": "Asia",
-                //         "value":2
-                //     }
-                // },
+                {
+                    "type": "MultiPolygon",
+                    "arcs": [
+                        [
+                            [
+                                -209,
+                                -208
+                            ]
+                        ],
+                        [
+                            [
+                                609,
+                                -207,
+                                610,
+                                611
+                            ]
+                        ],
+                        [
+                            [
+                                -199,
+                                612
+                            ]
+                        ],
+                        [
+                            [
+                                613,
+                                -212,
+                                614,
+                                615,
+                                616,
+                                617,
+                                618,
+                                -201
+                            ]
+                        ]
+                    ],
+                    "id": "CY",
+                    "properties": {
+                        "hc-group": "admin0",
+                        "hc-middle-x": 0.39,
+                        "hc-middle-y": 0.51,
+                        "hc-key": "cy",
+                        "hc-a2": "CY",
+                        "name": "Cyprus",
+                        "labelrank": "5",
+                        "country-abbrev": "Cyp.",
+                        "subregion": "Western Asia",
+                        "region-wb": "Europe & Central Asia",
+                        "iso-a3": "CYP",
+                        "iso-a2": "CY",
+                        "woe-id": "-90",
+                        "continent": "Asia",
+                        "value":2
+                    }
+                },
                 {
                     "type": "Polygon",
                     "arcs": [
@@ -5885,38 +5885,6 @@
                     "arcs": [
                         [
                             [
-                                -209,
-                                -208
-                            ]
-                        ],
-                        [
-                            [
-                                609,
-                                -207,
-                                610,
-                                611
-                            ]
-                        ],
-                        [
-                            [
-                                -199,
-                                612
-                            ]
-                        ],
-                        [
-                            [
-                                613,
-                                -212,
-                                614,
-                                615,
-                                616,
-                                617,
-                                618,
-                                -201
-                            ]
-                        ],
-                        [
-                            [
                                 -205,
                                 -204,
                                 950,
@@ -5931,26 +5899,24 @@
                             ]
                         ]
                     ],
-                    "id": "CY",
+                    "id": "NC",
                     "properties": {
                         "hc-group": "admin0",
-                        "hc-middle-x": 0.39,  // Note: This might need adjusting to account for the merged region
-                        "hc-middle-y": 0.51,  // Note: This might need adjusting to account for the merged region
-                        "hc-key": "cy",
-                        "hc-a2": "CY",
-                        "name": "Cyprus",
-                        "labelrank": "5",
-                        "country-abbrev": "Cyp.",
+                        "hc-middle-x": 0.56,
+                        "hc-middle-y": 0.71,
+                        "hc-key": "nc",
+                        "hc-a2": "NC",
+                        "name": "Northern Cyprus",
+                        "labelrank": "6",
+                        "country-abbrev": "N. Cy.",
                         "subregion": "Western Asia",
                         "region-wb": "Europe & Central Asia",
-                        "iso-a3": "CYP",
-                        "iso-a2": "CY",
+                        "iso-a3": "-99",
+                        "iso-a2": "NC",
                         "woe-id": "-90",
-                        "continent": "Asia",
-                        "value": 2
+                        "continent": "Asia"
                     }
                 },
-
                 {
                     "type": "Polygon",
                     "arcs": [
