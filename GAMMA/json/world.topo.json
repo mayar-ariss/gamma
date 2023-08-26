@@ -3668,7 +3668,11 @@
                     "type": "MultiPolygon",
                     "arcs": [
                         [
-                            [
+                            [   -205,
+                                -204,
+                                 950,
+                                951,
+                                952,
                                 -209,
                                 -208
                             ]
@@ -5880,43 +5884,43 @@
                         "continent": "Africa"
                     }
                 },
-                {
-                    "type": "MultiPolygon",
-                    "arcs": [
-                        [
-                            [
-                                -205,
-                                -204,
-                                950,
-                                951,
-                                952
-                            ]
-                        ],
-                        [
-                            [
-                                953,
-                                954
-                            ]
-                        ]
-                    ],
-                    "id": "NC",
-                    "properties": {
-                        "hc-group": "admin0",
-                        "hc-middle-x": 0.56,
-                        "hc-middle-y": 0.71,
-                        "hc-key": "nc",
-                        "hc-a2": "NC",
-                        "name": "Northern Cyprus",
-                        "labelrank": "6",
-                        "country-abbrev": "N. Cy.",
-                        "subregion": "Western Asia",
-                        "region-wb": "Europe & Central Asia",
-                        "iso-a3": "-99",
-                        "iso-a2": "NC",
-                        "woe-id": "-90",
-                        "continent": "Asia"
-                    }
-                },
+                // {
+                //     "type": "MultiPolygon",
+                //     "arcs": [
+                //         [
+                //             [
+                //                 -205,
+                //                 -204,
+                //                 950,
+                //                 951,
+                //                 952
+                //             ]
+                //         ],
+                //         [
+                //             [
+                //                 953,
+                //                 954
+                //             ]
+                //         ]
+                //     ],
+                //     "id": "NC",
+                //     "properties": {
+                //         "hc-group": "admin0",
+                //         "hc-middle-x": 0.56,
+                //         "hc-middle-y": 0.71,
+                //         "hc-key": "nc",
+                //         "hc-a2": "NC",
+                //         "name": "Northern Cyprus",
+                //         "labelrank": "6",
+                //         "country-abbrev": "N. Cy.",
+                //         "subregion": "Western Asia",
+                //         "region-wb": "Europe & Central Asia",
+                //         "iso-a3": "-99",
+                //         "iso-a2": "NC",
+                //         "woe-id": "-90",
+                //         "continent": "Asia"
+                //     }
+                // },
                 {
                     "type": "Polygon",
                     "arcs": [
@@ -6363,58 +6367,58 @@
                         "continent": "South America"
                     }
                 },
-                {
-                    "type": "MultiPolygon",
-                    "arcs": [
-                        [
-                            [
-                                611,
-                                -612,
-                                -611,
-                                -206,
-                                -953
-                            ]
-                        ],
-                        [
-                            [
-                                -955,
-                                -616
-                            ]
-                        ],
-                        [
-                            [
-                                -618,
-                                617,
-                                1021
-                            ]
-                        ],
-                        [
-                            [
-                                -203,
-                                -202,
-                                -619,
-                                -951
-                            ]
-                        ]
-                    ],
-                    "id": "CNM",
-                    "properties": {
-                        "hc-group": "admin0",
-                        "hc-middle-x": 0.39,
-                        "hc-middle-y": 0.11,
-                        "hc-key": "cnm",
-                        "hc-a2": "CN",
-                        "name": "Cyprus No Mans Area",
-                        "labelrank": "9",
-                        "country-abbrev": null,
-                        "subregion": "Western Asia",
-                        "region-wb": "Europe & Central Asia",
-                        "iso-a3": "-99",
-                        "iso-a2": null,
-                        "woe-id": "-99",
-                        "continent": "Asia"
-                    }
-                },
+                // {
+                //     "type": "MultiPolygon",
+                //     "arcs": [
+                //         [
+                //             [
+                //                 611,
+                //                 -612,
+                //                 -611,
+                //                 -206,
+                //                 -953
+                //             ]
+                //         ],
+                //         [
+                //             [
+                //                 -955,
+                //                 -616
+                //             ]
+                //         ],
+                //         [
+                //             [
+                //                 -618,
+                //                 617,
+                //                 1021
+                //             ]
+                //         ],
+                //         [
+                //             [
+                //                 -203,
+                //                 -202,
+                //                 -619,
+                //                 -951
+                //             ]
+                //         ]
+                //     ],
+                //     "id": "CNM",
+                //     "properties": {
+                //         "hc-group": "admin0",
+                //         "hc-middle-x": 0.39,
+                //         "hc-middle-y": 0.11,
+                //         "hc-key": "cnm",
+                //         "hc-a2": "CN",
+                //         "name": "Cyprus No Mans Area",
+                //         "labelrank": "9",
+                //         "country-abbrev": null,
+                //         "subregion": "Western Asia",
+                //         "region-wb": "Europe & Central Asia",
+                //         "iso-a3": "-99",
+                //         "iso-a2": null,
+                //         "woe-id": "-99",
+                //         "continent": "Asia"
+                //     }
+                // },
                 {
                     "type": "Polygon",
                     "arcs": [
@@ -7581,10 +7585,10 @@
                             -995,
                             1111,
                             -993,
-                            1112,
-                            -999,
-                            1113,
-                            1114
+                            1112
+                            // -999,
+                            // 1113,
+                            // 1114
                         ]
                     ],
                     "id": "IL",
