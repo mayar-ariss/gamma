@@ -7581,10 +7581,10 @@
                             -995,
                             1111,
                             -993,
-                            1112
-                            // -999,
-                            // 1113,
-                            // 1114
+                            1112,
+                            -999,
+                            1113,
+                            1114
                         ]
                     ],
                     "id": "IL",
@@ -7605,6 +7605,36 @@
                         "continent": "Asia"
                     }
                 },
+
+                {
+                    "type": "Polygon",
+                    "arcs": [
+                        [
+                            
+                            -999,
+                            1113,
+                            1114
+                        ]
+                    ],
+                    "id": "PAL",
+                    "properties": {
+                        "hc-group": "admin0",
+                        "hc-middle-x": 0.68,
+                        "hc-middle-y": 0.1,
+                        "hc-key": "pal",
+                        "hc-a2": "PAL",
+                        "name": "Palestine",
+                        "labelrank": "4",
+                        "country-abbrev": "Pal.",
+                        "subregion": "Western Asia",
+                        "region-wb": "Middle East & North Africa",
+                        "iso-a3": "PAL",
+                        "iso-a2": "PAL",
+                        "woe-id": "23424852",
+                        "continent": "Asia"
+                    }
+                },
+
                 {
                     "type": "Polygon",
                     "arcs": [
