@@ -983,10 +983,10 @@ function animate(magnitude) {
 // Update seismograph and magnitude on scroll
 function updateSeismograph() {
   // Update magnitude based on scroll position
-  magnitude = Math.min(window.scrollY / 70, 50);
+  magnitude = Math.min(window.scrollY / 120, 40);
 
   // Update counter display
-  const counter = Math.min(magnitude/3, 9.5);
+  const counter = Math.min(magnitude/1.8, 9.5);
   document.getElementById('counter').textContent = counter.toFixed(1);
 
   // Animate seismograph with updated magnitude
@@ -1150,7 +1150,7 @@ window.addEventListener('scroll', updateSeismograph);
 
 
 
-                  <div class="base-tease__text post-tease__text">
+                  <div class="base-tease__text post-tease__text" style="margin-right: 20px;">
 
 
                     <div class="base-tease__header base-tease__header--quote">
@@ -1255,7 +1255,7 @@ window.addEventListener('scroll', updateSeismograph);
 
 
 
-                  <div class="base-tease__text post-tease__text">
+                  <div class="base-tease__text post-tease__text" style="margin-right: 20px;">
 
 
                     <div class="base-tease__header base-tease__header--quote">
