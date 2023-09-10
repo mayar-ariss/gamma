@@ -30634,7 +30634,7 @@ img {
     
     .my-slideshow-container::-webkit-scrollbar-thumb {
       background-color: #000000;
-      border-radius: 2px;
+      border-radius: 3px;
     }
     
     .my-slideshow-container::-webkit-scrollbar-thumb:hover {
@@ -30650,14 +30650,14 @@ img {
   
 /* Set the width and height of the scrollbar */
 ::-webkit-scrollbar {
-    width: 2px;
-    height: 2px;
+    width: 3px;
+    height: 3px;
   }
   
   /* Style the thumb (the moving part of the scrollbar) */
   ::-webkit-scrollbar-thumb {
     background-color: #000000;
-    border-radius: 2px;
+    border-radius: 3px;
   }
   
   /* Style the track (the non-moving part of the scrollbar) */
