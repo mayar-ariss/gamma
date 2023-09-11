@@ -395,7 +395,7 @@
                         "iso-a2": "IN",
                         "woe-id": "23424848",
                         "continent": "Asia",
-                        "value": 1
+                        "value": 0
                     }
                 },
                 {
@@ -472,7 +472,7 @@
                         "iso-a2": "FR",
                         "woe-id": "-90",
                         "continent": "Europe",
-                        "value":5
+                        "value":2
                     }
                 },
                 {
@@ -889,7 +889,7 @@
                         "iso-a2": "ES",
                         "woe-id": "23424950",
                         "continent": "Europe",
-                        "value":3
+                        "value":0
                     }
                 },
                 {
@@ -1167,7 +1167,7 @@
                         "iso-a2": "GR",
                         "woe-id": "23424833",
                         "continent": "Europe",
-                        "value":2
+                        "value":0
                     }
                 },
                 {
@@ -2300,7 +2300,7 @@
                         "iso-a2": "CA",
                         "woe-id": "23424775",
                         "continent": "North America",
-                        "value":1
+                        "value":0
                     }
                 },
                 {
@@ -3587,7 +3587,7 @@
                         "iso-a2": "IT",
                         "woe-id": "23424853",
                         "continent": "Europe",
-                        "value":2
+                        "value":0
                     }
                 },
                 {
@@ -3716,7 +3716,7 @@
                         "iso-a2": "CY",
                         "woe-id": "-90",
                         "continent": "Asia",
-                        "value":2
+                        "value":1
                     }
                 },
                 {
@@ -4452,7 +4452,7 @@
                         "iso-a2": "SA",
                         "woe-id": "23424938",
                         "continent": "Asia",
-                        "value":1
+                        "value":0
                     }
                 },
                 {
@@ -6253,7 +6253,7 @@
                         "iso-a2": "SY",
                         "woe-id": "23424956",
                         "continent": "Asia",
-                        "value":2
+                        "value":0
                     }
                 },
                 {
@@ -7482,7 +7482,7 @@
                         "iso-a2": "LB",
                         "woe-id": "23424873",
                         "continent": "Asia",
-                        "value":6
+                        "value":1
                     }
                 },
                 {
