@@ -31012,7 +31012,18 @@ img {
   }
   
   
+/* Venn Diagram */
 
+.circle-venn {
+    stroke: white;
+    stroke-width: 1;
+}
+
+.middle-text-venn {
+    font-family: "office-code"; 
+    font-size: 14px
+
+}
 
 
 
