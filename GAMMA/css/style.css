@@ -31015,9 +31015,9 @@ img {
 /* Venn Diagram */
 
 #vennSVG {
+    display: block; /* To prevent default inline behavior that can cause white space at the bottom */
     width: 100%;
-    max-width: 600px;
-    height: auto;
+    max-height: 100%; /* Instead of setting height to 100%, set max-height to prevent it from growing beyond its container */
 }
 
 
