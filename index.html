@@ -624,7 +624,7 @@
     var gform_i18n = { "datepicker": { "days": { "monday": "Mon", "tuesday": "Tue", "wednesday": "Wed", "thursday": "Thu", "friday": "Fri", "saturday": "Sat", "sunday": "Sun" }, "months": { "january": "January", "february": "February", "march": "March", "april": "April", "may": "May", "june": "June", "july": "July", "august": "August", "september": "September", "october": "October", "november": "November", "december": "December" }, "firstDay": 1, "iconText": "Select date" } };
     var gf_legacy_multi = { "1": "1" };
     // var gform_gravityforms = { "strings": { "invalid_file_extension": "This type of file is not allowed. Must be one of the following:", "delete_file": "Delete this file", "in_progress": "in progress", "file_exceeds_limit": "File exceeds size limit", "illegal_extension": "This type of file is not allowed.", "max_reached": "Maximum number of files reached", "unknown_error": "There was a problem while saving the file on the server", "currently_uploading": "Please wait for the uploading to complete", "cancel": "Cancel", "cancel_upload": "Cancel this upload", "cancelled": "Cancelled" }, "vars": { "images_url": "https:\/\/www.gsd.harvard.edu\/wp-content\/plugins\/gravityforms\/images" } };
-/* ]]> */
+    /* ]]> */
   </script>
   <script type="text/javascript" id="gform_gravityforms-js-before">
 
@@ -634,7 +634,7 @@
   <script type="text/javascript" id="wp-util-js-extra">
     /* <![CDATA[ */
     var _wpUtilSettings = { "ajax": { "url": "\/wp-admin\/admin-ajax.php" } };
-/* ]]> */
+    /* ]]> */
   </script>
   <script type="text/javascript" src="js/wp-util.min.js" id="wp-util-js"></script>
   <script type="text/javascript" src="js/algoliasearch.jquery.min.js" id="algolia-search-js"></script>
@@ -652,7 +652,7 @@
     href="https://www.gsd.harvard.edu/wp-json/oembed/1.0/embed?url=https%3A%2F%2Fwww.gsd.harvard.edu%2F&format=xml"> -->
   <script type="text/javascript">< !-
       function powerpress_pinw(pinw_url) { window.open(pinw_url, 'PowerPressPlayer', 'toolbar=0,status=0,resizable=1,width=460,height=320'); return false; }
-//-->
+    //-->
   </script>
   <script>
         (function (i, s, o, g, r, a, m) {
@@ -922,7 +922,7 @@
 
 
 
-  
+
 
 </head>
 
@@ -935,83 +935,83 @@
   <div id="seismograph-container">
     <p class="hero-caption positionhero">Scroll <br> <span style='font-size:40px;'>&#8595;</span></p>
     <canvas id="seismograph-canvas" width="420" height="2500"></canvas>
-    <span id="magnitude-word" class="hero-caption" style="font-size: 22px; position: fixed; bottom: 70px; right: 20px;">Magnitude</span>
-    <span id="counter" class="hero-caption"
-      style="font-size: 22px; position: fixed; bottom: 20px; right:20px;">0</span>
+    <span id="magnitude-word" class="hero-caption"
+      style="font-size: 22px; position: fixed; bottom: 70px; right: 20px;">Magnitude</span>
+    <span id="counter" class="hero-caption" style="font-size: 22px; position: fixed; bottom: 20px; right:20px;">0</span>
   </div>
 
 
-  
 
-  
+
+
   <script>
-const canvas = document.getElementById('seismograph-canvas');
-const ctx = canvas.getContext('2d');
+    const canvas = document.getElementById('seismograph-canvas');
+    const ctx = canvas.getContext('2d');
 
-// Draw initial seismograph function as straight line
-ctx.beginPath();
-ctx.moveTo(canvas.width / 2, 0);
-ctx.lineTo(canvas.width / 2, canvas.height);
-ctx.stroke();
+    // Draw initial seismograph function as straight line
+    ctx.beginPath();
+    ctx.moveTo(canvas.width / 2, 0);
+    ctx.lineTo(canvas.width / 2, canvas.height);
+    ctx.stroke();
 
-// Set initial magnitude to 0
-let magnitude = 0;
+    // Set initial magnitude to 0
+    let magnitude = 0;
 
-function animate(magnitude) {
-  // Clear canvas before drawing updated seismograph function
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
+    function animate(magnitude) {
+      // Clear canvas before drawing updated seismograph function
+      ctx.clearRect(0, 0, canvas.width, canvas.height);
 
-  // Draw updated seismograph function with noise
-  ctx.beginPath();
-  ctx.moveTo(canvas.width / 2, 0);
-  for (let i = 0; i < canvas.height; i++) {
-    const noise = Math.random() * magnitude*3;
-    const x =
-      canvas.width / 2 +
-      Math.sin(i * 0.2) * Math.cos(i * 0.02) * magnitude * 5 +
-      noise;
-    const y = i;
-    ctx.lineTo(x, y);
-  }
+      // Draw updated seismograph function with noise
+      ctx.beginPath();
+      ctx.moveTo(canvas.width / 2, 0);
+      for (let i = 0; i < canvas.height; i++) {
+        const noise = Math.random() * magnitude * 3;
+        const x =
+          canvas.width / 2 +
+          Math.sin(i * 0.2) * Math.cos(i * 0.02) * magnitude * 5 +
+          noise;
+        const y = i;
+        ctx.lineTo(x, y);
+      }
 
-  ctx.strokeStyle = '#CC3333'; // Set stroke style to red
+      ctx.strokeStyle = '#CC3333'; // Set stroke style to red
 
-  ctx.stroke();
-}
+      ctx.stroke();
+    }
 
 
-// Update seismograph and magnitude on scroll
-function updateSeismograph() {
-  // Update magnitude based on scroll position
-  magnitude = Math.min(window.scrollY / 120, 40);
+    // Update seismograph and magnitude on scroll
+    function updateSeismograph() {
+      // Update magnitude based on scroll position
+      magnitude = Math.min(window.scrollY / 120, 40);
 
-  // Update counter display
-  const counter = Math.min(magnitude/1.8, 9.5);
-  document.getElementById('counter').textContent = counter.toFixed(1);
+      // Update counter display
+      const counter = Math.min(magnitude / 1.8, 9.5);
+      document.getElementById('counter').textContent = counter.toFixed(1);
 
-  // Animate seismograph with updated magnitude
-  animate(magnitude);
+      // Animate seismograph with updated magnitude
+      animate(magnitude);
 
-  // Collapse page if magnitude has reached maximum
-  if (counter >= 9.5) {
-    // document.body.style.height = '100vh';
-    document.getElementById('counter').style.display = 'none'; // hide counter element
-    document.getElementById('magnitude-word').style.display = 'none'; // hide counter element
-  } else {
-    document.getElementById('counter').style.display = 'block'; // show counter element
-    document.getElementById('magnitude-word').style.display = 'block'; // hide counter element
-    document.body.style.height = 'auto';
-  }
-}
+      // Collapse page if magnitude has reached maximum
+      if (counter >= 9.5) {
+        // document.body.style.height = '100vh';
+        document.getElementById('counter').style.display = 'none'; // hide counter element
+        document.getElementById('magnitude-word').style.display = 'none'; // hide counter element
+      } else {
+        document.getElementById('counter').style.display = 'block'; // show counter element
+        document.getElementById('magnitude-word').style.display = 'block'; // hide counter element
+        document.body.style.height = 'auto';
+      }
+    }
 
-updateSeismograph();
+    updateSeismograph();
 
-// Set up event listener to update seismograph and counter when the page is scrolled
-window.addEventListener('scroll', updateSeismograph);
+    // Set up event listener to update seismograph and counter when the page is scrolled
+    window.addEventListener('scroll', updateSeismograph);
 
   </script>
-  
-  
+
+
 
 
 
@@ -1071,8 +1071,8 @@ window.addEventListener('scroll', updateSeismograph);
             </svg>
 
           </a>
-          <h1 class="site-branding--title"><a href="https://gammarelief.org"
-              class="site-branding--link-title" target="blank">GAMMA <span>Relief through Urban Design</span></a>
+          <h1 class="site-branding--title"><a href="https://gammarelief.org" class="site-branding--link-title"
+              target="blank">GAMMA <span>Relief through Urban Design</span></a>
           </h1>
         </div>
 
@@ -1136,12 +1136,9 @@ window.addEventListener('scroll', updateSeismograph);
 
 
               <article class="l--tease l--post-tease tease-md tease-first l--format-quote tease-has-thumbnail ">
-                
+
 
                 <div class="base-tease-inner post-tease-inner">
-
-
-
 
                   <div class="base-tease__text post-tease__text" style="margin-right: 14px;">
 
@@ -1175,60 +1172,60 @@ window.addEventListener('scroll', updateSeismograph);
 
               <article class="l--tease l--post-tease tease-lg  l--format-default tease-has-thumbnail ">
                 <p class="base-tease__meta-item base-tease__meta-item--category post-tease__meta-item--category">
-                    Flat-pack assembly 
+                  Flat-pack assembly
                 </p>
 
                 <div class="base-tease-inner post-tease-inner">
                   <div class="base-tease__image-container">
-                      <figure class="">
-                          <div class="slideshow-container">
-                              <div class="mySlides_2">
-                                  <img src="./GAMMA/images/rhino1.png" style="width:100%">
-                                  <div class="text"></div>
-                              </div>
-                              <div class="mySlides_2">
-                                  <img src="./GAMMA/images/rhino2.png" style="width:100%">
-                                  <div class="text"></div>
-                              </div>
-                              <div class="mySlides_2">
-                                  <img src="./GAMMA/images/rhino3.png" style="width:100%">
-                                  <div class="text"></div>
-                              </div>
-                              <div class="mySlides_2">
-                                  <img src="./GAMMA/images/rhino4.png" style="width:100%">
-                                  <div class="text"></div>
-                              </div>
-                              <div class="mySlides_2">
-                                  <img src="./GAMMA/images/rhino5.png" style="width:100%">
-                                  <div class="text"></div>
-                              </div>
-                              <div class="mySlides_2">
-                                  <img src="./GAMMA/images/rhino6.png" style="width:100%">
-                                  <div class="text"></div>
-                              </div>
-                              <div class="mySlides_2">
-                                  <img src="./GAMMA/images/rhino7.png" style="width:100%">
-                                  <div class="text"></div>
-                              </div>
-                              <div class="mySlides_2">
-                                  <img src="./GAMMA/images/rhino8.png" style="width:100%">
-                                  <div class="text"></div>
-                              </div>
-                              <div class="mySlides_2">
-                                  <img src="./GAMMA/images/rhino9.png" style="width:100%">
-                                  <div class="text"></div>
-                              </div>
-                              <div class="mySlides_2">
-                                  <img src="./GAMMA/images/rhino10.png" style="width:100%">
-                                  <div class="text"></div>
-                              </div>
-                              <div class="mySlides_2">
-                                  <img src="./GAMMA/images/rhino11.png" style="width:100%">
-                                  <div class="text"></div>
-                              </div>
-                          </div>
-                          
-                          
+                    <figure class="">
+                      <div class="slideshow-container">
+                        <div class="mySlides_2">
+                          <img src="./GAMMA/images/rhino1.png" style="width:100%">
+                          <div class="text"></div>
+                        </div>
+                        <div class="mySlides_2">
+                          <img src="./GAMMA/images/rhino2.png" style="width:100%">
+                          <div class="text"></div>
+                        </div>
+                        <div class="mySlides_2">
+                          <img src="./GAMMA/images/rhino3.png" style="width:100%">
+                          <div class="text"></div>
+                        </div>
+                        <div class="mySlides_2">
+                          <img src="./GAMMA/images/rhino4.png" style="width:100%">
+                          <div class="text"></div>
+                        </div>
+                        <div class="mySlides_2">
+                          <img src="./GAMMA/images/rhino5.png" style="width:100%">
+                          <div class="text"></div>
+                        </div>
+                        <div class="mySlides_2">
+                          <img src="./GAMMA/images/rhino6.png" style="width:100%">
+                          <div class="text"></div>
+                        </div>
+                        <div class="mySlides_2">
+                          <img src="./GAMMA/images/rhino7.png" style="width:100%">
+                          <div class="text"></div>
+                        </div>
+                        <div class="mySlides_2">
+                          <img src="./GAMMA/images/rhino8.png" style="width:100%">
+                          <div class="text"></div>
+                        </div>
+                        <div class="mySlides_2">
+                          <img src="./GAMMA/images/rhino9.png" style="width:100%">
+                          <div class="text"></div>
+                        </div>
+                        <div class="mySlides_2">
+                          <img src="./GAMMA/images/rhino10.png" style="width:100%">
+                          <div class="text"></div>
+                        </div>
+                        <div class="mySlides_2">
+                          <img src="./GAMMA/images/rhino11.png" style="width:100%">
+                          <div class="text"></div>
+                        </div>
+                      </div>
+
+
                     </figure>
                   </div> <!-- ./base-tease__image-container -->
 
@@ -1238,7 +1235,7 @@ window.addEventListener('scroll', updateSeismograph);
               </article> <!-- /.l--article -->
 
 
-              
+
 
 
 
@@ -1255,7 +1252,7 @@ window.addEventListener('scroll', updateSeismograph);
                       <h1 class="base-tease__heading"><br>
                         <p>The flat-packs are produced in Europe, shipped to the devastated areas,
                           and assembled on-site. Later, the objective is to move the engine of reconstruction
-                           in a community-driven effort to localise the production, thus fostering local economic
+                          in a community-driven effort to localise the production, thus fostering local economic
                           growth and community inclusion. </p>
                       </h1>
                       <p class="base-tease__subheading base-tease__quote-attriubtion">Mayar Ariss</p>
@@ -1273,7 +1270,7 @@ window.addEventListener('scroll', updateSeismograph);
 
               <article class="l--tease l--post-tease tease-lg  l--format-default tease-has-thumbnail ">
                 <p class="base-tease__meta-item base-tease__meta-item--category post-tease__meta-item--category">
-                    Flat-pack section
+                  Flat-pack section
                 </p>
 
                 <div class="base-tease__image-container">
@@ -1292,11 +1289,11 @@ window.addEventListener('scroll', updateSeismograph);
                         <div class="text"></div>
                       </div>
                     </div>
-                     
-                
+
+
                   </figure>
                 </div> <!-- ./base-tease__image-container -->
-                
+
 
               </article> <!-- /.l--article -->
 
@@ -1306,8 +1303,8 @@ window.addEventListener('scroll', updateSeismograph);
 
             </div>
 
-           
-            
+
+
           </div> <!-- /.base-inner -->
 
 
@@ -1328,46 +1325,24 @@ window.addEventListener('scroll', updateSeismograph);
               <div class="base-main-inner">
                 <div class="base-body ">
                   <p>Dear Friends,</p>
-                  <p>A few weeks ago, a powerful earthquake left hundreds dead in Morocco. 
+                  <p>A few weeks ago, a powerful earthquake left hundreds dead in Morocco.
                     Earlier this year, the Turkey-Syria earthquakes killed tens of thousands.
                     Providing aid to the impacted communities is a moral imperative which is sometimes complicated by
                     politics.
                     While Morocco and Turkey have ties with most of the world, Syria does not.</p>
                   <p>The disaster is most acute in Aleppo, one of the oldest and most damaged cities in the world.
                     The international community failed to address a humanitarian crisis in
-                    a place where governance has collapsed. Aid efforts were hampered by poor infrastructure and economic
+                    a place where governance has collapsed. Aid efforts were hampered by poor infrastructure and
+                    economic
                     sanctions. Today, the need for help is still as urgent as ever.
                   </p>
                   <p>Although usual emergency solutions provide immediate relief, they are ultimately not viable to
                     solve such crises. In fact, they are harmful in the
-                    long-term, as they lead to protracted refugee situations &#8212 as currently witnessed in Aleppo &#8212 
+                    long-term, as they lead to protracted refugee situations &#8212 as currently witnessed in Aleppo
+                    &#8212
                     where refugees remain in camps much longer than intended.
                   </p>
 
-                  
-                  <svg id= "vennSVG" viewBox="0 0 500 300"; xmlns="http://www.w3.org/2000/svg">
-                    <!-- Fill for Left Circle -->
-                    <circle cx="175" cy="140" r="140" fill="black"></circle>                    
-                    <!-- Fill for Right Circle -->
-                    <circle cx="320" cy="140" r="140" fill="black"></circle>
-                    <!-- Stroke for Right Circle -->
-                    <circle class="circle-venn" cx="320" cy="140" r="140" fill="none"></circle>
-                    <!-- Stroke for Left Circle -->
-                    <circle class="circle-venn" cx="175" cy="140" r="140" fill="none"></circle>
-
-                    <!-- Texts remain the same -->
-                    <text class="middle-text-venn" x="75" y="100" fill="white">SHORT-TERM</text>
-                    <text class="middle-text-venn" x="85" y="140" fill="white">IMMEDIATE </text>
-                    <text class="middle-text-venn" x="95" y="180" fill="white">SHELTERS</text>
-                    <text class="middle-text-venn" x="345" y="100" fill="white">LONG-TERM</text>
-                    <text class="middle-text-venn" x="335" y="140" fill="white">PERMANENT </text>
-                    <text class="middle-text-venn" x="325" y="180" fill="white">HOMES</text>
-                    <text class="middle-text-venn" x="235" y="100" fill="white">THE</text>
-                    <text class="middle-text-venn" x="210" y="140" fill="white">FLAT-PACK</text>
-                    <text class="middle-text-venn" x="220" y="180" fill="white">SYSTEM</text>
-                </svg>
-                
-                
 
 
                   <p>From a pragmatic reading of the facts, we offer an alternative to the traditional way
@@ -1376,12 +1351,15 @@ window.addEventListener('scroll', updateSeismograph);
                     communities, to think of emergency shelters as homes and of refugee camps as future cities.</p>
                   <p>Your support is crucial for our mission. Your help will enable imminent housing while
                     reducing the dependency to degraded shelters, eliminating the risk of permanent slums, preserving
-                    the dignity of people and restoring their civic pride by offering a sustainable long-term alternative to tents.</p>
-                  <p>We would love to hear from you should you have questions, comments, or just want to say hi. Please 
+                    the dignity of people and restoring their civic pride by offering a sustainable long-term
+                    alternative to tents.</p>
+                  <p>We would love to hear from you should you have questions, comments, or just want to say hi. Please
                     <a href="mailto:contact@gammarelief.org" rel="noopener">connect</a> with us and consider supporting
                     our action
-                    by sharing, <a href="https://gammarelief.org/GAMMA/joinus.html" target="blank">joining</a> and/or <a href="https://crowdfund.mit.edu/story/7uy20f" target="blank">making a
-                      gift</a>. &#10084</p>
+                    by sharing, <a href="https://gammarelief.org/GAMMA/joinus.html" target="blank">joining</a> and/or <a
+                      href="https://crowdfund.mit.edu/story/7uy20f" target="blank">making a
+                      gift</a>. &#10084
+                  </p>
                   <p>Best,</p>
                   <p>The Team<br>
                     <br>
@@ -1425,7 +1403,7 @@ window.addEventListener('scroll', updateSeismograph);
             <br>
             <div class="view-all">
               <a href="https://crowdfund.mit.edu/story/7uy20f" class="view-all-link" target="blank">Donate</a>
-          </div>
+            </div>
             <div class="view-all">
               <a href="./GAMMA/joinus.html" class="view-all-link" target="blank">Join</a>
               <a href="https://gammarelief.org/GAMMA/knowmore.html" class="view-all-link" target="blank">More</a>
@@ -1434,76 +1412,76 @@ window.addEventListener('scroll', updateSeismograph);
           <br><br>
           <div class="progress-text">$1,140</div>
           <div class="progress-bar">
-              <div class="progress"></div>
+            <div class="progress"></div>
           </div>
           <span class="donation-amount" style="display: none;">1140</span>
 
 
           <script>
-              const progressBar = document.querySelector('.progress');
-              const progressBarContainer = document.querySelector('.progress-bar');
+            const progressBar = document.querySelector('.progress');
+            const progressBarContainer = document.querySelector('.progress-bar');
 
-              let maxAmount = 69500;
-              let partialAmount = parseInt(document.querySelector('.donation-amount').textContent);
+            let maxAmount = 69500;
+            let partialAmount = parseInt(document.querySelector('.donation-amount').textContent);
 
-              let isProgressComplete = false;
+            let isProgressComplete = false;
 
-              function fillProgress(entries) {
-                  if (!isProgressComplete && entries[0].isIntersecting) {
-                      let animationName = 'fill-progress';
-                      let animationDuration = '2s';
-                      let endWidth = '100%';
+            function fillProgress(entries) {
+              if (!isProgressComplete && entries[0].isIntersecting) {
+                let animationName = 'fill-progress';
+                let animationDuration = '2s';
+                let endWidth = '100%';
 
-                      animationName = 'fill-progress-partial';
-                      endWidth = 'var(--partialAmount)';
+                animationName = 'fill-progress-partial';
+                endWidth = 'var(--partialAmount)';
 
-                      progressBar.style.animationName = animationName;
-                      progressBar.style.animationDuration = animationDuration;
-                      progressBar.style.setProperty('--maxAmount', maxAmount);
-                      progressBar.style.setProperty('--partialAmount', partialAmount);
-                      progressBar.style.width = endWidth;
+                progressBar.style.animationName = animationName;
+                progressBar.style.animationDuration = animationDuration;
+                progressBar.style.setProperty('--maxAmount', maxAmount);
+                progressBar.style.setProperty('--partialAmount', partialAmount);
+                progressBar.style.width = endWidth;
 
-                      isProgressComplete = true;
+                isProgressComplete = true;
 
-                      const progressText = document.querySelector('.progress-text');
-                      progressText.textContent = '$0';
-                      let currentAmount = 0;
-                      const duration = 2000; // desired duration of the animation in milliseconds
-                      const increment = Math.ceil(partialAmount / (duration / 40)); // calculate the increment based on the final amount and duration
-                      const interval = setInterval(() => {
-                          if (currentAmount < partialAmount) {
-                              currentAmount += increment;
-                              if (currentAmount > partialAmount) { // make sure the final amount is not exceeded
-                                  currentAmount = partialAmount;
-                              }
-                              progressText.textContent = '$' + currentAmount;
-                          } else {
-                              clearInterval(interval);
-                          }
-                      }, 20);
-                  } else if (isProgressComplete && !entries[0].isIntersecting) {
-                      resetProgress();
+                const progressText = document.querySelector('.progress-text');
+                progressText.textContent = '$0';
+                let currentAmount = 0;
+                const duration = 2000; // desired duration of the animation in milliseconds
+                const increment = Math.ceil(partialAmount / (duration / 40)); // calculate the increment based on the final amount and duration
+                const interval = setInterval(() => {
+                  if (currentAmount < partialAmount) {
+                    currentAmount += increment;
+                    if (currentAmount > partialAmount) { // make sure the final amount is not exceeded
+                      currentAmount = partialAmount;
+                    }
+                    progressText.textContent = '$' + currentAmount;
+                  } else {
+                    clearInterval(interval);
                   }
+                }, 20);
+              } else if (isProgressComplete && !entries[0].isIntersecting) {
+                resetProgress();
               }
+            }
 
-              function resetProgress() {
-                  progressBar.style.width = '0';
-                  progressBar.style.animationName = '';
-                  progressBar.style.animationDuration = '';
-                  isProgressComplete = false;
-              }
+            function resetProgress() {
+              progressBar.style.width = '0';
+              progressBar.style.animationName = '';
+              progressBar.style.animationDuration = '';
+              isProgressComplete = false;
+            }
 
-              function updateProgressAmounts(newMaxAmount, newPartialAmount) {
-                  maxAmount = newMaxAmount;
-                  partialAmount = newPartialAmount;
-                  resetProgress();
-              }
+            function updateProgressAmounts(newMaxAmount, newPartialAmount) {
+              maxAmount = newMaxAmount;
+              partialAmount = newPartialAmount;
+              resetProgress();
+            }
 
-              const observer = new IntersectionObserver(fillProgress, {
-                  threshold: 0.5,
-              });
+            const observer = new IntersectionObserver(fillProgress, {
+              threshold: 0.5,
+            });
 
-              observer.observe(progressBarContainer);
+            observer.observe(progressBarContainer);
 
 
           </script>
@@ -1543,15 +1521,17 @@ window.addEventListener('scroll', updateSeismograph);
                 <div class="my-slide-description my-slide-description--with-line">
                   <p>
                   <h2 class="visual-content-panel__heading">Mayar Ariss </h2>
-                  
+
                   <div class="visual-content-panel__description">Initially studying Environmental Sciences & Engineering
                     at École polytechnique fédérale de Lausanne (EPFL), Mayar is now a MEng candidate in Civil
-                    & Environmental Engineering at Imperial College London. In 2023, he joined the Massachusetts Institute 
-                    of Technology (MIT) where he founded GAMMA, as a visiting student at MIT Senseable City Lab. Mayar is also a research fellow at the Dubai Future Labs.
+                    & Environmental Engineering at Imperial College London. In 2023, he joined the Massachusetts
+                    Institute
+                    of Technology (MIT) where he founded GAMMA, as a visiting student at MIT Senseable City Lab. Mayar
+                    is also a research fellow at the Dubai Future Labs.
                   </div>
-                  
-                </p>
-                  
+
+                  </p>
+
                 </div>
               </div>
 
@@ -1560,9 +1540,11 @@ window.addEventListener('scroll', updateSeismograph);
                 <div class="my-slide-description my-slide-description--with-line">
                   <p>
                   <h2 class="visual-content-panel__heading">Paul Carluy</h2>
-                  <div class="visual-content-panel__description">Trained at Atelier de Sèvres, Paul earned his BA in Industrial Design from
+                  <div class="visual-content-panel__description">Trained at Atelier de Sèvres, Paul earned his BA in
+                    Industrial Design from
                     École cantonale d'art de Lausanne (ECAL). His works lie at the intersection between form, function
-                    and identity. He is now an assitant designer for Louis Vuitton's "Objets Nomades" collection. He founded ACID (archives contemporaines et internationales de design), a
+                    and identity. He is now an assitant designer for Louis Vuitton's "Objets Nomades" collection. He
+                    founded ACID (archives contemporaines et internationales de design), a
                     podcast on design theory and analysis featuring occasional guests.</div>
                   </p>
                 </div>
@@ -1573,8 +1555,10 @@ window.addEventListener('scroll', updateSeismograph);
                 <div class="my-slide-description my-slide-description--with-line">
                   <p>
                   <h2 class="visual-content-panel__heading">Pei Zhao</h2>
-                  <div class="visual-content-panel__description">Pei holds a BSc in Economics from Peking University and a BSc in Environmental Science & Technology from Tsinghua University. 
-                    In 2018, she was a research assistant at Duke University. Currently, Pei is affiliated with the Massachusetts Institute of Technology (MIT) as a visiting PhD researcher. 
+                  <div class="visual-content-panel__description">Pei holds a BSc in Economics from Peking University and
+                    a BSc in Environmental Science & Technology from Tsinghua University.
+                    In 2018, she was a research assistant at Duke University. Currently, Pei is affiliated with the
+                    Massachusetts Institute of Technology (MIT) as a visiting PhD researcher.
                     Her ongoing research focuses on transport decarbonisation within MIT Senseable City Lab.</div>
                   </p>
                 </div>
@@ -1585,9 +1569,12 @@ window.addEventListener('scroll', updateSeismograph);
                 <div class="my-slide-description my-slide-description--with-line">
                   <p>
                   <h2 class="visual-content-panel__heading">Charles Dezons</h2>
-                  <div class="visual-content-panel__description">After completing the mathematics and physics "classes préparatoires MPSI/PSI*" at both Lycée Henri IV and Lycée Louis-le-Grand,
-                    Charles enrolled at École des ponts ParisTech (ENPC) as an Economics, Management and Finance student. In
-                    2022, he joined Imperial College London as an exchange student. He specialised in stochastic processes and quantitative modeling of financial markets.</div>
+                  <div class="visual-content-panel__description">After completing the mathematics and physics "classes
+                    préparatoires MPSI/PSI*" at both Lycée Henri IV and Lycée Louis-le-Grand,
+                    Charles enrolled at École des ponts ParisTech (ENPC) as an Economics, Management and Finance
+                    student. In
+                    2022, he joined Imperial College London as an exchange student. He specialised in stochastic
+                    processes and quantitative modeling of financial markets.</div>
                   </p>
                 </div>
               </div>
@@ -1598,9 +1585,12 @@ window.addEventListener('scroll', updateSeismograph);
                   <p>
                   <h2 class="visual-content-panel__heading">Tom Benson</h2>
                   <div class="visual-content-panel__description">
-                    Since 2018, Tom has been working as a research fellow at the Massachusetts Institute of Technology (MIT). At MIT Senseable City Lab,
-                    his research aims at making cities more liveable by combining the fields of architecture, urban planning and data science. 
-                    With a MArch from the University of Westminster, he previously worked for the British Army, Buro Ole Scheeren, Foster+Partners and Monsoon Assemblages. </div>
+                    Since 2018, Tom has been working as a research fellow at the Massachusetts Institute of Technology
+                    (MIT). At MIT Senseable City Lab,
+                    his research aims at making cities more liveable by combining the fields of architecture, urban
+                    planning and data science.
+                    With a MArch from the University of Westminster, he previously worked for the British Army, Buro Ole
+                    Scheeren, Foster+Partners and Monsoon Assemblages. </div>
                   </p>
                 </div>
               </div>
@@ -1610,12 +1600,14 @@ window.addEventListener('scroll', updateSeismograph);
                 <div class="my-slide-description my-slide-description--with-line">
                   <p>
                   <h2 class="visual-content-panel__heading">Selen Aksoy</h2>
-                  <div class="visual-content-panel__description">Selen is a PhD candidate in Architectural Design Computing and 
-                    a part-time lecturer on urban metabolism and AI at the Istanbul Technical University (ITU). 
-                    She is also a visiting researcher at the Massachusetts Institute of Technology (MIT). 
-                    At MIT Senseable Amsterdam Lab, Selen studies the role of repurposed buildings in addressing housing needs, considering a 15-minute city framework.
+                  <div class="visual-content-panel__description">Selen is a PhD candidate in Architectural Design
+                    Computing and
+                    a part-time lecturer on urban metabolism and AI at the Istanbul Technical University (ITU).
+                    She is also a visiting researcher at the Massachusetts Institute of Technology (MIT).
+                    At MIT Senseable Amsterdam Lab, Selen studies the role of repurposed buildings in addressing housing
+                    needs, considering a 15-minute city framework.
 
-                    </div>
+                  </div>
                   </p>
                 </div>
               </div>
@@ -1625,22 +1617,27 @@ window.addEventListener('scroll', updateSeismograph);
                 <div class="my-slide-description my-slide-description--with-line">
                   <p>
                   <h2 class="visual-content-panel__heading">Sadegh Sabouri</h2>
-                  <div class="visual-content-panel__description">With an MSc in Urban Science & Informatics from the University of Tehran, Sadi received a PhD in 
-                    Computational Urban Science & Planning from the University of Utah. In 2022, he co-instructed an urban data science course at both the 
-                    Massachusetts Institute of Technology (MIT) and at Politecnico di Milano. He is currently a postdoctoral researcher in Urban Data Science at MIT Senseable City Lab.</div>
+                  <div class="visual-content-panel__description">With an MSc in Urban Science & Informatics from the
+                    University of Tehran, Sadi received a PhD in
+                    Computational Urban Science & Planning from the University of Utah. In 2022, he co-instructed an
+                    urban data science course at both the
+                    Massachusetts Institute of Technology (MIT) and at Politecnico di Milano. He is currently a
+                    postdoctoral researcher in Urban Data Science at MIT Senseable City Lab.</div>
                   </p>
                 </div>
               </div>
-              
+
               <div class="my-slide">
                 <img src="GAMMA/images/mykpic.jpeg" alt="Image 6">
                 <div class="my-slide-description my-slide-description--with-line">
                   <p>
                   <h2 class="visual-content-panel__heading">Mykola Murashko</h2>
-                  <div class="visual-content-panel__description">Myk graduated with a BA in Architecture from the University of
+                  <div class="visual-content-panel__description">Myk graduated with a BA in Architecture from the
+                    University of
                     Cambridge, where he was awarded the departmental Edward S. Prior Prize for the best understanding of
                     construction and materials. He is now an architect at Carlo Ratti Associati, where he directs a
-                    construction technology spin-off specialising in the design of flat-pack structures. He is P&L owner, responsible for operations and R&D.</div>
+                    construction technology spin-off specialising in the design of flat-pack structures. He is P&L
+                    owner, responsible for operations and R&D.</div>
                   </p>
                 </div>
               </div>
@@ -1650,9 +1647,12 @@ window.addEventListener('scroll', updateSeismograph);
                 <div class="my-slide-description my-slide-description--with-line">
                   <p>
                   <h2 class="visual-content-panel__heading">Emily Loi</h2>
-                  <div class="visual-content-panel__description">Emily graduated with a MEng in Civil & Environmental Engineering at Imperial College London. 
-                    In 2020, she interned with a Fluid Mechanics research group at both Brown University and the Massachusetts Institute of Technology (MIT).
-                    Her research focused on global sewage sludge production and management statistics & trends. She is also the recipient of the prestigious Duke of Edinburgh's Award. </div>
+                  <div class="visual-content-panel__description">Emily graduated with a MEng in Civil & Environmental
+                    Engineering at Imperial College London.
+                    In 2020, she interned with a Fluid Mechanics research group at both Brown University and the
+                    Massachusetts Institute of Technology (MIT).
+                    Her research focused on global sewage sludge production and management statistics & trends. She is
+                    also the recipient of the prestigious Duke of Edinburgh's Award. </div>
                   </p>
                 </div>
               </div>
@@ -1856,14 +1856,15 @@ m-45 -470 l229 -7 -98 -50 c-201 -102 -358 -221 -411 -310 -32 -55 -55 -120
             </nav>
             <br><br>
             <a href="https://www.linkedin.com/company/gamma-relief-through-urban-design/">
-              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg" alt="LinkedIn logo" width="25" height="25" style="object-fit: contain; filter: grayscale(100%);">
+              <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/linkedin/linkedin-original.svg"
+                alt="LinkedIn logo" width="25" height="25" style="object-fit: contain; filter: grayscale(100%);">
             </a>
             <!-- <p class="subfooter-version">Version 1.12.3  </p> -->
           </div><!-- /.l-subfooter -->
-     
-         
+
+
         </div>
-     
+
       </footer>
 
       <div class="loading-container">
@@ -2114,7 +2115,7 @@ m-45 -470 l229 -7 -98 -50 c-201 -102 -358 -221 -411 -310 -32 -55 -55 -120
             monsterinsights_scroll_tracking_load();
           });
         }
-		/* End MonsterInsights Scroll Tracking */
+        /* End MonsterInsights Scroll Tracking */
 
       </script>
       <script type="text/javascript" src="GAMMA/js/regenerator-runtime.min.js" id="regenerator-runtime-js"></script>
